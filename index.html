@@ -1,231 +1,332 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>DAMYTEC | Cámaras de Seguridad</title>
+<title>DAMYTEC - Cámaras de Seguridad</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<style>
 
-        body {
-            background: #f5f7fa;
-            color: #222;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
 
-        header {
-            background: #0b0f19;
-            color: white;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-        }
+body{
+    background:#f5f6f8;
+    color:#222;
+}
 
-        .logo span {
-            color: #00bfff;
-        }
+/* HEADER */
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
-            font-weight: bold;
-        }
+header{
+    background:#ffffff;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
 
-        nav a:hover {
-            color: #00bfff;
-        }
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#111827;
+}
 
-        .hero {
-            min-height: 550px;
-            background: linear-gradient(
-                rgba(0,0,0,0.65),
-                rgba(0,0,0,0.65)
-            ),
-            url("Camara-de-seguridad_-ZM33-3K.png");
+.logo span{
+    color:#00a8e8;
+}
 
-            background-size: cover;
-            background-position: center;
+nav{
+    display:flex;
+    gap:28px;
+}
 
-            display: flex;
-            align-items: center;
-            padding: 50px 8%;
-            color: white;
-        }
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:bold;
+}
 
-        .hero-content {
-            max-width: 600px;
-        }
+nav a:hover{
+    color:#00a8e8;
+}
 
-        .hero h1 {
-            font-size: 55px;
-            margin-bottom: 20px;
-        }
+/* HERO */
 
-        .hero h1 span {
-            color: #00bfff;
-        }
+.hero{
+    background:linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.65)
+    ),
+    url("Camara-de-seguridad_-ZM33-3K.png");
 
-        .hero p {
-            font-size: 20px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
+    background-size:cover;
+    background-position:center;
 
-        .btn {
-            display: inline-block;
-            background: #00bfff;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-right: 10px;
-        }
+    min-height:480px;
 
-        .btn:hover {
-            background: #008dcc;
-        }
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-        .section {
-            padding: 70px 8%;
-            text-align: center;
-        }
+    text-align:center;
+    color:white;
+    padding:40px 20px;
+}
 
-        .section h2 {
-            font-size: 36px;
-            margin-bottom: 15px;
-        }
+.hero-content{
+    max-width:750px;
+}
 
-        .section-description {
-            color: #666;
-            margin-bottom: 40px;
-        }
+.hero h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
 
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
+.hero h1 span{
+    color:#00c2ff;
+}
 
-        .card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
+.hero p{
+    font-size:20px;
+    line-height:1.6;
+    margin-bottom:30px;
+}
 
-        .card:hover {
-            transform: translateY(-8px);
-        }
+.btn{
+    display:inline-block;
+    background:#00a8e8;
+    color:white;
+    padding:14px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin:5px;
+}
 
-        .card img {
-            width: 100%;
-            height: 220px;
-            object-fit: contain;
-            margin-bottom: 15px;
-        }
+.btn:hover{
+    background:#008ac0;
+}
 
-        .card h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
+/* SECCIONES */
 
-        .card p {
-            color: #666;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
+section{
+    padding:65px 7%;
+}
 
-        .price {
-            color: #00a6d6;
-            font-size: 25px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
+.section-title{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:10px;
+}
 
-        .services {
-            background: #0b0f19;
-            color: white;
-        }
+.section-text{
+    text-align:center;
+    color:#666;
+    margin-bottom:40px;
+}
 
-        .services .section-description {
-            color: #ccc;
-        }
+/* PRODUCTOS */
 
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-        }
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
 
-        .service {
-            padding: 30px;
-            background: #151b29;
-            border-radius: 15px;
-        }
+.card{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 4px 18px rgba(0,0,0,.08);
+    transition:.3s;
+}
 
-        .service h3 {
-            color: #00bfff;
-            margin-bottom: 10px;
-        }
+.card:hover{
+    transform:translateY(-7px);
+}
 
-        .contact {
-            background: white;
-        }
+.card img{
+    width:100%;
+    height:230px;
+    object-fit:contain;
+    margin-bottom:15px;
+}
 
-        .contact-box {
-            max-width: 700px;
-            margin: auto;
-        }
+.card h3{
+    font-size:21px;
+    margin-bottom:10px;
+}
 
-        .contact-box p {
-            font-size: 18px;
-            margin: 12px 0;
-        }
+.card p{
+    color:#666;
+    line-height:1.5;
+    min-height:70px;
+}
 
-        footer {
-            background: #070a11;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
+.price{
+    font-size:26px;
+    font-weight:bold;
+    color:#00a8e8;
+    margin:15px 0;
+}
 
-        @media (max-width: 700px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
+/* OFERTA */
 
-            nav a {
-                margin: 0 8px;
-            }
+.offer{
+    background:#111827;
+    color:white;
+    text-align:center;
+}
 
-            .hero h1 {
-                font-size: 38px;
-            }
+.offer h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
 
-            .hero {
-                min-height: 500px;
-            }
-        }
-    </style>
+.offer p{
+    color:#ddd;
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+/* SERVICIOS */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:35px;
+}
+
+.service{
+    background:white;
+    padding:30px 20px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+}
+
+.service h3{
+    margin:15px 0 10px;
+    color:#00a8e8;
+}
+
+.service p{
+    color:#666;
+    line-height:1.5;
+}
+
+/* PEDIDO */
+
+.order{
+    background:white;
+    text-align:center;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    max-width:900px;
+    margin:35px auto;
+}
+
+.step{
+    padding:20px;
+}
+
+.step-number{
+    width:55px;
+    height:55px;
+    background:#00a8e8;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* CONTACTO */
+
+.contact{
+    text-align:center;
+    background:#eef8fc;
+}
+
+.contact p{
+    font-size:18px;
+    margin:10px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+footer span{
+    color:#00a8e8;
+}
+
+/* CELULAR */
+
+@media(max-width:700px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:14px;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .section-title{
+        font-size:29px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
+
+<!-- MENU -->
 
 <header>
 
@@ -236,32 +337,32 @@
     <nav>
         <a href="#inicio">Inicio</a>
         <a href="#productos">Productos</a>
-        <a href="#servicios">Servicios</a>
+        <a href="#ofertas">Ofertas</a>
         <a href="#contacto">Contacto</a>
     </nav>
 
 </header>
 
 
+<!-- INICIO -->
+
 <section class="hero" id="inicio">
 
     <div class="hero-content">
 
         <h1>
-            Seguridad para tu <span>hogar y negocio</span>
+            DAMYTEC - <span>Seguridad para ti</span>
         </h1>
 
         <p>
-            Cámaras de seguridad modernas, instalación profesional
-            y soluciones de vigilancia para proteger lo que más importa.
+            Cámaras de seguridad para proteger tu hogar,
+            negocio y lo que más importa.
         </p>
 
-        <a href="#productos" class="btn">
-            Ver cámaras
-        </a>
-
-        <a href="#contacto" class="btn">
-            Contáctanos
+        <a
+        href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20información%20sobre%20las%20cámaras"
+        class="btn">
+            💬 CONTÁCTANOS POR WHATSAPP
         </a>
 
     </div>
@@ -269,77 +370,133 @@
 </section>
 
 
-<section class="section" id="productos">
+<!-- PRODUCTOS -->
 
-    <h2>Nuestras cámaras</h2>
+<section id="productos">
 
-    <p class="section-description">
-        Encuentra la solución de seguridad que necesitas.
+    <h2 class="section-title">
+        📷 Productos Destacados
+    </h2>
+
+    <p class="section-text">
+        Encuentra la cámara de seguridad que necesitas.
     </p>
 
+
     <div class="products">
+
+
+        <!-- PRODUCTO 1 -->
 
         <div class="card">
 
             <img src="Camara-de-seguridad_-ZM33-3K.png">
 
-            <h3>Cámara PTZ 3K</h3>
+            <h3>
+                Cámara PTZ WiFi 3K
+            </h3>
 
             <p>
-                Cámara de seguridad con movimiento PTZ,
-                visión nocturna y conexión mediante WiFi.
+                Cámara con movimiento PTZ,
+                conexión WiFi y visión nocturna.
+                Control desde tu celular.
             </p>
 
             <div class="price">
                 Desde S/ 200
             </div>
 
-            <a href="#contacto" class="btn">
-                Consultar
+            <a
+            href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%20PTZ%20WiFi%203K"
+            class="btn">
+                COMPRAR
             </a>
 
         </div>
 
 
+        <!-- PRODUCTO 2 -->
+
         <div class="card">
 
             <img src="Camara-de-seguridad_-ZM33-3K.png">
 
-            <h3>Cámara con panel solar</h3>
+            <h3>
+                Cámara con Panel Solar
+            </h3>
 
             <p>
-                Solución de vigilancia con panel solar
-                para lugares donde necesitas mayor autonomía.
+                Cámara de vigilancia con
+                panel solar para diferentes
+                espacios y necesidades.
             </p>
 
             <div class="price">
-                Consultar precio
+                Desde S/ 200
             </div>
 
-            <a href="#contacto" class="btn">
-                Consultar
+            <a
+            href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20información%20sobre%20la%20Cámara%20con%20Panel%20Solar"
+            class="btn">
+                COMPRAR
             </a>
 
         </div>
 
 
+        <!-- PRODUCTO 3 -->
+
         <div class="card">
 
             <img src="Camara-de-seguridad_-ZM33-3K.png">
 
-            <h3>Cámara con chip</h3>
+            <h3>
+                Cámara con Chip
+            </h3>
 
             <p>
-                Cámara con conexión mediante chip.
-                Compatible con operadores móviles.
+                Cámara con conexión mediante
+                chip. Consulta disponibilidad
+                para Claro, Bitel o Movistar.
             </p>
 
             <div class="price">
-                Consultar precio
+                Desde S/ 200
             </div>
 
-            <a href="#contacto" class="btn">
-                Consultar
+            <a
+            href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20información%20sobre%20la%20Cámara%20con%20Chip"
+            class="btn">
+                COMPRAR
+            </a>
+
+        </div>
+
+
+        <!-- PRODUCTO 4 -->
+
+        <div class="card">
+
+            <img src="Camara-de-seguridad_-ZM33-3K.png">
+
+            <h3>
+                Cámara Tipo Foco
+            </h3>
+
+            <p>
+                Cámara tipo foco con conexión
+                WiFi y visualización desde
+                la aplicación ICSee.
+            </p>
+
+            <div class="price">
+                Desde S/ 200
+            </div>
+
+            <a
+            href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20información%20sobre%20la%20Cámara%20Tipo%20Foco"
+            class="btn">
+                COMPRAR
             </a>
 
         </div>
@@ -349,44 +506,112 @@
 </section>
 
 
-<section class="section services" id="servicios">
+<!-- OFERTA -->
 
-    <h2>Servicios DAMYTEC</h2>
+<section class="offer" id="ofertas">
 
-    <p class="section-description">
-        No solo vendemos cámaras. También instalamos y configuramos
-        tu sistema de seguridad.
+    <h2>
+        🔥 OFERTAS DAMYTEC
+    </h2>
+
+    <p>
+        Cámaras de seguridad desde S/ 200.
+        Consulta disponibilidad y promociones.
     </p>
 
-    <div class="service-grid">
+    <a
+    href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20conocer%20las%20ofertas%20disponibles"
+    class="btn">
+        VER OFERTAS
+    </a>
+
+</section>
+
+
+<!-- SERVICIOS -->
+
+<section>
+
+    <h2 class="section-title">
+        🔧 Nuestros Servicios
+    </h2>
+
+    <p class="section-text">
+        Soluciones para la seguridad de tu hogar o negocio.
+    </p>
+
+
+    <div class="services">
 
         <div class="service">
-            <h3>📷 Venta de cámaras</h3>
+
+            <div style="font-size:40px;">
+                📷
+            </div>
+
+            <h3>
+                Venta de cámaras
+            </h3>
+
             <p>
-                Cámaras WiFi, PTZ, con panel solar y con chip.
+                Cámaras WiFi, PTZ, con panel solar
+                y con chip.
             </p>
+
         </div>
 
-        <div class="service">
-            <h3>🔧 Instalación</h3>
-            <p>
-                Instalación profesional de cámaras de seguridad.
-            </p>
-        </div>
 
         <div class="service">
-            <h3>📱 Configuración</h3>
+
+            <div style="font-size:40px;">
+                🔧
+            </div>
+
+            <h3>
+                Instalación
+            </h3>
+
             <p>
-                Configuramos tu cámara para que puedas verla
-                desde tu celular.
+                Instalación de cámaras
+                de seguridad.
             </p>
+
         </div>
 
+
         <div class="service">
-            <h3>🛠️ Mantenimiento</h3>
+
+            <div style="font-size:40px;">
+                📱
+            </div>
+
+            <h3>
+                Configuración
+            </h3>
+
             <p>
-                Servicio de mantenimiento y revisión de equipos.
+                Configuramos tu cámara
+                para visualizarla desde tu celular.
             </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <div style="font-size:40px;">
+                🛠️
+            </div>
+
+            <h3>
+                Mantenimiento
+            </h3>
+
+            <p>
+                Revisión y mantenimiento
+                de equipos de seguridad.
+            </p>
+
         </div>
 
     </div>
@@ -394,40 +619,109 @@
 </section>
 
 
-<section class="section contact" id="contacto">
+<!-- COMO COMPRAR -->
 
-    <h2>Contáctanos</h2>
+<section class="order">
 
-    <div class="contact-box">
+    <h2 class="section-title">
+        📦 ¿Cómo comprar?
+    </h2>
 
-        <p>
-            📱 Escríbenos por WhatsApp para consultar
-            disponibilidad y precios.
-        </p>
+    <div class="steps">
 
-        <p>
-            📍 Lima, Perú
-        </p>
+        <div class="step">
 
-        <p>
-            📷 DAMYTEC - Seguridad y Tecnología
-        </p>
+            <div class="step-number">1</div>
 
-        <br>
+            <h3>Elige tu cámara</h3>
 
-        <a href="https://wa.me/" class="btn">
-            WhatsApp
-        </a>
+            <p>
+                Revisa nuestros productos.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">2</div>
+
+            <h3>Escríbenos</h3>
+
+            <p>
+                Contáctanos por WhatsApp.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">3</div>
+
+            <h3>Coordina tu pedido</h3>
+
+            <p>
+                Confirmamos disponibilidad y precio.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">4</div>
+
+            <h3>Instalación</h3>
+
+            <p>
+                También ofrecemos instalación.
+            </p>
+
+        </div>
 
     </div>
 
 </section>
 
+
+<!-- CONTACTO -->
+
+<section class="contact" id="contacto">
+
+    <h2 class="section-title">
+        📞 Contáctanos
+    </h2>
+
+    <p>
+        ¿Quieres una cámara de seguridad?
+    </p>
+
+    <p>
+        Escríbenos directamente por WhatsApp.
+    </p>
+
+    <br>
+
+    <a
+    href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20información%20sobre%20sus%20cámaras"
+    class="btn">
+        💬 WHATSAPP: 992 504 911
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
 
     <p>
-        © 2026 DAMYTEC - Cámaras de Seguridad
+        © 2026 <span>DAMYTEC</span> - Cámaras de Seguridad
+    </p>
+
+    <p>
+        Venta e instalación de cámaras de seguridad
     </p>
 
 </footer>
