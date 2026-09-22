@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>DAMYTEC | Cámaras de Seguridad y Accesorios</title>
 
 <style>
+
+/* =========================
+   GENERAL
+========================= */
 
 *{
     margin:0;
@@ -20,6 +27,7 @@ body{
     background:#f5f7fa;
     color:#222;
 }
+
 
 /* =========================
    HEADER
@@ -46,6 +54,7 @@ header{
     font-size:28px;
     font-weight:bold;
     color:white;
+    letter-spacing:1px;
 }
 
 .logo span{
@@ -61,6 +70,7 @@ nav a{
     color:white;
     text-decoration:none;
     font-weight:bold;
+    transition:0.3s;
 }
 
 nav a:hover{
@@ -135,10 +145,13 @@ nav a:hover{
     font-weight:bold;
 
     margin:5px;
+
+    transition:0.3s;
 }
 
 .btn:hover{
     background:#0077b6;
+    transform:translateY(-2px);
 }
 
 .btn-whatsapp{
@@ -182,8 +195,7 @@ section{
 .products{
     display:grid;
 
-    grid-template-columns:
-    repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 
     gap:25px;
 }
@@ -213,7 +225,7 @@ section{
 
 
 /* =========================
-   IMAGEN PRODUCTO
+   IMÁGENES
 ========================= */
 
 .product-card img{
@@ -263,7 +275,7 @@ section{
 
 
 /* =========================
-   ⭐ PRECIO CENTRADO ⭐
+   PRECIO CENTRADO
 ========================= */
 
 .price{
@@ -303,6 +315,8 @@ section{
     border-radius:7px;
 
     font-weight:bold;
+
+    transition:0.3s;
 }
 
 .product-btn:hover{
@@ -316,7 +330,6 @@ section{
 
 .offers{
     background:#0b132b;
-
     color:white;
 }
 
@@ -380,8 +393,7 @@ section{
 .services{
     display:grid;
 
-    grid-template-columns:
-    repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 
     gap:25px;
 }
@@ -495,15 +507,12 @@ footer strong{
 
     header{
         flex-direction:column;
-
         gap:15px;
     }
 
     nav{
         flex-wrap:wrap;
-
         justify-content:center;
-
         gap:12px;
     }
 
@@ -631,7 +640,7 @@ tu hogar, negocio o establecimiento.
 <div class="products">
 
 
-<!-- CÁMARA FOCO 2K -->
+<!-- 1. FOCO 2K -->
 
 <div class="product-card">
 
@@ -646,9 +655,8 @@ Cámara Foco 2K
 </h3>
 
 <p>
-Cámara de seguridad tipo foco
-con conexión WiFi y monitoreo
-desde celular.
+Cámara de seguridad tipo foco con conexión
+WiFi y monitoreo desde celular.
 </p>
 
 <div class="price">
@@ -667,7 +675,7 @@ Comprar por WhatsApp
 </div>
 
 
-<!-- CÁMARA 2K -->
+<!-- 2. CÁMARA 2K -->
 
 <div class="product-card">
 
@@ -682,9 +690,8 @@ Cámara 2K
 </h3>
 
 <p>
-Cámara de seguridad con imagen
-2K, ideal para vigilancia del hogar
-y negocio.
+Cámara de seguridad con imagen 2K,
+ideal para vigilancia del hogar y negocio.
 </p>
 
 <div class="price">
@@ -703,7 +710,7 @@ Comprar por WhatsApp
 </div>
 
 
-<!-- POLICÍA 3K -->
+<!-- 3. POLICÍA 3K -->
 
 <div class="product-card">
 
@@ -718,8 +725,8 @@ Cámara Policía 3K
 </h3>
 
 <p>
-Cámara de vigilancia con resolución
-3K para una mejor visualización.
+Cámara de vigilancia con resolución 3K
+para una mejor visualización.
 </p>
 
 <div class="price">
@@ -738,7 +745,7 @@ Comprar por WhatsApp
 </div>
 
 
-<!-- NEGRITA 3K -->
+<!-- 4. NEGRITA 3K -->
 
 <div class="product-card">
 
@@ -753,8 +760,8 @@ Cámara Negrita 3K
 </h3>
 
 <p>
-Cámara compacta de seguridad
-con resolución 3K para vigilancia.
+Cámara compacta de seguridad con resolución
+3K para vigilancia.
 </p>
 
 <div class="price">
@@ -773,7 +780,7 @@ Comprar por WhatsApp
 </div>
 
 
-<!-- PRO 3K -->
+<!-- 5. PRO 3K -->
 
 <div class="product-card">
 
@@ -788,9 +795,8 @@ Cámara Pro 3K
 </h3>
 
 <p>
-Cámara de seguridad Pro con
-resolución 3K para vigilancia
-de alta calidad.
+Cámara de seguridad Pro con resolución 3K
+para vigilancia de alta calidad.
 </p>
 
 <div class="price">
@@ -809,7 +815,7 @@ Comprar por WhatsApp
 </div>
 
 
-<!-- BOCINA 4K -->
+<!-- 6. BOCINA 4K -->
 
 <div class="product-card">
 
@@ -824,9 +830,8 @@ Cámara Bocina 4K
 </h3>
 
 <p>
-Cámara con resolución 4K y
-diseño tipo bocina, ideal para
-vigilancia.
+Cámara con resolución 4K y diseño tipo bocina,
+ideal para vigilancia.
 </p>
 
 <div class="price">
@@ -845,7 +850,7 @@ Comprar por WhatsApp
 </div>
 
 
-<!-- PULPO 4K -->
+<!-- 7. PULPO 4K HD -->
 
 <div class="product-card">
 
@@ -860,9 +865,8 @@ Cámara Pulpo 4K HD
 </h3>
 
 <p>
-Cámara de vigilancia 4K HD
-con diseño moderno para
-diferentes espacios.
+Cámara de vigilancia 4K HD con diseño moderno
+para diferentes espacios.
 </p>
 
 <div class="price">
@@ -881,7 +885,7 @@ Comprar por WhatsApp
 </div>
 
 
-<!-- PANEL SOLAR -->
+<!-- 8. PANEL SOLAR WIFI -->
 
 <div class="product-card">
 
@@ -896,10 +900,8 @@ Cámara con Panel Solar WIFI
 </h3>
 
 <p>
-Cámara WiFi con panel solar,
-ideal para lugares donde se
-necesita vigilancia sin conexión
-eléctrica.
+Cámara WiFi con panel solar, ideal para lugares
+donde se necesita vigilancia sin conexión eléctrica.
 </p>
 
 <div class="price">
@@ -908,6 +910,42 @@ S/ 380
 
 <a
 href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%20con%20Panel%20Solar%20WIFI"
+target="_blank"
+class="product-btn">
+Comprar por WhatsApp
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 9. NUEVA CÁMARA 2 PANELES SOLARES -->
+
+<div class="product-card">
+
+<img
+src="width_1178.png"
+alt="Cámara con 2 paneles solares, chip y 4 lentes">
+
+<div class="product-info">
+
+<h3>
+Cámara con 2 Paneles Solares, Chip y 4 Lentes
+</h3>
+
+<p>
+Cámara de seguridad con 2 paneles solares,
+chip y 4 lentes, ideal para vigilancia
+en exteriores.
+</p>
+
+<div class="price">
+S/ 480
+</div>
+
+<a
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%20con%202%20Paneles%20Solares,%20Chip%20y%204%20Lentes"
 target="_blank"
 class="product-btn">
 Comprar por WhatsApp
@@ -1135,8 +1173,8 @@ Venta de Cámaras
 </h3>
 
 <p>
-Venta de cámaras de seguridad
-WiFi, 2K, 3K y 4K.
+Venta de cámaras de seguridad WiFi,
+2K, 3K y 4K.
 </p>
 
 </div>
@@ -1189,8 +1227,8 @@ Asesoría
 </h3>
 
 <p>
-Te ayudamos a elegir la cámara
-adecuada según tus necesidades.
+Te ayudamos a elegir la cámara adecuada
+según tus necesidades.
 </p>
 
 </div>
@@ -1267,4 +1305,5 @@ Cámaras de seguridad y accesorios.
 
 
 </body>
+
 </html>
