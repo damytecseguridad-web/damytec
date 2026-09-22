@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>DAMYTEC | Cámaras, AirPods y Piscinas</title>
 
 <style>
 
+/* =========================
+   ESTILOS GENERALES
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -20,296 +31,606 @@ body {
     color: #222;
 }
 
+
+/* =========================
+   HEADER
+========================= */
+
 header {
+
     background: #071d2b;
+
     color: white;
-    padding: 18px 7%;
+
+    padding: 18px 5%;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     position: sticky;
+
     top: 0;
+
     z-index: 1000;
+
 }
 
 .logo {
+
     font-size: 28px;
+
     font-weight: bold;
+
 }
 
 .logo span {
+
     color: #00a8e8;
+
 }
 
 nav a {
+
     color: white;
+
     text-decoration: none;
-    margin-left: 18px;
+
+    margin-left: 20px;
+
     font-weight: bold;
+
 }
 
 nav a:hover {
+
     color: #00a8e8;
+
 }
 
+
+/* =========================
+   HERO / FONDO
+========================= */
+
 .hero {
-    background:
-    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-    url("Camara-de-seguridad_-_ZM33-3K-2.png");
 
-    background-size: cover;
-    background-position: center;
-
-    min-height: 430px;
+    min-height: 500px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
+
     color: white;
+
+    padding: 40px;
+
+    position: relative;
+
+    background-image:
+
+        linear-gradient(
+            rgba(0,0,0,.25),
+            rgba(0,0,0,.35)
+        ),
+
+        url("fondo-damytec.png");
+
+    background-size: cover;
+
+    background-position: center bottom;
+
+    background-repeat: no-repeat;
+
+}
+
+.hero-content {
+
+    max-width: 800px;
+
     padding: 30px;
+
 }
 
 .hero h1 {
+
     font-size: 45px;
+
     margin-bottom: 15px;
+
+    text-shadow:
+        2px 2px 8px rgba(0,0,0,.7);
+
 }
 
 .hero p {
-    font-size: 20px;
+
+    font-size: 21px;
+
+    text-shadow:
+        2px 2px 6px rgba(0,0,0,.7);
+
 }
 
+
+/* =========================
+   SECCIONES
+========================= */
+
 section {
+
     padding: 55px 7%;
+
 }
 
 .section-title {
+
     text-align: center;
+
     margin-bottom: 35px;
+
 }
 
 .section-title h2 {
+
     font-size: 32px;
+
     color: #071d2b;
+
 }
 
 .section-title p {
+
     margin-top: 8px;
+
     color: #666;
+
 }
 
+
+/* =========================
+   PRODUCTOS
+========================= */
+
 .product-grid {
+
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
     gap: 25px;
+
 }
 
 .product-card {
+
     background: white;
+
     border-radius: 15px;
+
     overflow: hidden;
-    box-shadow: 0 5px 18px rgba(0,0,0,.10);
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,.10);
 
     display: flex;
+
     flex-direction: column;
 
     transition: .3s;
+
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.15);
+
 }
 
 .product-card img {
+
     width: 100%;
+
     height: 250px;
+
     object-fit: contain;
+
     padding: 15px;
+
     background: white;
+
 }
 
 .product-info {
+
     padding: 20px;
+
     display: flex;
+
     flex-direction: column;
+
     flex-grow: 1;
+
 }
 
 .product-info h3 {
+
     color: #071d2b;
+
     font-size: 19px;
+
     margin-bottom: 10px;
+
 }
 
 .product-info p {
+
     color: #666;
+
     line-height: 1.5;
+
     flex-grow: 1;
+
 }
+
+
+/* =========================
+   PRECIO
+========================= */
 
 .price {
+
     font-size: 25px;
+
     font-weight: bold;
+
     color: #0077b6;
-    margin-top: 5px;
+
+    margin-top: 10px;
+
     margin-bottom: 15px;
+
     text-align: center;
+
     width: 100%;
+
 }
 
+
+/* =========================
+   BOTON WHATSAPP
+========================= */
+
 .product-btn {
+
     display: block;
+
     background: #25D366;
+
     color: white;
+
     text-decoration: none;
+
     text-align: center;
+
     padding: 12px;
+
     border-radius: 8px;
+
     font-weight: bold;
+
+    transition: .3s;
+
 }
 
 .product-btn:hover {
+
     background: #128C7E;
+
 }
 
+
+/* =========================
+   OFERTAS
+========================= */
+
 .offers {
+
     background: #071d2b;
+
     color: white;
+
     text-align: center;
+
 }
 
 .offers h2 {
+
     font-size: 32px;
+
     margin-bottom: 15px;
+
 }
 
+.offers p {
+
+    font-size: 18px;
+
+}
+
+
+/* =========================
+   SERVICIOS
+========================= */
+
 .services {
+
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
     gap: 20px;
+
 }
 
 .service {
+
     background: white;
+
     padding: 30px 20px;
+
     border-radius: 15px;
+
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.08);
+
 }
 
 .service h3 {
+
     margin: 15px 0 10px;
+
+    color: #071d2b;
+
 }
 
 .service p {
+
     color: #666;
+
     line-height: 1.5;
+
 }
 
 .icon {
+
     font-size: 45px;
+
 }
 
+
+/* =========================
+   CONTACTO
+========================= */
+
 .contact {
+
     background: #eaf6fb;
+
     text-align: center;
+
 }
 
 .contact h2 {
+
+    color: #071d2b;
+
     margin-bottom: 15px;
+
 }
 
 .whatsapp-contact {
+
     display: inline-block;
+
     margin-top: 20px;
+
     background: #25D366;
+
     color: white;
+
     padding: 14px 25px;
+
     border-radius: 8px;
+
     text-decoration: none;
+
     font-weight: bold;
+
 }
 
+
+/* =========================
+   FOOTER
+========================= */
+
 footer {
+
     background: #071d2b;
+
     color: white;
+
     text-align: center;
+
     padding: 25px;
+
 }
+
+
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 1000px) {
 
     .product-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
     }
 
     .services {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
     }
 
 }
 
+
+/* =========================
+   CELULAR
+========================= */
+
 @media (max-width: 600px) {
 
     header {
+
         flex-direction: column;
+
         gap: 15px;
+
     }
 
     nav {
+
         text-align: center;
+
     }
 
     nav a {
+
         display: inline-block;
+
         margin: 5px;
+
+    }
+
+    .hero {
+
+        min-height: 430px;
+
     }
 
     .hero h1 {
+
         font-size: 32px;
+
+    }
+
+    .hero p {
+
+        font-size: 18px;
+
     }
 
     .product-grid {
+
         grid-template-columns: 1fr;
+
     }
 
     .services {
+
         grid-template-columns: 1fr;
+
     }
 
 }
 
 </style>
+
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
 <div class="logo">
+
 DAMY<span>TEC</span>
+
 </div>
 
+
 <nav>
-<a href="#inicio">Inicio</a>
-<a href="#camaras">Cámaras</a>
-<a href="#airpods">AirPods</a>
-<a href="#piscinas">Piscinas</a>
-<a href="#servicios">Servicios</a>
-<a href="#contacto">Contacto</a>
+
+<a href="#inicio">
+Inicio
+</a>
+
+<a href="#camaras">
+Cámaras
+</a>
+
+<a href="#airpods">
+AirPods
+</a>
+
+<a href="#piscinas">
+Piscinas
+</a>
+
+<a href="#servicios">
+Servicios
+</a>
+
+<a href="#contacto">
+Contacto
+</a>
+
 </nav>
 
 </header>
 
 
-<!-- INICIO -->
 
-<section class="hero" id="inicio">
+<!-- =========================
+     INICIO
+========================= -->
 
-<div>
+<section
+class="hero"
+id="inicio"
+>
 
-<h1>Seguridad y Tecnología</h1>
+<div class="hero-content">
+
+<h1>
+Seguridad y Tecnología
+</h1>
 
 <p>
 Cámaras de seguridad, AirPods y piscinas Bestway
@@ -320,13 +641,18 @@ Cámaras de seguridad, AirPods y piscinas Bestway
 </section>
 
 
-<!-- ==================== CAMARAS ==================== -->
+
+<!-- =========================
+     CAMARAS
+========================= -->
 
 <section id="camaras">
 
 <div class="section-title">
 
-<h2>📷 Cámaras de Seguridad</h2>
+<h2>
+📷 Cámaras de Seguridad
+</h2>
 
 <p>
 Encuentra la cámara ideal para tu hogar o negocio
@@ -334,34 +660,44 @@ Encuentra la cámara ideal para tu hogar o negocio
 
 </div>
 
+
 <div class="product-grid">
 
 
-<!-- CAMARA FOCO -->
+<!-- CAMARA FOCO 2K -->
 
 <div class="product-card">
 
-<img src="w=800,h=800,fit=pad.webp"
-alt="Cámara Foco 2K">
+<img
+src="w=800,h=800,fit=pad.webp"
+alt="Cámara Foco 2K"
+>
 
 <div class="product-info">
 
-<h3>Cámara Foco 2K</h3>
+<h3>
+Cámara Foco 2K
+</h3>
 
 <p>
 Cámara tipo foco con resolución 2K,
 ideal para vigilancia del hogar.
 </p>
 
-<div class="price">S/ 200</div>
+<div class="price">
+S/ 200
+</div>
 
-<a href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%20Foco%202K"
+<a
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%20Foco%202K"
 target="_blank"
-class="product-btn">
+class="product-btn"
+>
 Comprar por WhatsApp
 </a>
 
 </div>
+
 </div>
 
 
@@ -369,199 +705,268 @@ Comprar por WhatsApp
 
 <div class="product-card">
 
-<img src="image (4).png"
-alt="Cámara 2K">
+<img
+src="image (4).png"
+alt="Cámara 2K"
+>
 
 <div class="product-info">
 
-<h3>Cámara 2K</h3>
+<h3>
+Cámara 2K
+</h3>
 
 <p>
-Cámara de seguridad con buena calidad
-de imagen para vigilancia.
+Cámara de seguridad con buena
+calidad de imagen para vigilancia.
 </p>
 
-<div class="price">S/ 240</div>
+<div class="price">
+S/ 240
+</div>
 
-<a href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%202K"
+<a
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%202K"
 target="_blank"
-class="product-btn">
+class="product-btn"
+>
 Comprar por WhatsApp
 </a>
 
 </div>
+
 </div>
 
 
-<!-- POLICIA -->
+<!-- CAMARA POLICIA 3K -->
 
 <div class="product-card">
 
-<img src="image (3).png"
-alt="Cámara Policía 3K">
+<img
+src="image (3).png"
+alt="Cámara Policía 3K"
+>
 
 <div class="product-info">
 
-<h3>Cámara Policía 3K</h3>
+<h3>
+Cámara Policía 3K
+</h3>
 
 <p>
-Cámara de vigilancia con resolución 3K.
+Cámara de vigilancia con resolución 3K,
+ideal para vigilancia.
 </p>
 
-<div class="price">S/ 290</div>
+<div class="price">
+S/ 290
+</div>
 
-<a href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%20Policía%203K"
+<a
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%20Policía%203K"
 target="_blank"
-class="product-btn">
+class="product-btn"
+>
 Comprar por WhatsApp
 </a>
 
 </div>
+
 </div>
 
 
-<!-- NEGRITA -->
+<!-- CAMARA NEGRITA -->
 
 <div class="product-card">
 
-<img src="5ec66464-4284-45bd-bb95-530dddfa2f40.jpg"
-alt="Cámara Negrita 3K">
+<img
+src="5ec66464-4284-45bd-bb95-530dddfa2f40.jpg"
+alt="Cámara Negrita 3K"
+>
 
 <div class="product-info">
 
-<h3>Cámara Negrita 3K</h3>
+<h3>
+Cámara Negrita 3K
+</h3>
 
 <p>
-Cámara compacta con resolución 3K.
+Cámara compacta con resolución 3K
+para vigilancia.
 </p>
 
-<div class="price">S/ 290</div>
+<div class="price">
+S/ 290
+</div>
 
-<a href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%20Negrita%203K"
+<a
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%20Negrita%203K"
 target="_blank"
-class="product-btn">
+class="product-btn"
+>
 Comprar por WhatsApp
 </a>
 
 </div>
+
 </div>
 
 
-<!-- PRO -->
+<!-- CAMARA PRO -->
 
 <div class="product-card">
 
-<img src="c003e327-4272-4a16-b699-2e5d566e58a5.jpg"
-alt="Cámara Pro 3K">
+<img
+src="c003e327-4272-4a16-b699-2e5d566e58a5.jpg"
+alt="Cámara Pro 3K"
+>
 
 <div class="product-info">
 
-<h3>Cámara Pro 3K</h3>
+<h3>
+Cámara Pro 3K
+</h3>
 
 <p>
-Cámara de seguridad con resolución 3K.
+Cámara de seguridad con resolución 3K
+para vigilancia continua.
 </p>
 
-<div class="price">S/ 290</div>
+<div class="price">
+S/ 290
+</div>
 
-<a href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%20Pro%203K"
+<a
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%20Pro%203K"
 target="_blank"
-class="product-btn">
+class="product-btn"
+>
 Comprar por WhatsApp
 </a>
 
 </div>
+
 </div>
 
 
-<!-- BOCINA -->
+<!-- CAMARA BOCINA -->
 
 <div class="product-card">
 
-<img src="image (1).png"
-alt="Cámara Bocina 4K">
+<img
+src="image (1).png"
+alt="Cámara Bocina 4K"
+>
 
 <div class="product-info">
 
-<h3>Cámara Bocina 4K</h3>
+<h3>
+Cámara Bocina 4K
+</h3>
 
 <p>
 Cámara de seguridad con resolución 4K.
 </p>
 
-<div class="price">S/ 300</div>
+<div class="price">
+S/ 300
+</div>
 
-<a href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%20Bocina%204K"
+<a
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%20Bocina%204K"
 target="_blank"
-class="product-btn">
+class="product-btn"
+>
 Comprar por WhatsApp
 </a>
 
 </div>
+
 </div>
 
 
-<!-- PULPO -->
+<!-- CAMARA PULPO -->
 
 <div class="product-card">
 
-<img src="image (2).png"
-alt="Cámara Pulpo 4K HD">
+<img
+src="image (2).png"
+alt="Cámara Pulpo 4K HD"
+>
 
 <div class="product-info">
 
-<h3>Cámara Pulpo 4K HD</h3>
+<h3>
+Cámara Pulpo 4K HD
+</h3>
 
 <p>
-Cámara de seguridad 4K HD.
+Cámara de seguridad 4K HD
+para vigilancia.
 </p>
 
-<div class="price">S/ 380</div>
+<div class="price">
+S/ 380
+</div>
 
-<a href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%20Pulpo%204K%20HD"
+<a
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%20Pulpo%204K%20HD"
 target="_blank"
-class="product-btn">
+class="product-btn"
+>
 Comprar por WhatsApp
 </a>
 
 </div>
+
 </div>
 
 
-<!-- PANEL SOLAR -->
+<!-- CAMARA PANEL SOLAR -->
 
 <div class="product-card">
 
-<img src="image (7).png"
-alt="Cámara con panel solar WIFI">
+<img
+src="image (7).png"
+alt="Cámara con Panel Solar WIFI"
+>
 
 <div class="product-info">
 
-<h3>Cámara con Panel Solar WIFI</h3>
+<h3>
+Cámara con Panel Solar WIFI
+</h3>
 
 <p>
-Cámara inalámbrica con panel solar
-para exteriores.
+Cámara inalámbrica con panel solar,
+ideal para exteriores.
 </p>
 
-<div class="price">S/ 380</div>
+<div class="price">
+S/ 380
+</div>
 
-<a href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%20con%20Panel%20Solar%20WIFI"
+<a
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%20con%20Panel%20Solar%20WIFI"
 target="_blank"
-class="product-btn">
+class="product-btn"
+>
 Comprar por WhatsApp
 </a>
 
 </div>
+
 </div>
 
 
-<!-- 2 PANELES -->
+<!-- CAMARA 2 PANELES -->
 
 <div class="product-card">
 
-<img src="width_1178.png"
-alt="Cámara con 2 paneles solares">
+<img
+src="width_1178.png"
+alt="Cámara con 2 paneles solares, chip y 4 lentes"
+>
 
 <div class="product-info">
 
@@ -575,27 +980,38 @@ Cámara de seguridad con 2 paneles
 solares, chip y 4 lentes.
 </p>
 
-<div class="price">S/ 480</div>
+<div class="price">
+S/ 480
+</div>
 
-<a href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%20con%202%20Paneles%20Solares,%20Chip%20y%204%20Lentes"
+<a
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Cámara%20con%202%20Paneles%20Solares,%20Chip%20y%204%20Lentes"
 target="_blank"
-class="product-btn">
+class="product-btn"
+>
 Comprar por WhatsApp
 </a>
 
 </div>
+
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- ==================== OFERTA ==================== -->
+
+<!-- =========================
+     OFERTAS
+========================= -->
 
 <section class="offers">
 
-<h2>🔥 Ofertas DAMYTEC</h2>
+<h2>
+🔥 Ofertas DAMYTEC
+</h2>
 
 <p>
 Productos a precios especiales hasta agotar stock.
@@ -604,19 +1020,25 @@ Productos a precios especiales hasta agotar stock.
 </section>
 
 
-<!-- ==================== AIRPODS ==================== -->
+
+<!-- =========================
+     AIRPODS
+========================= -->
 
 <section id="airpods">
 
 <div class="section-title">
 
-<h2>🎧 AirPods</h2>
+<h2>
+🎧 AirPods
+</h2>
 
 <p>
 Audífonos disponibles en DAMYTEC.
 </p>
 
 </div>
+
 
 <div class="product-grid">
 
@@ -625,8 +1047,10 @@ Audífonos disponibles en DAMYTEC.
 
 <div class="product-card">
 
-<img src="image (5).png"
-alt="AirPods 4ta Generación">
+<img
+src="image (5).png"
+alt="AirPods 4ta Generación"
+>
 
 <div class="product-info">
 
@@ -639,15 +1063,20 @@ Audífonos inalámbricos con diseño moderno,
 ideales para música y llamadas.
 </p>
 
-<div class="price">S/ 110</div>
+<div class="price">
+S/ 110
+</div>
 
-<a href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20los%20AirPods%204ta%20Generación"
+<a
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20los%20AirPods%204ta%20Generación"
 target="_blank"
-class="product-btn">
+class="product-btn"
+>
 Comprar
 </a>
 
 </div>
+
 </div>
 
 
@@ -655,8 +1084,10 @@ Comprar
 
 <div class="product-card">
 
-<img src="image (6).png"
-alt="AirPods 3ra Generación">
+<img
+src="image (6).png"
+alt="AirPods 3ra Generación"
+>
 
 <div class="product-info">
 
@@ -669,35 +1100,47 @@ Audífonos inalámbricos con diseño cómodo,
 ideales para música y llamadas.
 </p>
 
-<div class="price">S/ 140</div>
+<div class="price">
+S/ 140
+</div>
 
-<a href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20los%20AirPods%203ra%20Generación"
+<a
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20los%20AirPods%203ra%20Generación"
 target="_blank"
-class="product-btn">
+class="product-btn"
+>
 Comprar
 </a>
 
 </div>
+
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- ==================== PISCINAS ==================== -->
+
+<!-- =========================
+     PISCINAS
+========================= -->
 
 <section id="piscinas">
 
 <div class="section-title">
 
-<h2>🏊 Piscinas Bestway</h2>
+<h2>
+🏊 Piscinas Bestway
+</h2>
 
 <p>
 Piscinas para disfrutar este verano en familia.
 </p>
 
 </div>
+
 
 <div class="product-grid">
 
@@ -706,29 +1149,37 @@ Piscinas para disfrutar este verano en familia.
 
 <div class="product-card">
 
-<img src="piscina-259.jpg"
-alt="Piscina Bestway 2.59 x 1.70 x 61 cm">
+<img
+src="piscina-259.jpg"
+alt="Piscina Bestway 2.59 x 1.70 x 61 cm"
+>
 
 <div class="product-info">
 
 <h3>
-Piscina Bestway 2.59 × 1.70 × 61 cm
+Piscina Bestway
+2.59 × 1.70 × 61 cm
 </h3>
 
 <p>
-Piscina armable Bestway, ideal para
-disfrutar en familia.
+Piscina armable Bestway,
+ideal para disfrutar en familia.
 </p>
 
-<div class="price">S/ 380</div>
+<div class="price">
+S/ 380
+</div>
 
-<a href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Piscina%20Bestway%202.59%20x%201.70%20x%2061%20cm"
+<a
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Piscina%20Bestway%202.59%20x%201.70%20x%2061%20cm"
 target="_blank"
-class="product-btn">
+class="product-btn"
+>
 Comprar por WhatsApp
 </a>
 
 </div>
+
 </div>
 
 
@@ -736,43 +1187,57 @@ Comprar por WhatsApp
 
 <div class="product-card">
 
-<img src="piscina-300.jpg"
-alt="Piscina Bestway 3.00 x 2.01 x 66 cm">
+<img
+src="piscina-300.jpg"
+alt="Piscina Bestway 3.00 x 2.01 x 66 cm"
+>
 
 <div class="product-info">
 
 <h3>
-Piscina Bestway 3.00 × 2.01 × 66 cm
+Piscina Bestway
+3.00 × 2.01 × 66 cm
 </h3>
 
 <p>
-Piscina armable Bestway, ideal para
-disfrutar en familia.
+Piscina armable Bestway,
+ideal para disfrutar en familia.
 </p>
 
-<div class="price">S/ 450</div>
+<div class="price">
+S/ 450
+</div>
 
-<a href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Piscina%20Bestway%203.00%20x%202.01%20x%2066%20cm"
+<a
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20comprar%20la%20Piscina%20Bestway%203.00%20x%202.01%20x%2066%20cm"
 target="_blank"
-class="product-btn">
+class="product-btn"
+>
 Comprar por WhatsApp
 </a>
 
 </div>
+
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- ==================== SERVICIOS ==================== -->
+
+<!-- =========================
+     SERVICIOS
+========================= -->
 
 <section id="servicios">
 
 <div class="section-title">
 
-<h2>🛠️ Nuestros Servicios</h2>
+<h2>
+🛠️ Nuestros Servicios
+</h2>
 
 <p>
 Soluciones completas para tu seguridad.
@@ -780,13 +1245,19 @@ Soluciones completas para tu seguridad.
 
 </div>
 
+
 <div class="services">
+
 
 <div class="service">
 
-<div class="icon">📷</div>
+<div class="icon">
+📷
+</div>
 
-<h3>Venta de Cámaras</h3>
+<h3>
+Venta de Cámaras
+</h3>
 
 <p>
 Cámaras para hogares y negocios.
@@ -794,11 +1265,16 @@ Cámaras para hogares y negocios.
 
 </div>
 
+
 <div class="service">
 
-<div class="icon">🔧</div>
+<div class="icon">
+🔧
+</div>
 
-<h3>Instalación</h3>
+<h3>
+Instalación
+</h3>
 
 <p>
 Instalación de cámaras de seguridad.
@@ -806,11 +1282,16 @@ Instalación de cámaras de seguridad.
 
 </div>
 
+
 <div class="service">
 
-<div class="icon">📱</div>
+<div class="icon">
+📱
+</div>
 
-<h3>Configuración</h3>
+<h3>
+Configuración
+</h3>
 
 <p>
 Configuración de cámaras y aplicaciones.
@@ -818,11 +1299,16 @@ Configuración de cámaras y aplicaciones.
 
 </div>
 
+
 <div class="service">
 
-<div class="icon">💡</div>
+<div class="icon">
+💡
+</div>
 
-<h3>Asesoría</h3>
+<h3>
+Asesoría
+</h3>
 
 <p>
 Te ayudamos a elegir el producto adecuado.
@@ -830,25 +1316,36 @@ Te ayudamos a elegir el producto adecuado.
 
 </div>
 
+
 </div>
 
 </section>
 
 
-<!-- ==================== CONTACTO ==================== -->
 
-<section class="contact" id="contacto">
+<!-- =========================
+     CONTACTO
+========================= -->
 
-<h2>📞 ¿Quieres comprar?</h2>
+<section
+class="contact"
+id="contacto"
+>
+
+<h2>
+📞 ¿Quieres comprar?
+</h2>
 
 <p>
 Comunícate con DAMYTEC por WhatsApp.
 </p>
 
+
 <a
 href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20información%20sobre%20sus%20productos"
 target="_blank"
-class="whatsapp-contact">
+class="whatsapp-contact"
+>
 
 💬 Contactar por WhatsApp
 
@@ -856,6 +1353,11 @@ class="whatsapp-contact">
 
 </section>
 
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -865,5 +1367,7 @@ class="whatsapp-contact">
 
 </footer>
 
+
 </body>
+
 </html>
