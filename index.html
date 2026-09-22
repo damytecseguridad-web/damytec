@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>DAMYTEC | Cámaras de Seguridad y Accesorios</title>
@@ -21,20 +24,22 @@
             color: #222;
         }
 
-        /* =========================
-           HEADER
-        ========================= */
+        /* HEADER */
 
         header {
             position: sticky;
             top: 0;
             z-index: 1000;
+
             background: #0b132b;
             color: white;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             padding: 15px 7%;
+
             box-shadow: 0 3px 10px rgba(0,0,0,0.25);
         }
 
@@ -65,16 +70,17 @@
             color: #00b4d8;
         }
 
-        /* =========================
-           HERO
-        ========================= */
+        /* HERO */
 
         .hero {
             min-height: 620px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             text-align: center;
+
             padding: 50px 20px;
 
             background:
@@ -108,19 +114,25 @@
             margin-bottom: 30px;
         }
 
-        /* =========================
-           BOTONES
-        ========================= */
+        /* BOTONES */
 
         .btn {
             display: inline-block;
+
             background: #00b4d8;
+
             color: white;
+
             padding: 15px 28px;
+
             border-radius: 8px;
+
             text-decoration: none;
+
             font-weight: bold;
+
             transition: 0.3s;
+
             margin: 5px;
         }
 
@@ -137,9 +149,7 @@
             background: #1da851;
         }
 
-        /* =========================
-           SECCIONES
-        ========================= */
+        /* SECCIONES */
 
         section {
             padding: 70px 7%;
@@ -161,23 +171,25 @@
             font-size: 17px;
         }
 
-        /* =========================
-           PRODUCTOS
-        ========================= */
+        /* PRODUCTOS */
 
         .products {
             display: grid;
-            grid-template-columns: repeat(
-                auto-fit,
-                minmax(240px, 1fr)
-            );
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(240px, 1fr)
+                );
 
             gap: 25px;
         }
 
         .product-card {
             background: white;
+
             border-radius: 15px;
+
             overflow: hidden;
 
             box-shadow:
@@ -198,9 +210,13 @@
 
         .product-card img {
             width: 100%;
+
             height: 250px;
+
             object-fit: contain;
+
             background: white;
+
             padding: 15px;
         }
 
@@ -208,6 +224,7 @@
             padding: 20px;
 
             display: flex;
+
             flex-direction: column;
 
             flex-grow: 1;
@@ -215,41 +232,45 @@
 
         .product-info h3 {
             color: #0b132b;
+
             font-size: 21px;
+
             margin-bottom: 10px;
         }
 
         .product-info p {
             color: #666;
+
             line-height: 1.5;
+
             margin-bottom: 15px;
 
             flex-grow: 1;
         }
 
-        /* =========================
-           PRECIO CENTRADO
-        ========================= */
+        /* PRECIO */
 
         .price {
             font-size: 25px;
+
             font-weight: bold;
+
             color: #0077b6;
 
             margin-bottom: 15px;
 
-            text-align: center;
+            text-align: left;
         }
 
-        /* =========================
-           BOTÓN PRODUCTO
-        ========================= */
+        /* BOTÓN DE PRODUCTO */
 
         .product-btn {
             display: block;
+
             text-align: center;
 
             background: #25d366;
+
             color: white;
 
             text-decoration: none;
@@ -265,9 +286,7 @@
             background: #1da851;
         }
 
-        /* =========================
-           OFERTAS
-        ========================= */
+        /* OFERTAS */
 
         .offers {
             background: #0b132b;
@@ -284,6 +303,7 @@
 
         .offer-box {
             background: white;
+
             color: #222;
 
             max-width: 900px;
@@ -302,27 +322,27 @@
 
         .offer-box h3 {
             color: #0077b6;
+
             font-size: 30px;
+
             margin-bottom: 15px;
         }
 
         .offer-box p {
             font-size: 18px;
+
             line-height: 1.6;
+
             margin-bottom: 20px;
         }
 
-        /* =========================
-           AIRPODS
-        ========================= */
+        /* AIRPODS */
 
         #airpods {
             background: #eef7fb;
         }
 
-        /* =========================
-           SERVICIOS
-        ========================= */
+        /* SERVICIOS */
 
         .services {
             display: grid;
@@ -351,25 +371,27 @@
 
         .service-icon {
             font-size: 45px;
+
             margin-bottom: 15px;
         }
 
         .service h3 {
             color: #0b132b;
+
             margin-bottom: 10px;
         }
 
         .service p {
             color: #666;
+
             line-height: 1.5;
         }
 
-        /* =========================
-           CONTACTO
-        ========================= */
+        /* CONTACTO */
 
         .contact {
             background: #0b132b;
+
             color: white;
 
             text-align: center;
@@ -377,26 +399,29 @@
 
         .contact h2 {
             font-size: 38px;
+
             margin-bottom: 15px;
         }
 
         .contact p {
             font-size: 18px;
+
             margin-bottom: 20px;
+
             line-height: 1.6;
         }
 
         .contact-info {
             margin: 25px 0;
+
             font-size: 18px;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
+        /* FOOTER */
 
         footer {
             background: #050914;
+
             color: #aaa;
 
             text-align: center;
@@ -408,9 +433,7 @@
             color: white;
         }
 
-        /* =========================
-           TABLET
-        ========================= */
+        /* TABLET */
 
         @media (max-width: 800px) {
 
@@ -421,7 +444,9 @@
 
             nav {
                 flex-wrap: wrap;
+
                 justify-content: center;
+
                 gap: 15px;
             }
 
@@ -439,9 +464,7 @@
 
         }
 
-        /* =========================
-           CELULAR
-        ========================= */
+        /* CELULAR */
 
         @media (max-width: 500px) {
 
@@ -472,9 +495,12 @@
         }
 
     </style>
+
 </head>
 
+
 <body>
+
 
 <!-- =========================
      HEADER
@@ -488,29 +514,17 @@
 
     <nav>
 
-        <a href="#inicio">
-            Inicio
-        </a>
+        <a href="#inicio">Inicio</a>
 
-        <a href="#productos">
-            Productos
-        </a>
+        <a href="#productos">Productos</a>
 
-        <a href="#ofertas">
-            Ofertas
-        </a>
+        <a href="#ofertas">Ofertas</a>
 
-        <a href="#airpods">
-            AirPods
-        </a>
+        <a href="#airpods">AirPods</a>
 
-        <a href="#servicios">
-            Servicios
-        </a>
+        <a href="#servicios">Servicios</a>
 
-        <a href="#contacto">
-            Contacto
-        </a>
+        <a href="#contacto">Contacto</a>
 
     </nav>
 
@@ -580,7 +594,7 @@
     <div class="products">
 
 
-        <!-- 1. FOCO 2K -->
+        <!-- CÁMARA FOCO 2K -->
 
         <div class="product-card">
 
@@ -618,7 +632,7 @@
         </div>
 
 
-        <!-- 2. CÁMARA 2K -->
+        <!-- CÁMARA 2K -->
 
         <div class="product-card">
 
@@ -656,7 +670,7 @@
         </div>
 
 
-        <!-- 3. POLICÍA 3K -->
+        <!-- CÁMARA POLICÍA 3K -->
 
         <div class="product-card">
 
@@ -693,7 +707,7 @@
         </div>
 
 
-        <!-- 4. NEGRITA 3K -->
+        <!-- CÁMARA NEGRITA 3K -->
 
         <div class="product-card">
 
@@ -730,7 +744,7 @@
         </div>
 
 
-        <!-- 5. PRO 3K -->
+        <!-- CÁMARA PRO 3K -->
 
         <div class="product-card">
 
@@ -768,7 +782,7 @@
         </div>
 
 
-        <!-- 6. BOCINA 4K -->
+        <!-- CÁMARA BOCINA 4K -->
 
         <div class="product-card">
 
@@ -806,7 +820,7 @@
         </div>
 
 
-        <!-- 7. PULPO 4K -->
+        <!-- CÁMARA PULPO 4K HD -->
 
         <div class="product-card">
 
@@ -844,7 +858,7 @@
         </div>
 
 
-        <!-- 8. PANEL SOLAR -->
+        <!-- CÁMARA PANEL SOLAR -->
 
         <div class="product-card">
 
@@ -1245,4 +1259,5 @@
 
 
 </body>
+
 </html>
