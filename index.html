@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>DAMYTEC | Cámaras de Seguridad</title>
@@ -12,10 +9,10 @@
 <style>
 
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial, sans-serif;
 }
 
 html{
@@ -27,7 +24,7 @@ body{
     color:#172033;
 }
 
-/* ================= HEADER ================= */
+/* MENU */
 
 header{
     background:white;
@@ -52,12 +49,12 @@ header{
 
 nav{
     display:flex;
-    gap:30px;
+    gap:28px;
 }
 
 nav a{
-    color:#222;
     text-decoration:none;
+    color:#222;
     font-weight:bold;
 }
 
@@ -65,14 +62,13 @@ nav a:hover{
     color:#00a9e8;
 }
 
-/* ================= HERO ================= */
+/* FONDO PRINCIPAL */
 
 .hero{
-
-    min-height:520px;
+    min-height:600px;
 
     background:
-    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),
     url("Camara-de-seguridad_-ZM33-3K-2.png");
 
     background-size:cover;
@@ -83,18 +79,17 @@ nav a:hover{
     align-items:center;
 
     text-align:center;
-
     color:white;
 
     padding:40px 20px;
 }
 
 .hero-content{
-    max-width:850px;
+    max-width:900px;
 }
 
 .hero h1{
-    font-size:55px;
+    font-size:52px;
     margin-bottom:20px;
 }
 
@@ -117,309 +112,172 @@ nav a:hover{
     border-radius:8px;
     font-weight:bold;
     margin:5px;
-    transition:.2s;
 }
 
 .btn:hover{
     background:#008bc1;
-    transform:translateY(-2px);
 }
 
-/* ================= SECCIONES ================= */
+/* SECCIONES */
 
 section{
     padding:70px 6%;
 }
 
-.title{
+.titulo{
     text-align:center;
     font-size:38px;
-    margin-bottom:12px;
+    margin-bottom:10px;
 }
 
-.subtitle{
+.subtitulo{
     text-align:center;
     color:#666;
-    margin-bottom:45px;
-    font-size:18px;
+    margin-bottom:40px;
 }
 
-/* ================= PRODUCTOS ================= */
+/* PRODUCTOS */
 
-.products{
-
+.productos{
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
     gap:25px;
-
     max-width:1250px;
-
     margin:auto;
 }
 
-.card{
-
+.producto{
     background:white;
-
     border-radius:16px;
-
-    overflow:hidden;
-
-    box-shadow:0 5px 20px rgba(0,0,0,.10);
-
     padding:18px;
-
     text-align:center;
-
+    box-shadow:0 5px 20px rgba(0,0,0,.10);
     transition:.3s;
 }
 
-.card:hover{
-    transform:translateY(-7px);
-    box-shadow:0 10px 25px rgba(0,0,0,.16);
+.producto:hover{
+    transform:translateY(-6px);
 }
 
-.card img{
-
+.producto img{
     width:100%;
-
-    height:230px;
-
+    height:220px;
     object-fit:contain;
-
-    background:#fff;
-
     border-radius:10px;
-
-    margin-bottom:15px;
 }
 
-.card h3{
-    font-size:21px;
-    margin-bottom:10px;
+.producto h3{
+    font-size:20px;
+    margin:15px 0 8px;
 }
 
-.card .description{
-
+.producto p{
     color:#666;
-
     line-height:1.5;
-
-    min-height:65px;
-
-    font-size:15px;
+    min-height:48px;
 }
 
-.price{
-
+.precio{
     color:#00a9e8;
-
     font-size:28px;
-
-    font-weight:800;
-
-    margin:18px 0 10px;
-}
-
-.memory{
-
-    display:inline-block;
-
-    background:#eef8fc;
-
-    color:#007fae;
-
-    padding:6px 12px;
-
-    border-radius:20px;
-
-    font-size:13px;
-
     font-weight:bold;
-
-    margin-bottom:10px;
+    margin:18px 0;
 }
 
-/* ================= OFERTA ================= */
+.memoria{
+    display:inline-block;
+    background:#eaf8fc;
+    color:#007fae;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
 
-.offer{
+/* OFERTAS */
 
+.ofertas{
     background:#111827;
-
     color:white;
-
     text-align:center;
 }
 
-.offer h2{
-
-    font-size:40px;
-
-    margin-bottom:15px;
-
+.ofertas h2{
     color:#00b8f0;
+    font-size:38px;
+    margin-bottom:15px;
 }
 
-.offer p{
-
-    font-size:19px;
-
-    margin-bottom:25px;
-
+.ofertas p{
+    margin-bottom:20px;
     color:#ddd;
 }
 
-/* ================= SERVICIOS ================= */
+/* AIRPODS */
 
-.services{
+.airpods{
+    background:white;
+}
 
+.airpod-icon{
+    font-size:100px;
+    height:220px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* SERVICIOS */
+
+.servicios{
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:25px;
-
     max-width:1100px;
-
     margin:auto;
 }
 
-.service{
-
+.servicio{
     background:white;
-
-    padding:30px 20px;
-
+    padding:30px;
     border-radius:15px;
-
     text-align:center;
-
     box-shadow:0 4px 15px rgba(0,0,0,.08);
 }
 
-.service-icon{
-
+.servicio-icon{
     font-size:45px;
-
-    margin-bottom:15px;
 }
 
-.service h3{
-
+.servicio h3{
     color:#00a9e8;
-
-    margin-bottom:10px;
+    margin:12px;
 }
 
-.service p{
-
+.servicio p{
     color:#666;
-
     line-height:1.5;
 }
 
-/* ================= COMO COMPRAR ================= */
+/* CONTACTO */
 
-.how{
-
-    background:white;
-
-    text-align:center;
-}
-
-.steps{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(180px,1fr));
-
-    max-width:1000px;
-
-    margin:40px auto 0;
-
-    gap:25px;
-}
-
-.step{
-
-    padding:20px;
-}
-
-.number{
-
-    width:60px;
-    height:60px;
-
-    border-radius:50%;
-
-    background:#00a9e8;
-
-    color:white;
-
-    display:flex;
-
-    justify-content:center;
-    align-items:center;
-
-    margin:0 auto 15px;
-
-    font-size:24px;
-
-    font-weight:bold;
-}
-
-.step h3{
-    margin-bottom:8px;
-}
-
-.step p{
-    color:#666;
-}
-
-/* ================= CONTACTO ================= */
-
-.contact{
-
+.contacto{
     background:#edf8fc;
-
     text-align:center;
 }
 
-.contact h2{
-    margin-bottom:20px;
-}
-
-.contact p{
-
-    font-size:18px;
-
+.contacto p{
     margin:10px;
+    font-size:18px;
 }
 
-.contact-info{
-
-    margin:25px auto;
-
-    max-width:600px;
-}
-
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer{
-
     background:#111827;
-
     color:white;
-
     text-align:center;
-
-    padding:30px 20px;
-
+    padding:30px;
     line-height:1.8;
 }
 
@@ -427,7 +285,7 @@ footer strong{
     color:#00b8f0;
 }
 
-/* ================= CELULAR ================= */
+/* CELULAR */
 
 @media(max-width:700px){
 
@@ -442,670 +300,603 @@ footer strong{
         justify-content:center;
     }
 
-    nav a{
-        font-size:14px;
-    }
-
     .hero h1{
-        font-size:38px;
+        font-size:36px;
     }
 
     .hero p{
         font-size:17px;
     }
 
-    .title{
+    .titulo{
         font-size:30px;
     }
 
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- ================= MENU ================= -->
+<!-- MENU -->
 
 <header>
 
-    <div class="logo">
-        DAMY<span>TEC</span>
-    </div>
+<div class="logo">
+DAMY<span>TEC</span>
+</div>
 
-    <nav>
+<nav>
 
-        <a href="#inicio">Inicio</a>
+<a href="#inicio">Inicio</a>
+<a href="#productos">Productos</a>
+<a href="#ofertas">Ofertas</a>
+<a href="#airpods">AirPods</a>
+<a href="#servicios">Servicios</a>
+<a href="#contacto">Contacto</a>
 
-        <a href="#productos">Productos</a>
-
-        <a href="#ofertas">Ofertas</a>
-
-        <a href="#servicios">Servicios</a>
-
-        <a href="#contacto">Contacto</a>
-
-    </nav>
+</nav>
 
 </header>
 
 
-<!-- ================= INICIO ================= -->
+<!-- INICIO -->
 
 <section class="hero" id="inicio">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <h1>
-            DAMYTEC -
-            <span>Seguridad que te da tranquilidad</span>
-        </h1>
+<h1>
+DAMYTEC -
+<span>Seguridad para ti</span>
+</h1>
 
-        <p>
-            Venta e instalación de cámaras de seguridad WiFi
-            para hogares, negocios, oficinas y almacenes.
-        </p>
+<p>
+Venta e instalación de cámaras de seguridad WiFi
+para hogares, negocios, oficinas y almacenes.
+</p>
 
-        <a
-        class="btn"
-        href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20cotizar%20una%20cámara">
-            💬 COTIZAR POR WHATSAPP
-        </a>
+<a
+class="btn"
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20cotizar%20una%20cámara">
+💬 COTIZAR POR WHATSAPP
+</a>
 
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= PRODUCTOS ================= -->
+<!-- PRODUCTOS -->
 
 <section id="productos">
 
-    <h2 class="title">
-        📷 Nuestros productos
-    </h2>
+<h2 class="titulo">
+📷 Cámaras de Seguridad
+</h2>
 
-    <p class="subtitle">
-        Cámaras de seguridad con memoria incluida
-    </p>
+<p class="subtitulo">
+Cámaras + memoria
+</p>
 
 
-    <div class="products">
+<div class="productos">
 
 
-        <!-- 1 -->
+<!-- FOCO 2K -->
 
-        <div class="card">
+<div class="producto">
 
-            <img src="w=800,h=800,fit=pad.webp">
+<img src="w=800,h=800,fit=pad.webp">
 
-            <h3>
-                Cámara Foco 2K
-            </h3>
+<h3>Cámara Foco 2K</h3>
 
-            <p class="description">
-                Cámara tipo foco WiFi para vigilancia
-                y visualización desde tu celular.
-            </p>
+<p>
+Cámara tipo foco con conexión WiFi
+para vigilancia desde el celular.
+</p>
 
-            <span class="memory">
-                ✓ Cámara + memoria
-            </span>
+<span class="memoria">
+CÁMARA + MEMORIA
+</span>
 
-            <div class="price">
-                S/ 200
-            </div>
+<div class="precio">
+S/ 200
+</div>
 
-            <a
-            class="btn"
-            href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20la%20Cámara%20Foco%202K%20de%20S%2F%20200">
-                COMPRAR
-            </a>
+<a class="btn"
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20la%20Cámara%20Foco%202K">
+COMPRAR
+</a>
 
-        </div>
+</div>
 
 
-        <!-- 2 -->
+<!-- 2K -->
 
-        <div class="card">
+<div class="producto">
 
-            <img src="Camara-de-seguridad_-ZM33-3K-2.png">
+<img src="Camara-de-seguridad_-ZM33-3K-2.png">
 
-            <h3>
-                Cámara 2K
-            </h3>
+<h3>Cámara 2K</h3>
 
-            <p class="description">
-                Cámara WiFi 2K para vigilancia
-                de hogares y negocios.
-            </p>
+<p>
+Cámara WiFi para vigilancia
+de hogares y negocios.
+</p>
 
-            <span class="memory">
-                ✓ Cámara + memoria
-            </span>
+<span class="memoria">
+CÁMARA + MEMORIA
+</span>
 
-            <div class="price">
-                S/ 240
-            </div>
+<div class="precio">
+S/ 240
+</div>
 
-            <a
-            class="btn"
-            href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20la%20Cámara%202K%20de%20S%2F%20240">
-                COMPRAR
-            </a>
+<a class="btn"
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20la%20Cámara%202K">
+COMPRAR
+</a>
 
-        </div>
+</div>
 
 
-        <!-- 3 -->
+<!-- POLICIA -->
 
-        <div class="card">
+<div class="producto">
 
-            <img src="Camara-de-seguridad_-ZM33-3K-2.png">
+<img src="Camara-de-seguridad_-ZM33-3K-2.png">
 
-            <h3>
-                Cámara Policía 3K
-            </h3>
+<h3>Cámara Policía 3K</h3>
 
-            <p class="description">
-                Cámara WiFi 3K para vigilancia
-                y mayor cobertura.
-            </p>
+<p>
+Cámara de seguridad WiFi
+con calidad 3K.
+</p>
 
-            <span class="memory">
-                ✓ Cámara + memoria
-            </span>
+<span class="memoria">
+CÁMARA + MEMORIA
+</span>
 
-            <div class="price">
-                S/ 290
-            </div>
+<div class="precio">
+S/ 290
+</div>
 
-            <a
-            class="btn"
-            href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20la%20Cámara%20Policía%203K%20de%20S%2F%20290">
-                COMPRAR
-            </a>
+<a class="btn"
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20la%20Cámara%20Policía%203K">
+COMPRAR
+</a>
 
-        </div>
+</div>
 
 
-        <!-- 4 -->
+<!-- NEGRITA -->
 
-        <div class="card">
+<div class="producto">
 
-            <img src="imageUrl_4.webp">
+<img src="imageUrl_4.webp">
 
-            <h3>
-                Cámara Negrita 3K
-            </h3>
+<h3>Cámara Negrita 3K</h3>
 
-            <p class="description">
-                Cámara WiFi 3K de diseño compacto
-                para vigilancia.
-            </p>
+<p>
+Cámara WiFi 3K de diseño
+compacto para vigilancia.
+</p>
 
-            <span class="memory">
-                ✓ Cámara + memoria
-            </span>
+<span class="memoria">
+CÁMARA + MEMORIA
+</span>
 
-            <div class="price">
-                S/ 290
-            </div>
+<div class="precio">
+S/ 290
+</div>
 
-            <a
-            class="btn"
-            href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20la%20Cámara%20Negrita%203K%20de%20S%2F%20290">
-                COMPRAR
-            </a>
+<a class="btn"
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20la%20Cámara%20Negrita%203K">
+COMPRAR
+</a>
 
-        </div>
+</div>
 
 
-        <!-- 5 -->
+<!-- PRO -->
 
-        <div class="card">
+<div class="producto">
 
-            <img src="Camara-de-seguridad_-ZM33-3K-2.png">
+<img src="Camara-de-seguridad_-ZM33-3K-2.png">
 
-            <h3>
-                Cámara Pro 3K
-            </h3>
+<h3>Cámara Pro 3K</h3>
 
-            <p class="description">
-                Cámara WiFi Pro 3K para vigilancia
-                de diferentes espacios.
-            </p>
+<p>
+Cámara WiFi Pro 3K
+para vigilancia.
+</p>
 
-            <span class="memory">
-                ✓ Cámara + memoria
-            </span>
+<span class="memoria">
+CÁMARA + MEMORIA
+</span>
 
-            <div class="price">
-                S/ 290
-            </div>
+<div class="precio">
+S/ 290
+</div>
 
-            <a
-            class="btn"
-            href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20la%20Cámara%20Pro%203K%20de%20S%2F%20290">
-                COMPRAR
-            </a>
+<a class="btn"
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20la%20Cámara%20Pro%203K">
+COMPRAR
+</a>
 
-        </div>
+</div>
 
 
-        <!-- 6 -->
+<!-- BOCINA -->
 
-        <div class="card">
+<div class="producto">
 
-            <img src="Camara-de-seguridad_-ZM33-3K-2.png">
+<img src="Camara-de-seguridad_-ZM33-3K-2.png">
 
-            <h3>
-                Cámara Bocina 4K
-            </h3>
+<h3>Cámara Bocina 4K</h3>
 
-            <p class="description">
-                Cámara WiFi 4K con sistema de bocina
-                para vigilancia.
-            </p>
+<p>
+Cámara WiFi 4K con sistema
+de bocina.
+</p>
 
-            <span class="memory">
-                ✓ Cámara + memoria
-            </span>
+<span class="memoria">
+CÁMARA + MEMORIA
+</span>
 
-            <div class="price">
-                S/ 300
-            </div>
+<div class="precio">
+S/ 300
+</div>
 
-            <a
-            class="btn"
-            href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20la%20Cámara%20Bocina%204K%20de%20S%2F%20300">
-                COMPRAR
-            </a>
+<a class="btn"
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20la%20Cámara%20Bocina%204K">
+COMPRAR
+</a>
 
-        </div>
+</div>
 
 
-        <!-- 7 -->
+<!-- PULPO -->
 
-        <div class="card">
+<div class="producto">
 
-            <img src="Camara-de-seguridad_-ZM33-3K-2.png">
+<img src="Camara-de-seguridad_-ZM33-3K-2.png">
 
-            <h3>
-                Cámara Pulpo 4K
-            </h3>
+<h3>Cámara Pulpo 4K</h3>
 
-            <p class="description">
-                Cámara WiFi 4K con múltiples lentes
-                para ampliar la cobertura.
-            </p>
+<p>
+Cámara WiFi 4K para
+mayor cobertura.
+</p>
 
-            <span class="memory">
-                ✓ Cámara + memoria
-            </span>
+<span class="memoria">
+CÁMARA + MEMORIA
+</span>
 
-            <div class="price">
-                S/ 380
-            </div>
+<div class="precio">
+S/ 380
+</div>
 
-            <a
-            class="btn"
-            href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20la%20Cámara%20Pulpo%204K%20de%20S%2F%20380">
-                COMPRAR
-            </a>
+<a class="btn"
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20la%20Cámara%20Pulpo%204K">
+COMPRAR
+</a>
 
-        </div>
+</div>
 
 
-        <!-- 8 -->
+<!-- PANEL -->
 
-        <div class="card">
+<div class="producto">
 
-            <img src="Camara-de-seguridad_-ZM33-3K-2.png">
+<img src="Camara-de-seguridad_-ZM33-3K-2.png">
 
-            <h3>
-                Cámara con Panel Solar
-            </h3>
+<h3>Cámara con Panel Solar</h3>
 
-            <p class="description">
-                Cámara con panel solar para vigilancia
-                y alimentación mediante energía solar.
-            </p>
+<p>
+Cámara con panel solar
+para vigilancia.
+</p>
 
-            <span class="memory">
-                ✓ Cámara + memoria
-            </span>
+<span class="memoria">
+CÁMARA + MEMORIA
+</span>
 
-            <div class="price">
-                S/ 380
-            </div>
+<div class="precio">
+S/ 380
+</div>
 
-            <a
-            class="btn"
-            href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20la%20Cámara%20con%20Panel%20Solar%20de%20S%2F%20380">
-                COMPRAR
-            </a>
+<a class="btn"
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20la%20Cámara%20con%20Panel%20Solar">
+COMPRAR
+</a>
 
-        </div>
+</div>
 
 
-        <!-- 9 -->
+<!-- PANEL + CHIP -->
 
-        <div class="card">
+<div class="producto">
 
-            <img src="Camara-de-seguridad_-ZM33-3K-2.png">
+<img src="Camara-de-seguridad_-ZM33-3K-2.png">
 
-            <h3>
-                Cámara con Panel Solar y Chip
-            </h3>
+<h3>Cámara Panel Solar + Chip</h3>
 
-            <p class="description">
-                Cámara con panel solar y conexión
-                mediante chip para vigilancia.
-            </p>
+<p>
+Panel solar y conexión
+mediante chip.
+</p>
 
-            <span class="memory">
-                ✓ Cámara + memoria
-            </span>
+<span class="memoria">
+CÁMARA + MEMORIA
+</span>
 
-            <div class="price">
-                S/ 480
-            </div>
+<div class="precio">
+S/ 480
+</div>
 
-            <a
-            class="btn"
-            href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20la%20Cámara%20con%20Panel%20Solar%20y%20Chip%20de%20S%2F%20480">
-                COMPRAR
-            </a>
+<a class="btn"
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20la%20Cámara%20con%20Panel%20Solar%20y%20Chip">
+COMPRAR
+</a>
 
-        </div>
+</div>
 
 
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= OFERTAS ================= -->
+<!-- OFERTAS -->
 
-<section class="offer" id="ofertas">
+<section class="ofertas" id="ofertas">
 
-    <h2>
-        🔥 ¡OFERTAS DAMYTEC!
-    </h2>
+<h2>
+🔥 OFERTAS DAMYTEC
+</h2>
 
-    <p>
-        Cámaras de seguridad con memoria incluida.
-        Consulta disponibilidad por WhatsApp.
-    </p>
+<p>
+Consulta nuestras promociones y disponibilidad.
+</p>
 
-    <a
-    class="btn"
-    href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20conocer%20las%20ofertas%20de%20cámaras">
-        💬 VER OFERTAS
-    </a>
+<a class="btn"
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20conocer%20las%20ofertas">
+💬 VER OFERTAS
+</a>
 
 </section>
 
 
-<!-- ================= SERVICIOS ================= -->
+<!-- AIRPODS -->
+
+<section class="airpods" id="airpods">
+
+<h2 class="titulo">
+🎧 AirPods
+</h2>
+
+<p class="subtitulo">
+También contamos con productos tecnológicos
+</p>
+
+
+<div class="productos">
+
+
+<div class="producto">
+
+<div class="airpod-icon">
+🎧
+</div>
+
+<h3>
+AirPods 3.ª generación
+</h3>
+
+<p>
+Audífonos inalámbricos.
+</p>
+
+<div class="precio">
+Consultar
+</div>
+
+<a class="btn"
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20información%20sobre%20AirPods%203ra%20generación">
+CONSULTAR
+</a>
+
+</div>
+
+
+<div class="producto">
+
+<div class="airpod-icon">
+🎧
+</div>
+
+<h3>
+AirPods 4.ª generación
+</h3>
+
+<p>
+Audífonos inalámbricos.
+</p>
+
+<div class="precio">
+Consultar
+</div>
+
+<a class="btn"
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20información%20sobre%20AirPods%204ta%20generación">
+CONSULTAR
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- SERVICIOS -->
 
 <section id="servicios">
 
-    <h2 class="title">
-        🔧 Nuestros servicios
-    </h2>
+<h2 class="titulo">
+🔧 Nuestros Servicios
+</h2>
 
-    <p class="subtitle">
-        Venta e instalación de cámaras de seguridad
-    </p>
-
-
-    <div class="services">
+<p class="subtitulo">
+Venta, instalación y configuración.
+</p>
 
 
-        <div class="service">
-
-            <div class="service-icon">
-                📷
-            </div>
-
-            <h3>
-                Venta de cámaras
-            </h3>
-
-            <p>
-                Cámaras de seguridad WiFi
-                para diferentes necesidades.
-            </p>
-
-        </div>
+<div class="servicios">
 
 
-        <div class="service">
+<div class="servicio">
 
-            <div class="service-icon">
-                🔧
-            </div>
+<div class="servicio-icon">
+📷
+</div>
 
-            <h3>
-                Instalación
-            </h3>
+<h3>
+Venta de cámaras
+</h3>
 
-            <p>
-                Instalación profesional
-                de cámaras de seguridad.
-            </p>
+<p>
+Cámaras WiFi para diferentes
+necesidades.
+</p>
 
-        </div>
-
-
-        <div class="service">
-
-            <div class="service-icon">
-                📱
-            </div>
-
-            <h3>
-                Configuración
-            </h3>
-
-            <p>
-                Configuración para visualizar
-                tus cámaras desde el celular.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="service">
+<div class="servicio">
 
-            <div class="service-icon">
-                🛠️
-            </div>
+<div class="servicio-icon">
+🔧
+</div>
 
-            <h3>
-                Mantenimiento
-            </h3>
+<h3>
+Instalación
+</h3>
 
-            <p>
-                Revisión y mantenimiento
-                de equipos de seguridad.
-            </p>
+<p>
+Instalación de cámaras
+de seguridad.
+</p>
 
-        </div>
-
-
-    </div>
-
-</section>
+</div>
 
 
-<!-- ================= COMO COMPRAR ================= -->
+<div class="servicio">
 
-<section class="how">
+<div class="servicio-icon">
+📱
+</div>
 
-    <h2 class="title">
-        📦 ¿Cómo comprar?
-    </h2>
+<h3>
+Configuración
+</h3>
 
-    <p class="subtitle">
-        Realiza tu pedido de manera rápida y sencilla.
-    </p>
+<p>
+Configuramos tu cámara
+para verla desde tu celular.
+</p>
 
-
-    <div class="steps">
-
-
-        <div class="step">
-
-            <div class="number">
-                1
-            </div>
-
-            <h3>
-                Elige tu cámara
-            </h3>
-
-            <p>
-                Selecciona el modelo que necesitas.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="step">
+<div class="servicio">
 
-            <div class="number">
-                2
-            </div>
+<div class="servicio-icon">
+🛠️
+</div>
 
-            <h3>
-                Escríbenos
-            </h3>
+<h3>
+Mantenimiento
+</h3>
 
-            <p>
-                Pulsa el botón de WhatsApp.
-            </p>
+<p>
+Revisión y mantenimiento
+de equipos.
+</p>
 
-        </div>
-
-
-        <div class="step">
-
-            <div class="number">
-                3
-            </div>
-
-            <h3>
-                Confirma tu pedido
-            </h3>
-
-            <p>
-                Coordinamos disponibilidad y entrega.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="step">
-
-            <div class="number">
-                4
-            </div>
-
-            <h3>
-                Instalación
-            </h3>
-
-            <p>
-                También contamos con instalación.
-            </p>
-
-        </div>
-
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= CONTACTO ================= -->
+<!-- CONTACTO -->
 
-<section class="contact" id="contacto">
+<section class="contacto" id="contacto">
 
-    <h2 class="title">
-        📞 Contáctanos
-    </h2>
+<h2 class="titulo">
+📞 Contáctanos
+</h2>
 
+<p>
+📱 <strong>WhatsApp:</strong>
+992 504 911
+</p>
 
-    <div class="contact-info">
+<p>
+🎵 <strong>TikTok:</strong>
+@damytec16
+</p>
 
-        <p>
-            📱 <strong>WhatsApp:</strong>
-            992 504 911
-        </p>
+<p>
+📍 <strong>Puerto Maldonado</strong>
+</p>
 
-        <p>
-            🎵 <strong>TikTok:</strong>
-            @damytec16
-        </p>
+<p>
+📌 Jr. Manco Inca - Jr. Las Ponas
+</p>
 
-        <p>
-            📍 <strong>Ubicación:</strong>
-            Puerto Maldonado
-        </p>
+<p>
+🕐 Lunes a sábado:
+7:00 a. m. - 10:00 p. m.
+</p>
 
-        <p>
-            📌 <strong>Dirección:</strong>
-            Jr. Manco Inca - Jr. Las Ponas
-        </p>
+<p>
+🕐 Domingo:
+7:00 a. m. - 1:00 p. m.
+</p>
 
-        <p>
-            🕐 <strong>Horario:</strong>
-            Lunes a sábado de 7:00 a.m. a 10:00 p.m.
-        </p>
+<br>
 
-        <p>
-            🕐 <strong>Domingo:</strong>
-            7:00 a.m. a 1:00 p.m.
-        </p>
-
-    </div>
-
-
-    <a
-    class="btn"
-    href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20cotizar%20una%20cámara">
-        💬 ESCRÍBENOS POR WHATSAPP
-    </a>
+<a class="btn"
+href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20cotizar">
+💬 ESCRÍBENOS POR WHATSAPP
+</a>
 
 </section>
 
-
-<!-- ================= FOOTER ================= -->
 
 <footer>
 
-    <p>
-        © 2026 <strong>DAMYTEC</strong>
-        - Cámaras de Seguridad
-    </p>
+<p>
+© 2026 <strong>DAMYTEC</strong>
+- Cámaras de Seguridad
+</p>
 
-    <p>
-        🔐 ¡Más tranquilidad, más seguridad!
-    </p>
-
-    <p>
-        Puerto Maldonado
-    </p>
+<p>
+🔐 ¡Más tranquilidad, más seguridad!
+</p>
 
 </footer>
 
 
 </body>
-
 </html>
