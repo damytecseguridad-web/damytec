@@ -11,10 +11,6 @@
 
 <style>
 
-/* =========================
-   ESTILOS GENERALES
-========================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -37,62 +33,40 @@ body {
 ========================= */
 
 header {
-
     background: #071d2b;
-
     color: white;
-
     padding: 18px 5%;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     position: sticky;
-
     top: 0;
-
     z-index: 1000;
-
 }
 
 .logo {
-
     font-size: 28px;
-
     font-weight: bold;
-
 }
 
 .logo span {
-
     color: #00a8e8;
-
 }
 
 nav a {
-
     color: white;
-
     text-decoration: none;
-
     margin-left: 20px;
-
     font-weight: bold;
-
 }
 
 nav a:hover {
-
     color: #00a8e8;
-
 }
 
 
 /* =========================
-   HERO / FONDO
+   PORTADA
 ========================= */
 
 .hero {
@@ -111,12 +85,10 @@ nav a:hover {
 
     padding: 40px;
 
-    position: relative;
-
     background-image:
 
         linear-gradient(
-            rgba(0,0,0,.25),
+            rgba(0,0,0,.30),
             rgba(0,0,0,.35)
         ),
 
@@ -124,38 +96,25 @@ nav a:hover {
 
     background-size: cover;
 
-    background-position: center bottom;
+    background-position: center;
 
     background-repeat: no-repeat;
-
 }
 
 .hero-content {
-
-    max-width: 800px;
-
+    max-width: 850px;
     padding: 30px;
-
 }
 
 .hero h1 {
-
     font-size: 45px;
-
     margin-bottom: 15px;
-
-    text-shadow:
-        2px 2px 8px rgba(0,0,0,.7);
-
+    text-shadow: 2px 2px 8px rgba(0,0,0,.8);
 }
 
 .hero p {
-
     font-size: 21px;
-
-    text-shadow:
-        2px 2px 6px rgba(0,0,0,.7);
-
+    text-shadow: 2px 2px 6px rgba(0,0,0,.8);
 }
 
 
@@ -164,33 +123,22 @@ nav a:hover {
 ========================= */
 
 section {
-
     padding: 55px 7%;
-
 }
 
 .section-title {
-
     text-align: center;
-
     margin-bottom: 35px;
-
 }
 
 .section-title h2 {
-
     font-size: 32px;
-
     color: #071d2b;
-
 }
 
 .section-title p {
-
     margin-top: 8px;
-
     color: #666;
-
 }
 
 
@@ -199,14 +147,9 @@ section {
 ========================= */
 
 .product-grid {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
-
 }
 
 .product-card {
@@ -225,17 +168,14 @@ section {
     flex-direction: column;
 
     transition: .3s;
-
 }
 
 .product-card:hover {
 
-    transform:
-        translateY(-5px);
+    transform: translateY(-5px);
 
     box-shadow:
         0 10px 25px rgba(0,0,0,.15);
-
 }
 
 .product-card img {
@@ -249,7 +189,6 @@ section {
     padding: 15px;
 
     background: white;
-
 }
 
 .product-info {
@@ -261,7 +200,6 @@ section {
     flex-direction: column;
 
     flex-grow: 1;
-
 }
 
 .product-info h3 {
@@ -271,7 +209,6 @@ section {
     font-size: 19px;
 
     margin-bottom: 10px;
-
 }
 
 .product-info p {
@@ -281,12 +218,11 @@ section {
     line-height: 1.5;
 
     flex-grow: 1;
-
 }
 
 
 /* =========================
-   PRECIO
+   PRECIOS
 ========================= */
 
 .price {
@@ -304,12 +240,11 @@ section {
     text-align: center;
 
     width: 100%;
-
 }
 
 
 /* =========================
-   BOTON WHATSAPP
+   BOTONES
 ========================= */
 
 .product-btn {
@@ -331,13 +266,10 @@ section {
     font-weight: bold;
 
     transition: .3s;
-
 }
 
 .product-btn:hover {
-
     background: #128C7E;
-
 }
 
 
@@ -352,7 +284,6 @@ section {
     color: white;
 
     text-align: center;
-
 }
 
 .offers h2 {
@@ -360,13 +291,10 @@ section {
     font-size: 32px;
 
     margin-bottom: 15px;
-
 }
 
 .offers p {
-
     font-size: 18px;
-
 }
 
 
@@ -382,7 +310,6 @@ section {
         repeat(4, 1fr);
 
     gap: 20px;
-
 }
 
 .service {
@@ -397,7 +324,6 @@ section {
 
     box-shadow:
         0 5px 15px rgba(0,0,0,.08);
-
 }
 
 .service h3 {
@@ -405,7 +331,6 @@ section {
     margin: 15px 0 10px;
 
     color: #071d2b;
-
 }
 
 .service p {
@@ -413,13 +338,10 @@ section {
     color: #666;
 
     line-height: 1.5;
-
 }
 
 .icon {
-
     font-size: 45px;
-
 }
 
 
@@ -432,7 +354,6 @@ section {
     background: #eaf6fb;
 
     text-align: center;
-
 }
 
 .contact h2 {
@@ -440,7 +361,6 @@ section {
     color: #071d2b;
 
     margin-bottom: 15px;
-
 }
 
 .whatsapp-contact {
@@ -460,7 +380,6 @@ section {
     text-decoration: none;
 
     font-weight: bold;
-
 }
 
 
@@ -477,7 +396,6 @@ footer {
     text-align: center;
 
     padding: 25px;
-
 }
 
 
@@ -491,14 +409,12 @@ footer {
 
         grid-template-columns:
             repeat(2, 1fr);
-
     }
 
     .services {
 
         grid-template-columns:
             repeat(2, 1fr);
-
     }
 
 }
@@ -515,13 +431,11 @@ footer {
         flex-direction: column;
 
         gap: 15px;
-
     }
 
     nav {
 
         text-align: center;
-
     }
 
     nav a {
@@ -529,37 +443,31 @@ footer {
         display: inline-block;
 
         margin: 5px;
-
     }
 
     .hero {
 
         min-height: 430px;
-
     }
 
     .hero h1 {
 
         font-size: 32px;
-
     }
 
     .hero p {
 
         font-size: 18px;
-
     }
 
     .product-grid {
 
         grid-template-columns: 1fr;
-
     }
 
     .services {
 
         grid-template-columns: 1fr;
-
     }
 
 }
@@ -579,42 +487,26 @@ footer {
 <header>
 
 <div class="logo">
-
 DAMY<span>TEC</span>
-
 </div>
-
 
 <nav>
 
-<a href="#inicio">
-Inicio
-</a>
+<a href="#inicio">Inicio</a>
 
-<a href="#camaras">
-Cámaras
-</a>
+<a href="#camaras">Cámaras</a>
 
-<a href="#airpods">
-AirPods
-</a>
+<a href="#airpods">AirPods</a>
 
-<a href="#piscinas">
-Piscinas
-</a>
+<a href="#piscinas">Piscinas</a>
 
-<a href="#servicios">
-Servicios
-</a>
+<a href="#servicios">Servicios</a>
 
-<a href="#contacto">
-Contacto
-</a>
+<a href="#contacto">Contacto</a>
 
 </nav>
 
 </header>
-
 
 
 <!-- =========================
@@ -639,7 +531,6 @@ Cámaras de seguridad, AirPods y piscinas Bestway
 </div>
 
 </section>
-
 
 
 <!-- =========================
@@ -754,8 +645,7 @@ Cámara Policía 3K
 </h3>
 
 <p>
-Cámara de vigilancia con resolución 3K,
-ideal para vigilancia.
+Cámara de vigilancia con resolución 3K.
 </p>
 
 <div class="price">
@@ -775,7 +665,7 @@ Comprar por WhatsApp
 </div>
 
 
-<!-- CAMARA NEGRITA -->
+<!-- CAMARA NEGRITA 3K -->
 
 <div class="product-card">
 
@@ -812,7 +702,7 @@ Comprar por WhatsApp
 </div>
 
 
-<!-- CAMARA PRO -->
+<!-- CAMARA PRO 3K -->
 
 <div class="product-card">
 
@@ -849,7 +739,7 @@ Comprar por WhatsApp
 </div>
 
 
-<!-- CAMARA BOCINA -->
+<!-- CAMARA BOCINA 4K -->
 
 <div class="product-card">
 
@@ -885,7 +775,7 @@ Comprar por WhatsApp
 </div>
 
 
-<!-- CAMARA PULPO -->
+<!-- CAMARA PULPO 4K -->
 
 <div class="product-card">
 
@@ -1002,7 +892,6 @@ Comprar por WhatsApp
 </section>
 
 
-
 <!-- =========================
      OFERTAS
 ========================= -->
@@ -1018,7 +907,6 @@ Productos a precios especiales hasta agotar stock.
 </p>
 
 </section>
-
 
 
 <!-- =========================
@@ -1122,7 +1010,6 @@ Comprar
 </section>
 
 
-
 <!-- =========================
      PISCINAS
 ========================= -->
@@ -1145,12 +1032,12 @@ Piscinas para disfrutar este verano en familia.
 <div class="product-grid">
 
 
-<!-- PISCINA 2.59 -->
+<!-- PISCINA 2.59 x 1.70 -->
 
 <div class="product-card">
 
 <img
-src="piscina-259.jpg"
+src="2.59x1.70"
 alt="Piscina Bestway 2.59 x 1.70 x 61 cm"
 >
 
@@ -1183,12 +1070,12 @@ Comprar por WhatsApp
 </div>
 
 
-<!-- PISCINA 3.00 -->
+<!-- PISCINA 3 x 2 -->
 
 <div class="product-card">
 
 <img
-src="piscina-300.jpg"
+src="3x2"
 alt="Piscina Bestway 3.00 x 2.01 x 66 cm"
 >
 
@@ -1224,7 +1111,6 @@ Comprar por WhatsApp
 </div>
 
 </section>
-
 
 
 <!-- =========================
@@ -1322,7 +1208,6 @@ Te ayudamos a elegir el producto adecuado.
 </section>
 
 
-
 <!-- =========================
      CONTACTO
 ========================= -->
@@ -1340,19 +1225,15 @@ id="contacto"
 Comunícate con DAMYTEC por WhatsApp.
 </p>
 
-
 <a
 href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20información%20sobre%20sus%20productos"
 target="_blank"
 class="whatsapp-contact"
 >
-
 💬 Contactar por WhatsApp
-
 </a>
 
 </section>
-
 
 
 <!-- =========================
