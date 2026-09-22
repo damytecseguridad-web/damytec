@@ -1,24 +1,586 @@
-<!-- ===================================================== -->
-<!-- PRODUCTOS - DE MENOR A MAYOR PRECIO -->
-<!-- ===================================================== -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DAMYTEC | Cámaras de Seguridad y Accesorios</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #0b132b;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 7%;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #00b4d8;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00b4d8;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 620px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.65),
+                    rgba(0,0,0,0.65)
+                ),
+                url("Camara-de-seguridad_-_ZM33-3K-2.png");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #00d4ff;
+        }
+
+        .hero p {
+            font-size: 21px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* =========================
+           BOTONES
+        ========================= */
+
+        .btn {
+            display: inline-block;
+            background: #00b4d8;
+            color: white;
+            padding: 15px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            margin: 5px;
+        }
+
+        .btn:hover {
+            background: #0077b6;
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1da851;
+        }
+
+        /* =========================
+           SECCIONES
+        ========================= */
+
+        section {
+            padding: 70px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #0b132b;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 17px;
+        }
+
+        /* =========================
+           PRODUCTOS
+        ========================= */
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(240px, 1fr)
+            );
+
+            gap: 25px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+
+            box-shadow:
+                0 5px 18px rgba(0,0,0,0.12);
+
+            transition: 0.3s;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.18);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            background: white;
+            padding: 15px;
+        }
+
+        .product-info {
+            padding: 20px;
+
+            display: flex;
+            flex-direction: column;
+
+            flex-grow: 1;
+        }
+
+        .product-info h3 {
+            color: #0b132b;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .product-info p {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 15px;
+
+            flex-grow: 1;
+        }
+
+        /* =========================
+           PRECIO CENTRADO
+        ========================= */
+
+        .price {
+            font-size: 25px;
+            font-weight: bold;
+            color: #0077b6;
+
+            margin-bottom: 15px;
+
+            text-align: center;
+        }
+
+        /* =========================
+           BOTÓN PRODUCTO
+        ========================= */
+
+        .product-btn {
+            display: block;
+            text-align: center;
+
+            background: #25d366;
+            color: white;
+
+            text-decoration: none;
+
+            padding: 12px;
+
+            border-radius: 7px;
+
+            font-weight: bold;
+        }
+
+        .product-btn:hover {
+            background: #1da851;
+        }
+
+        /* =========================
+           OFERTAS
+        ========================= */
+
+        .offers {
+            background: #0b132b;
+            color: white;
+        }
+
+        .offers .section-title h2 {
+            color: white;
+        }
+
+        .offers .section-title p {
+            color: #ddd;
+        }
+
+        .offer-box {
+            background: white;
+            color: #222;
+
+            max-width: 900px;
+
+            margin: auto;
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.25);
+        }
+
+        .offer-box h3 {
+            color: #0077b6;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .offer-box p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* =========================
+           AIRPODS
+        ========================= */
+
+        #airpods {
+            background: #eef7fb;
+        }
+
+        /* =========================
+           SERVICIOS
+        ========================= */
+
+        .services {
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(230px,1fr)
+                );
+
+            gap: 25px;
+        }
+
+        .service {
+            background: white;
+
+            padding: 30px 20px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            box-shadow:
+                0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service h3 {
+            color: #0b132b;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* =========================
+           CONTACTO
+        ========================= */
+
+        .contact {
+            background: #0b132b;
+            color: white;
+
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .contact-info {
+            margin: 25px 0;
+            font-size: 18px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #050914;
+            color: #aaa;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            section {
+                padding: 50px 5%;
+            }
+
+        }
+
+        /* =========================
+           CELULAR
+        ========================= */
+
+        @media (max-width: 500px) {
+
+            .logo {
+                font-size: 24px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 550px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .product-card img {
+                height: 220px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="logo">
+        DAMY<span>TEC</span>
+    </div>
+
+    <nav>
+
+        <a href="#inicio">
+            Inicio
+        </a>
+
+        <a href="#productos">
+            Productos
+        </a>
+
+        <a href="#ofertas">
+            Ofertas
+        </a>
+
+        <a href="#airpods">
+            AirPods
+        </a>
+
+        <a href="#servicios">
+            Servicios
+        </a>
+
+        <a href="#contacto">
+            Contacto
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     INICIO
+========================= -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <h1>
+            Seguridad para tu hogar y negocio con
+            <span>DAMYTEC</span>
+        </h1>
+
+        <p>
+            Cámaras de seguridad WiFi,
+            cámaras con panel solar,
+            cámaras 2K, 3K y 4K.
+            También contamos con AirPods y accesorios.
+        </p>
+
+        <a
+            href="#productos"
+            class="btn"
+        >
+            Ver productos
+        </a>
+
+        <a
+            href="https://wa.me/51992504911"
+            target="_blank"
+            class="btn btn-whatsapp"
+        >
+            💬 Comprar por WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CÁMARAS
+========================= -->
 
 <section id="productos">
 
     <div class="section-title">
 
-        <h2>📷 Cámaras de Seguridad</h2>
+        <h2>
+            📷 Cámaras de Seguridad
+        </h2>
 
         <p>
-            Encuentra la cámara ideal para proteger tu hogar,
-            negocio o establecimiento.
+            Encuentra la cámara ideal para proteger
+            tu hogar, negocio o establecimiento.
         </p>
 
     </div>
 
+
     <div class="products">
 
 
-        <!-- 1. CÁMARA FOCO 2K - S/ 200 -->
+        <!-- 1. FOCO 2K -->
 
         <div class="product-card">
 
@@ -29,7 +591,9 @@
 
             <div class="product-info">
 
-                <h3>Cámara Foco 2K</h3>
+                <h3>
+                    Cámara Foco 2K
+                </h3>
 
                 <p>
                     Cámara de seguridad tipo foco
@@ -54,7 +618,7 @@
         </div>
 
 
-        <!-- 2. CÁMARA 2K - S/ 240 -->
+        <!-- 2. CÁMARA 2K -->
 
         <div class="product-card">
 
@@ -65,11 +629,13 @@
 
             <div class="product-info">
 
-                <h3>Cámara 2K</h3>
+                <h3>
+                    Cámara 2K
+                </h3>
 
                 <p>
-                    Cámara de seguridad con imagen 2K,
-                    ideal para vigilancia del hogar
+                    Cámara de seguridad con imagen
+                    2K, ideal para vigilancia del hogar
                     y negocio.
                 </p>
 
@@ -90,7 +656,7 @@
         </div>
 
 
-        <!-- 3. CÁMARA POLICÍA 3K - S/ 290 -->
+        <!-- 3. POLICÍA 3K -->
 
         <div class="product-card">
 
@@ -101,7 +667,9 @@
 
             <div class="product-info">
 
-                <h3>Cámara Policía 3K</h3>
+                <h3>
+                    Cámara Policía 3K
+                </h3>
 
                 <p>
                     Cámara de vigilancia con resolución
@@ -125,7 +693,7 @@
         </div>
 
 
-        <!-- 4. CÁMARA NEGRITA 3K - S/ 290 -->
+        <!-- 4. NEGRITA 3K -->
 
         <div class="product-card">
 
@@ -136,7 +704,9 @@
 
             <div class="product-info">
 
-                <h3>Cámara Negrita 3K</h3>
+                <h3>
+                    Cámara Negrita 3K
+                </h3>
 
                 <p>
                     Cámara compacta de seguridad
@@ -160,7 +730,7 @@
         </div>
 
 
-        <!-- 5. CÁMARA PRO 3K - S/ 290 -->
+        <!-- 5. PRO 3K -->
 
         <div class="product-card">
 
@@ -171,12 +741,14 @@
 
             <div class="product-info">
 
-                <h3>Cámara Pro 3K</h3>
+                <h3>
+                    Cámara Pro 3K
+                </h3>
 
                 <p>
-                    Cámara de seguridad Pro
-                    con resolución 3K para
-                    vigilancia de alta calidad.
+                    Cámara de seguridad Pro con
+                    resolución 3K para vigilancia
+                    de alta calidad.
                 </p>
 
                 <div class="price">
@@ -196,7 +768,7 @@
         </div>
 
 
-        <!-- 6. CÁMARA BOCINA 4K - S/ 300 -->
+        <!-- 6. BOCINA 4K -->
 
         <div class="product-card">
 
@@ -207,12 +779,14 @@
 
             <div class="product-info">
 
-                <h3>Cámara Bocina 4K</h3>
+                <h3>
+                    Cámara Bocina 4K
+                </h3>
 
                 <p>
                     Cámara con resolución 4K y
-                    diseño tipo bocina, ideal
-                    para vigilancia.
+                    diseño tipo bocina, ideal para
+                    vigilancia.
                 </p>
 
                 <div class="price">
@@ -232,7 +806,7 @@
         </div>
 
 
-        <!-- 7. CÁMARA PULPO 4K HD - S/ 380 -->
+        <!-- 7. PULPO 4K -->
 
         <div class="product-card">
 
@@ -243,7 +817,9 @@
 
             <div class="product-info">
 
-                <h3>Cámara Pulpo 4K HD</h3>
+                <h3>
+                    Cámara Pulpo 4K HD
+                </h3>
 
                 <p>
                     Cámara de vigilancia 4K HD
@@ -268,7 +844,7 @@
         </div>
 
 
-        <!-- 8. CÁMARA PANEL SOLAR - S/ 380 -->
+        <!-- 8. PANEL SOLAR -->
 
         <div class="product-card">
 
@@ -279,7 +855,9 @@
 
             <div class="product-info">
 
-                <h3>Cámara con Panel Solar WIFI</h3>
+                <h3>
+                    Cámara con Panel Solar WIFI
+                </h3>
 
                 <p>
                     Cámara WiFi con panel solar,
@@ -307,16 +885,72 @@
 
     </div>
 
-</section> 
-<!-- ===================================================== -->
-<!-- AIRPODS - DE MENOR A MAYOR PRECIO -->
-<!-- ===================================================== -->
+</section>
+
+
+<!-- =========================
+     OFERTAS
+========================= -->
+
+<section
+    class="offers"
+    id="ofertas"
+>
+
+    <div class="section-title">
+
+        <h2>
+            🔥 Ofertas DAMYTEC
+        </h2>
+
+        <p>
+            Modelos en stock a precios especiales.
+        </p>
+
+    </div>
+
+
+    <div class="offer-box">
+
+        <h3>
+            📢 ¡Modelos en stock!
+        </h3>
+
+        <p>
+            Aprovecha nuestros precios especiales
+            en cámaras de seguridad y accesorios.
+        </p>
+
+        <p>
+            <strong>
+                Precio de locura hasta agotar stock.
+            </strong>
+        </p>
+
+        <a
+            href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20quiero%20conocer%20las%20ofertas%20disponibles"
+            target="_blank"
+            class="btn btn-whatsapp"
+        >
+            Ver ofertas por WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     AIRPODS
+========================= -->
 
 <section id="airpods">
 
     <div class="section-title">
 
-        <h2>🎧 AirPods</h2>
+        <h2>
+            🎧 AirPods
+        </h2>
 
         <p>
             Audífonos disponibles en DAMYTEC.
@@ -324,10 +958,11 @@
 
     </div>
 
+
     <div class="products">
 
 
-        <!-- 1. AIRPODS 4 - S/ 100 -->
+        <!-- AIRPODS 4TA -->
 
         <div class="product-card">
 
@@ -338,7 +973,9 @@
 
             <div class="product-info">
 
-                <h3>AirPods 4ta Generación</h3>
+                <h3>
+                    AirPods 4ta Generación
+                </h3>
 
                 <p>
                     AirPods de 4ta generación.
@@ -361,7 +998,7 @@
         </div>
 
 
-        <!-- 2. AIRPODS 2 - S/ 110 -->
+        <!-- AIRPODS 2DA -->
 
         <div class="product-card">
 
@@ -372,7 +1009,9 @@
 
             <div class="product-info">
 
-                <h3>AirPods 2da Generación</h3>
+                <h3>
+                    AirPods 2da Generación
+                </h3>
 
                 <p>
                     AirPods de 2da generación.
@@ -395,7 +1034,7 @@
         </div>
 
 
-        <!-- 3. AIRPODS 3 - S/ 140 -->
+        <!-- AIRPODS 3RA -->
 
         <div class="product-card">
 
@@ -406,7 +1045,9 @@
 
             <div class="product-info">
 
-                <h3>AirPods 3ra Generación</h3>
+                <h3>
+                    AirPods 3ra Generación
+                </h3>
 
                 <p>
                     AirPods de 3ra generación.
@@ -432,3 +1073,176 @@
     </div>
 
 </section>
+
+
+<!-- =========================
+     SERVICIOS
+========================= -->
+
+<section id="servicios">
+
+    <div class="section-title">
+
+        <h2>
+            🛠️ Nuestros Servicios
+        </h2>
+
+        <p>
+            Soluciones de seguridad para tu hogar
+            y negocio.
+        </p>
+
+    </div>
+
+
+    <div class="services">
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                📷
+            </div>
+
+            <h3>
+                Venta de Cámaras
+            </h3>
+
+            <p>
+                Venta de cámaras de seguridad
+                WiFi, 2K, 3K y 4K.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                🔧
+            </div>
+
+            <h3>
+                Instalación
+            </h3>
+
+            <p>
+                Instalación de cámaras de seguridad
+                para hogares y negocios.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                📱
+            </div>
+
+            <h3>
+                Configuración
+            </h3>
+
+            <p>
+                Configuración de cámaras y conexión
+                con aplicaciones móviles.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                🛡️
+            </div>
+
+            <h3>
+                Asesoría
+            </h3>
+
+            <p>
+                Te ayudamos a elegir la cámara
+                adecuada según tus necesidades.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACTO
+========================= -->
+
+<section
+    class="contact"
+    id="contacto"
+>
+
+    <h2>
+        📞 Contacta con DAMYTEC
+    </h2>
+
+    <p>
+        ¿Quieres comprar una cámara o necesitas
+        información? Escríbenos directamente.
+    </p>
+
+
+    <div class="contact-info">
+
+        <p>
+            📱 WhatsApp:
+            <strong>
+                992 504 911
+            </strong>
+        </p>
+
+        <p>
+            📷 Cámaras de seguridad
+        </p>
+
+        <p>
+            🔧 Venta e instalación
+        </p>
+
+    </div>
+
+
+    <a
+        href="https://wa.me/51992504911"
+        target="_blank"
+        class="btn btn-whatsapp"
+    >
+        💬 Escribir por WhatsApp
+    </a>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026
+        <strong>DAMYTEC</strong>.
+        Todos los derechos reservados.
+    </p>
+
+    <p>
+        Cámaras de seguridad y accesorios.
+    </p>
+
+</footer>
+
+
+</body>
+</html>
