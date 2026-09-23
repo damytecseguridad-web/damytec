@@ -2,469 +2,598 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>DAMYTEC | Seguridad y Tecnología</title>
+<meta charset="UTF-8">
 
-    <style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+<title>DAMYTEC | Seguridad y Tecnología</title>
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f7fb;
-            color: #172b3a;
-        }
+<style>
 
-        /* =========================
-           HEADER
-        ========================= */
+/* =========================
+   GENERAL
+========================= */
 
-        header {
-            background: #061b2a;
-            color: white;
-            height: 66px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #172b3a;
+}
 
-            padding: 0 60px;
 
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+/* =========================
+   CABECERA
+========================= */
 
-        .logo {
-            font-size: 25px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
+header {
 
-        .logo span {
-            color: #00a9e8;
-        }
+    background: #061b2a;
 
-        nav {
-            display: flex;
-            gap: 26px;
-        }
+    color: white;
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-        }
+    height: 66px;
 
-        nav a:hover {
-            color: #00a9e8;
-        }
+    display: flex;
 
+    align-items: center;
 
-        /* =========================
-           HERO / FONDO
-        ========================= */
+    justify-content: space-between;
 
-        .hero {
-            min-height: 500px;
+    padding: 0 60px;
 
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
+    position: sticky;
 
-            text-align: center;
+    top: 0;
 
-            padding: 40px 20px;
+    z-index: 1000;
+}
 
-            background-color: #071d2b;
 
-            background-image:
-                url("https://damytecseguridad-web.github.io/damytec/fondo-damytec.png");
+.logo {
 
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+    font-size: 25px;
 
-        /*
-        La imagen fondo-damytec.png ya contiene
-        el texto "Seguridad y Tecnología".
+    font-weight: bold;
 
-        Por eso NO agregamos otro título encima.
-        */
+    letter-spacing: 1px;
+}
 
-        .hero-buttons {
-            margin-bottom: 5px;
-        }
 
-        .hero-button {
-            display: inline-block;
+.logo span {
 
-            padding: 13px 25px;
+    color: #00a9e8;
+}
 
-            background: #00a9e8;
 
-            color: white;
+nav {
 
-            text-decoration: none;
+    display: flex;
 
-            border-radius: 8px;
+    gap: 26px;
+}
 
-            font-weight: bold;
 
-            margin: 5px;
+nav a {
 
-            box-shadow: 0 4px 10px rgba(0,0,0,.35);
-        }
+    color: white;
 
-        .hero-button:hover {
-            background: #008ac0;
-        }
+    text-decoration: none;
 
+    font-weight: bold;
 
-        /* =========================
-           SECCIONES
-        ========================= */
+    font-size: 14px;
+}
 
-        section {
-            padding: 55px 7%;
-        }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 35px;
-        }
+nav a:hover {
 
-        .section-title h2 {
-            font-size: 30px;
-            color: #061b2a;
-            margin-bottom: 8px;
-        }
+    color: #00a9e8;
+}
 
-        .section-title p {
-            color: #667788;
-        }
 
+/* =========================
+   HERO
+========================= */
 
-        /* =========================
-           PRODUCTOS
-        ========================= */
+.hero {
 
-        .products {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 22px;
-        }
+    height: 500px;
 
-        .product-card {
-            background: white;
+    position: relative;
 
-            border-radius: 15px;
+    overflow: hidden;
 
-            overflow: hidden;
+    display: flex;
 
-            box-shadow: 0 5px 18px rgba(0,0,0,.10);
+    align-items: flex-end;
 
-            transition: .3s;
+    justify-content: center;
 
-            display: flex;
-            flex-direction: column;
-        }
+    padding-bottom: 25px;
 
-        .product-card:hover {
-            transform: translateY(-6px);
+    background-color: #071d2b;
 
-            box-shadow:
-                0 10px 25px rgba(0,0,0,.15);
-        }
+    background-image:
+        url("https://damytecseguridad-web.github.io/damytec/fondo-damytec.png");
 
-        .product-card img {
-            width: 100%;
-            height: 230px;
+    background-size: cover;
 
-            object-fit: contain;
+    /*
+       Movemos la imagen hacia arriba
+       para ocultar la cabecera que
+       está dentro de la nueva imagen.
+    */
 
-            background: white;
+    background-position: center -65px;
 
-            padding: 10px;
-        }
+    background-repeat: no-repeat;
+}
 
-        .product-info {
-            padding: 18px;
 
-            display: flex;
-            flex-direction: column;
+/* BOTONES DEL HERO */
 
-            flex-grow: 1;
-        }
+.hero-buttons {
 
-        .product-info h3 {
-            font-size: 18px;
+    position: relative;
 
-            color: #102b3d;
+    z-index: 5;
 
-            margin-bottom: 10px;
+    text-align: center;
+}
 
-            text-align: center;
-        }
 
-        .product-info p {
-            color: #667788;
+.hero-button {
 
-            font-size: 14px;
+    display: inline-block;
 
-            line-height: 1.5;
+    padding: 13px 25px;
 
-            text-align: center;
+    background: #00a9e8;
 
-            flex-grow: 1;
-        }
+    color: white;
 
-        .price {
-            font-size: 25px;
+    text-decoration: none;
 
-            font-weight: bold;
+    border-radius: 8px;
 
-            color: #0077b6;
+    font-weight: bold;
 
-            margin-top: 10px;
-            margin-bottom: 15px;
+    margin: 5px;
 
-            text-align: center;
+    box-shadow:
+        0 4px 10px rgba(0,0,0,.35);
+}
 
-            width: 100%;
-        }
 
-        .whatsapp {
-            display: block;
+.hero-button:hover {
 
-            text-align: center;
+    background: #008ac0;
+}
 
-            background: #25D366;
 
-            color: white;
+/* =========================
+   SECCIONES
+========================= */
 
-            padding: 11px;
+section {
 
-            border-radius: 8px;
+    padding: 55px 7%;
+}
 
-            text-decoration: none;
 
-            font-weight: bold;
+.section-title {
 
-            margin-top: auto;
-        }
+    text-align: center;
 
-        .whatsapp:hover {
-            background: #1ebe5d;
-        }
+    margin-bottom: 35px;
+}
 
 
-        /* =========================
-           OFERTAS
-        ========================= */
+.section-title h2 {
 
-        .offers {
-            background: #e9f7ff;
-        }
+    font-size: 30px;
 
-        .offer-box {
-            background: white;
+    color: #061b2a;
 
-            border-radius: 15px;
+    margin-bottom: 8px;
+}
 
-            padding: 30px;
 
-            text-align: center;
+.section-title p {
 
-            box-shadow:
-                0 5px 18px rgba(0,0,0,.08);
-        }
+    color: #667788;
+}
 
-        .offer-box h3 {
-            color: #0077b6;
 
-            font-size: 25px;
+/* =========================
+   PRODUCTOS
+========================= */
 
-            margin-bottom: 10px;
-        }
+.products {
 
+    display: grid;
 
-        /* =========================
-           SERVICIOS
-        ========================= */
+    grid-template-columns:
+        repeat(4, 1fr);
 
-        .services {
-            display: grid;
+    gap: 22px;
+}
 
-            grid-template-columns:
-                repeat(3, 1fr);
 
-            gap: 25px;
-        }
+.product-card {
 
-        .service {
-            background: white;
+    background: white;
 
-            padding: 30px 20px;
+    border-radius: 15px;
 
-            text-align: center;
+    overflow: hidden;
 
-            border-radius: 15px;
+    box-shadow:
+        0 5px 18px rgba(0,0,0,.10);
 
-            box-shadow:
-                0 5px 18px rgba(0,0,0,.08);
-        }
+    transition: .3s;
 
-        .service-icon {
-            font-size: 40px;
+    display: flex;
 
-            margin-bottom: 15px;
-        }
+    flex-direction: column;
+}
 
-        .service h3 {
-            margin-bottom: 10px;
 
-            color: #061b2a;
-        }
+.product-card:hover {
 
-        .service p {
-            color: #667788;
+    transform: translateY(-6px);
 
-            line-height: 1.5;
-        }
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.15);
+}
 
 
-        /* =========================
-           CONTACTO
-        ========================= */
+.product-card img {
 
-        .contact {
-            background: #061b2a;
+    width: 100%;
 
-            color: white;
+    height: 230px;
 
-            text-align: center;
-        }
+    object-fit: contain;
 
-        .contact h2 {
-            font-size: 30px;
+    background: white;
 
-            margin-bottom: 15px;
-        }
+    padding: 10px;
+}
 
-        .contact p {
-            margin-bottom: 10px;
 
-            font-size: 17px;
-        }
+.product-info {
 
-        .contact-button {
-            display: inline-block;
+    padding: 18px;
 
-            margin-top: 20px;
+    display: flex;
 
-            background: #25D366;
+    flex-direction: column;
 
-            color: white;
+    flex-grow: 1;
+}
 
-            text-decoration: none;
 
-            padding: 14px 28px;
+.product-info h3 {
 
-            border-radius: 8px;
+    font-size: 18px;
 
-            font-weight: bold;
-        }
+    color: #102b3d;
 
+    margin-bottom: 10px;
 
-        /* =========================
-           FOOTER
-        ========================= */
+    text-align: center;
+}
 
-        footer {
-            background: #03111b;
 
-            color: #b9c6cf;
+.product-info p {
 
-            text-align: center;
+    color: #667788;
 
-            padding: 22px;
+    font-size: 14px;
 
-            font-size: 14px;
-        }
+    line-height: 1.5;
 
+    text-align: center;
 
-        /* =========================
-           RESPONSIVE
-        ========================= */
+    flex-grow: 1;
+}
 
-        @media (max-width: 1000px) {
 
-            .products {
-                grid-template-columns: repeat(2, 1fr);
-            }
+.price {
 
-            .services {
-                grid-template-columns: repeat(2, 1fr);
-            }
+    font-size: 25px;
 
-            header {
-                padding: 0 30px;
-            }
+    font-weight: bold;
 
-        }
+    color: #0077b6;
 
+    margin-top: 10px;
 
-        @media (max-width: 650px) {
+    margin-bottom: 15px;
 
-            header {
-                height: auto;
+    text-align: center;
 
-                padding: 18px 20px;
+    width: 100%;
+}
 
-                flex-direction: column;
 
-                gap: 15px;
-            }
+.whatsapp {
 
-            nav {
-                flex-wrap: wrap;
+    display: block;
 
-                justify-content: center;
+    text-align: center;
 
-                gap: 15px;
-            }
+    background: #25D366;
 
-            .hero {
-                min-height: 430px;
+    color: white;
 
-                padding: 30px 15px;
-            }
+    padding: 11px;
 
-            .products {
-                grid-template-columns: 1fr;
-            }
+    border-radius: 8px;
 
-            .services {
-                grid-template-columns: 1fr;
-            }
+    text-decoration: none;
 
-            section {
-                padding: 45px 5%;
-            }
+    font-weight: bold;
 
-        }
+    margin-top: auto;
+}
 
-    </style>
+
+.whatsapp:hover {
+
+    background: #1ebe5d;
+}
+
+
+/* =========================
+   OFERTAS
+========================= */
+
+.offers {
+
+    background: #e9f7ff;
+}
+
+
+.offer-box {
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,.08);
+}
+
+
+.offer-box h3 {
+
+    color: #0077b6;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   SERVICIOS
+========================= */
+
+.services {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.service {
+
+    background: white;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,.08);
+}
+
+
+.service-icon {
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+
+.service h3 {
+
+    margin-bottom: 10px;
+
+    color: #061b2a;
+}
+
+
+.service p {
+
+    color: #667788;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contact {
+
+    background: #061b2a;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+.contact h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+
+.contact p {
+
+    margin-bottom: 10px;
+
+    font-size: 17px;
+}
+
+
+.contact-button {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    background: #25D366;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 14px 28px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #03111b;
+
+    color: #b9c6cf;
+
+    text-align: center;
+
+    padding: 22px;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .products {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .services {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    header {
+
+        padding: 0 30px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    header {
+
+        height: auto;
+
+        padding: 18px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+
+    .hero {
+
+        height: 430px;
+
+        background-position:
+            center -45px;
+
+        padding-bottom: 20px;
+    }
+
+
+    .products {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .services {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    section {
+
+        padding: 45px 5%;
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -473,14 +602,17 @@
 
 
 <!-- =========================
-     HEADER
+     CABECERA
 ========================= -->
 
 <header>
 
     <div class="logo">
+
         DAMY<span>TEC</span>
+
     </div>
+
 
     <nav>
 
@@ -523,13 +655,9 @@
     id="inicio"
 >
 
-    <!--
-    NO ponemos título aquí porque
-    el título ya está dentro de
-    fondo-damytec.png
-    -->
 
     <div class="hero-buttons">
+
 
         <a
             href="#camaras"
@@ -547,7 +675,9 @@
             WhatsApp
         </a>
 
+
     </div>
+
 
 </section>
 
@@ -576,7 +706,7 @@
     <div class="products">
 
 
-        <!-- CÁMARA FOCO 2K -->
+        <!-- 1 -->
 
         <div class="product-card">
 
@@ -614,7 +744,7 @@
 
 
 
-        <!-- CÁMARA 2K -->
+        <!-- 2 -->
 
         <div class="product-card">
 
@@ -652,7 +782,7 @@
 
 
 
-        <!-- CÁMARA POLICÍA 3K -->
+        <!-- 3 -->
 
         <div class="product-card">
 
@@ -690,7 +820,7 @@
 
 
 
-        <!-- CÁMARA NEGRITA 3K -->
+        <!-- 4 -->
 
         <div class="product-card">
 
@@ -728,7 +858,7 @@
 
 
 
-        <!-- CÁMARA PRO 3K -->
+        <!-- 5 -->
 
         <div class="product-card">
 
@@ -766,7 +896,7 @@
 
 
 
-        <!-- CÁMARA BOCINA 4K -->
+        <!-- 6 -->
 
         <div class="product-card">
 
@@ -804,7 +934,7 @@
 
 
 
-        <!-- CÁMARA PULPO 4K -->
+        <!-- 7 -->
 
         <div class="product-card">
 
@@ -842,7 +972,7 @@
 
 
 
-        <!-- CÁMARA PANEL SOLAR -->
+        <!-- 8 -->
 
         <div class="product-card">
 
@@ -880,7 +1010,7 @@
 
 
 
-        <!-- CÁMARA 2 PANELES -->
+        <!-- 9 -->
 
         <div class="product-card">
 
@@ -986,7 +1116,7 @@
     <div class="products">
 
 
-        <!-- AIRPODS 4TA -->
+        <!-- AIRPODS 4 -->
 
         <div class="product-card">
 
@@ -1024,7 +1154,7 @@
 
 
 
-        <!-- AIRPODS 3RA -->
+        <!-- AIRPODS 3 -->
 
         <div class="product-card">
 
@@ -1267,13 +1397,16 @@
     id="contacto"
 >
 
+
     <h2>
         ¿Necesitas más información?
     </h2>
 
+
     <p>
         Escríbenos y consulta nuestros productos.
     </p>
+
 
     <p>
         📱 WhatsApp: 992 504 911
@@ -1287,6 +1420,7 @@
     >
         💬 Escribir por WhatsApp
     </a>
+
 
 </section>
 
@@ -1304,4 +1438,5 @@
 
 
 </body>
+
 </html>
