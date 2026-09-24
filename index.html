@@ -1,658 +1,1164 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DAMYTEC | Seguridad, Tecnología y Piscinas</title>
+
+<title>DAMYTEC | Seguridad y Tecnología</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f4f7fb;
-    color:#172033;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6fa;
+    color: #102a43;
 }
+
 
 /* =========================
    HEADER
 ========================= */
 
-header{
-    background:#071a33;
-    color:white;
-    padding:15px 6%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 3px 15px rgba(0,0,0,.25);
+header {
+
+    background: #062235;
+
+    min-height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 10px 5%;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
 }
 
-.logo{
-    font-size:27px;
-    font-weight:bold;
-    letter-spacing:1px;
+.logo {
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    color: white;
 }
 
-.logo span{
-    color:#20c4ff;
+.logo span {
+
+    color: #00aeef;
 }
 
-nav{
-    display:flex;
-    gap:22px;
+nav {
+
+    display: flex;
+
+    gap: 20px;
+
+    align-items: center;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
 }
 
-nav a:hover{
-    color:#20c4ff;
+nav a:hover {
+
+    color: #00aeef;
 }
+
+
+/* =========================
+   BOTÓN CARRITO
+========================= */
+
+.cart-button {
+
+    background: #00aeef;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.cart-button:hover {
+
+    background: #008dcc;
+}
+
 
 /* =========================
    HERO
 ========================= */
 
-.hero{
-    width:100%;
-    overflow:hidden;
-    background:#071a33;
+.hero {
+
+    width: 100%;
+
+    background: #071e2d;
+
+    overflow: hidden;
 }
 
-.hero img{
-    width:100%;
-    display:block;
-    height:auto;
+.hero img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
 }
+
 
 /* =========================
    SECCIONES
 ========================= */
 
-section{
-    padding:55px 6%;
+section {
+
+    padding: 55px 6%;
 }
 
-.section-title{
-    text-align:center;
-    font-size:32px;
-    color:#071a33;
-    margin-bottom:10px;
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 30px;
 }
 
-.section-subtitle{
-    text-align:center;
-    color:#667085;
-    margin-bottom:35px;
+.section-title h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+
+    color: #102a43;
 }
+
+.section-title p {
+
+    color: #607d94;
+
+    font-size: 15px;
+}
+
 
 /* =========================
    BUSCADOR
 ========================= */
 
-.search-box{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    margin-bottom:25px;
-    flex-wrap:wrap;
+.search-area {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+
+    flex-wrap: wrap;
 }
 
-.search-box input{
-    width:320px;
-    max-width:100%;
-    padding:13px 16px;
-    border:1px solid #ccd4df;
-    border-radius:10px;
-    font-size:16px;
-    outline:none;
+.search-box {
+
+    width: 350px;
+
+    max-width: 100%;
+
+    padding: 13px 16px;
+
+    border: 1px solid #ccd8e0;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    outline: none;
 }
 
-.filters{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-bottom:30px;
+.search-box:focus {
+
+    border-color: #00aeef;
 }
 
-.filter-btn{
-    border:none;
-    background:#e6edf5;
-    color:#071a33;
-    padding:10px 18px;
-    border-radius:25px;
-    cursor:pointer;
-    font-weight:bold;
+.filter {
+
+    padding: 13px 16px;
+
+    border: 1px solid #ccd8e0;
+
+    border-radius: 9px;
+
+    background: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
 }
 
-.filter-btn.active,
-.filter-btn:hover{
-    background:#071a33;
-    color:white;
-}
 
 /* =========================
    PRODUCTOS
 ========================= */
 
-.product-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:25px;
+.products {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
 }
 
-.product{
-    background:white;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,.09);
-    transition:.3s;
-    display:flex;
-    flex-direction:column;
+.product-card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+    0 5px 18px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+
+    display: flex;
+
+    flex-direction: column;
 }
 
-.product:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
+.product-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.13);
 }
 
-.product-image{
-    width:100%;
-    height:230px;
-    object-fit:contain;
-    background:#fff;
-    padding:10px;
-    cursor:pointer;
+.product-card img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: contain;
+
+    padding: 12px;
+
+    background: white;
 }
 
-.product-info{
-    padding:18px;
-    display:flex;
-    flex-direction:column;
-    flex:1;
+.product-info {
+
+    padding: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex-grow: 1;
+
+    text-align: center;
 }
 
-.product-info h3{
-    font-size:18px;
-    color:#071a33;
-    margin-bottom:8px;
+.product-info h3 {
+
+    font-size: 17px;
+
+    color: #102a43;
+
+    margin-bottom: 10px;
 }
 
-.product-price{
-    font-size:24px;
-    font-weight:bold;
-    color:#0a9b55;
-    margin-bottom:14px;
+.product-info p {
+
+    font-size: 14px;
+
+    color: #607d94;
+
+    line-height: 1.5;
+
+    flex-grow: 1;
 }
 
-.product-category{
-    font-size:13px;
-    color:#777;
-    margin-bottom:12px;
+.price {
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #0077b6;
+
+    margin-top: 12px;
+
+    margin-bottom: 15px;
 }
 
-.buy-btn{
-    margin-top:auto;
-    border:none;
-    background:#10b95d;
-    color:white;
-    padding:12px;
-    border-radius:9px;
-    font-weight:bold;
-    cursor:pointer;
-    font-size:15px;
-    transition:.3s;
-}
-
-.buy-btn:hover{
-    background:#078b43;
-}
 
 /* =========================
-   GALERÍA
+   BOTONES
 ========================= */
 
-.gallery-section{
-    background:#ffffff;
+.btn-cart {
+
+    width: 100%;
+
+    background: #0077b6;
+
+    color: white;
+
+    border: none;
+
+    padding: 11px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-bottom: 8px;
+
+    transition: 0.3s;
 }
 
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:22px;
-    max-width:1200px;
-    margin:auto;
+.btn-cart:hover {
+
+    background: #005f8d;
 }
 
-.gallery-item{
-    position:relative;
-    height:270px;
-    border-radius:16px;
-    overflow:hidden;
-    cursor:pointer;
-    background:#e9eef5;
-    box-shadow:0 5px 18px rgba(0,0,0,.12);
+.btn-whatsapp {
+
+    display: block;
+
+    width: 100%;
+
+    background: #18c964;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 11px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    text-align: center;
+
+    transition: 0.3s;
 }
 
-.gallery-item img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.4s;
+.btn-whatsapp:hover {
+
+    background: #0da950;
 }
 
-.gallery-item:hover img{
-    transform:scale(1.08);
-}
-
-.gallery-overlay{
-    position:absolute;
-    bottom:0;
-    left:0;
-    right:0;
-    background:linear-gradient(transparent,rgba(0,0,0,.8));
-    color:white;
-    padding:35px 15px 15px;
-    font-weight:bold;
-    font-size:16px;
-}
 
 /* =========================
-   MODAL GALERÍA
+   OFERTAS
 ========================= */
 
-.gallery-modal{
-    display:none;
-    position:fixed;
-    z-index:3000;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.9);
-    align-items:center;
-    justify-content:center;
-    padding:20px;
+.offers {
+
+    background: #062235;
+
+    color: white;
+
+    text-align: center;
 }
 
-.gallery-modal img{
-    max-width:95%;
-    max-height:90%;
-    object-fit:contain;
-    border-radius:10px;
+.offers h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
 }
 
-.close-gallery{
-    position:absolute;
-    top:20px;
-    right:30px;
-    color:white;
-    font-size:45px;
-    cursor:pointer;
-    font-weight:bold;
+.offers p {
+
+    color: #d9edf7;
 }
+
 
 /* =========================
    SERVICIOS
 ========================= */
 
-.services{
-    background:#071a33;
-    color:white;
+.services {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
 }
 
-.services .section-title{
-    color:white;
+.service-card {
+
+    background: white;
+
+    padding: 30px 20px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+    0 5px 18px rgba(0,0,0,0.07);
 }
 
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-    max-width:1100px;
-    margin:auto;
+.service-card .icon {
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
 }
 
-.service-card{
-    background:#10294a;
-    padding:28px 20px;
-    border-radius:15px;
-    text-align:center;
-    border:1px solid rgba(255,255,255,.08);
+.service-card h3 {
+
+    margin-bottom: 10px;
 }
 
-.service-card h3{
-    margin-bottom:10px;
-    color:#20c4ff;
+.service-card p {
+
+    color: #607d94;
+
+    line-height: 1.5;
 }
 
-.service-card p{
-    line-height:1.6;
-    color:#d9e3ef;
-}
-
-/* =========================
-   CARRITO
-========================= */
-
-.cart-section{
-    background:#eef4fa;
-}
-
-.cart{
-    max-width:850px;
-    margin:auto;
-    background:white;
-    padding:25px;
-    border-radius:18px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.cart-item{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:15px;
-    padding:15px 0;
-    border-bottom:1px solid #e5e7eb;
-}
-
-.cart-item-info{
-    flex:1;
-}
-
-.cart-item-info strong{
-    display:block;
-    margin-bottom:5px;
-}
-
-.quantity{
-    display:flex;
-    align-items:center;
-    gap:8px;
-}
-
-.quantity button{
-    width:30px;
-    height:30px;
-    border:none;
-    background:#071a33;
-    color:white;
-    border-radius:6px;
-    cursor:pointer;
-}
-
-.cart-total{
-    text-align:right;
-    font-size:24px;
-    font-weight:bold;
-    margin-top:20px;
-    color:#071a33;
-}
-
-.whatsapp-order{
-    width:100%;
-    margin-top:20px;
-    padding:14px;
-    border:none;
-    background:#10b95d;
-    color:white;
-    border-radius:10px;
-    font-size:17px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.whatsapp-order:hover{
-    background:#078b43;
-}
 
 /* =========================
    CONTACTO
 ========================= */
 
-.contact{
-    text-align:center;
-    background:white;
+.contact {
+
+    background: #eaf4f8;
+
+    text-align: center;
 }
 
-.contact p{
-    margin:10px 0;
-    font-size:17px;
+.contact h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
 }
 
-.contact strong{
-    color:#071a33;
+.contact p {
+
+    color: #506b7a;
+
+    margin-bottom: 20px;
 }
+
+.contact-button {
+
+    display: inline-block;
+
+    background: #18c964;
+
+    color: white;
+
+    padding: 13px 28px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
 
 /* =========================
-   WHATSAPP
+   WHATSAPP FLOTANTE
 ========================= */
 
-.whatsapp-float{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    background:#25D366;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    font-size:30px;
-    box-shadow:0 5px 20px rgba(0,0,0,.25);
-    z-index:2000;
+.whatsapp-float {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    width: 58px;
+
+    height: 58px;
+
+    background: #18c964;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    font-size: 28px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.25);
+
+    z-index: 2000;
 }
+
+
+/* =========================
+   CARRITO
+========================= */
+
+.cart-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.5);
+
+    display: none;
+
+    z-index: 3000;
+}
+
+.cart-overlay.active {
+
+    display: block;
+}
+
+.cart {
+
+    position: absolute;
+
+    right: 0;
+
+    top: 0;
+
+    height: 100%;
+
+    width: 400px;
+
+    max-width: 95%;
+
+    background: white;
+
+    padding: 25px;
+
+    overflow-y: auto;
+
+    box-shadow:
+    -5px 0 20px rgba(0,0,0,0.2);
+}
+
+.cart-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.close-cart {
+
+    background: #e63946;
+
+    color: white;
+
+    border: none;
+
+    width: 35px;
+
+    height: 35px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 20px;
+}
+
+.cart-item {
+
+    border-bottom: 1px solid #ddd;
+
+    padding: 15px 0;
+}
+
+.cart-item h4 {
+
+    margin-bottom: 7px;
+}
+
+.cart-item p {
+
+    color: #0077b6;
+
+    font-weight: bold;
+}
+
+.cart-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 8px;
+}
+
+.cart-controls button {
+
+    width: 28px;
+
+    height: 28px;
+
+    border: none;
+
+    background: #0077b6;
+
+    color: white;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.cart-controls .remove {
+
+    background: #e63946;
+}
+
+.cart-total {
+
+    margin-top: 25px;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    color: #102a43;
+}
+
+.whatsapp-order {
+
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 13px;
+
+    background: #18c964;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.empty-cart {
+
+    text-align: center;
+
+    color: #777;
+
+    margin-top: 40px;
+}
+
 
 /* =========================
    RULETA
 ========================= */
 
-.ruleta-modal{
-    display:none;
-    position:fixed;
-    z-index:4000;
-    inset:0;
-    background:rgba(0,0,0,.75);
-    align-items:center;
-    justify-content:center;
-    padding:20px;
+.ruleta-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.78);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 5000;
+
+    padding: 20px;
 }
 
-.ruleta-box{
-    background:white;
-    width:420px;
-    max-width:100%;
-    border-radius:20px;
-    padding:25px;
-    text-align:center;
-    position:relative;
+.ruleta-overlay.active {
+
+    display: flex;
 }
 
-.ruleta-box h2{
-    color:#071a33;
-    margin-bottom:8px;
+.ruleta-box {
+
+    background: white;
+
+    width: 450px;
+
+    max-width: 100%;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    position: relative;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.4);
 }
 
-.ruleta-box p{
-    color:#666;
-    margin-bottom:15px;
+.ruleta-box h2 {
+
+    color: #062235;
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
 }
 
-.ruleta-container{
-    position:relative;
-    width:300px;
-    max-width:100%;
-    margin:15px auto;
+.ruleta-box p {
+
+    color: #607d94;
+
+    margin-bottom: 8px;
 }
 
-#ruletaCanvas{
-    width:100%;
-    height:auto;
+.cerrar-ruleta {
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 15px;
+
+    width: 35px;
+
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #e63946;
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
 }
 
-.ruleta-flecha{
-    position:absolute;
-    top:-5px;
-    left:50%;
-    transform:translateX(-50%);
-    font-size:32px;
-    color:#e63946;
-    z-index:5;
+.ruleta-container {
+
+    position: relative;
+
+    width: 320px;
+
+    height: 320px;
+
+    margin: 20px auto;
 }
 
-.spin-btn{
-    border:none;
-    background:#071a33;
-    color:white;
-    padding:13px 25px;
-    border-radius:10px;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
+#ruleta {
+
+    width: 320px;
+
+    height: 320px;
+
+    transition:
+    transform 5s cubic-bezier(
+        0.17,
+        0.67,
+        0.12,
+        0.99
+    );
 }
 
-.spin-btn:hover{
-    background:#0c2e55;
+.flecha {
+
+    position: absolute;
+
+    top: -8px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    color: #e63946;
+
+    font-size: 35px;
+
+    text-shadow:
+    0 2px 4px rgba(0,0,0,0.3);
 }
 
-.close-ruleta{
-    position:absolute;
-    top:10px;
-    right:15px;
-    font-size:28px;
-    cursor:pointer;
-    color:#555;
+.boton-girar {
+
+    background: #0077b6;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 25px;
+
+    border-radius: 9px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
 }
 
-.premio{
-    margin-top:15px;
-    font-size:20px;
-    font-weight:bold;
-    color:#0a9b55;
+.boton-girar:hover {
+
+    background: #005f8d;
 }
+
+.boton-girar:disabled {
+
+    background: #999;
+
+    cursor: not-allowed;
+}
+
+.resultado-ruleta {
+
+    margin-top: 18px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #0077b6;
+
+    min-height: 30px;
+}
+
+.codigo-descuento {
+
+    margin-top: 10px;
+
+    padding: 10px;
+
+    background: #eaf7ee;
+
+    border-radius: 8px;
+
+    color: #159447;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
 
 /* =========================
    FOOTER
 ========================= */
 
-footer{
-    background:#041225;
-    color:#b9c5d4;
-    text-align:center;
-    padding:25px;
-    font-size:14px;
+footer {
+
+    background: #061b29;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    font-size: 14px;
 }
+
 
 /* =========================
-   RESPONSIVE
+   TABLET
 ========================= */
 
-@media(max-width:768px){
+@media (max-width: 1000px) {
 
-    header{
-        flex-direction:column;
-        gap:12px;
-        padding:14px 4%;
+    .products {
+
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    nav{
-        gap:12px;
-        flex-wrap:wrap;
-        justify-content:center;
+    .services {
+
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    nav a{
-        font-size:13px;
-    }
+    header {
 
-    section{
-        padding:40px 4%;
-    }
-
-    .section-title{
-        font-size:27px;
-    }
-
-    .product-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:12px;
-    }
-
-    .product-image{
-        height:180px;
-    }
-
-    .product-info{
-        padding:12px;
-    }
-
-    .product-info h3{
-        font-size:15px;
-    }
-
-    .product-price{
-        font-size:20px;
-    }
-
-    .buy-btn{
-        font-size:13px;
-        padding:10px;
-    }
-
-    .gallery-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:12px;
-    }
-
-    .gallery-item{
-        height:200px;
-    }
-
-    .cart-item{
-        flex-direction:column;
-        align-items:flex-start;
+        padding: 12px 3%;
     }
 }
 
-@media(max-width:480px){
 
-    .product-grid{
-        grid-template-columns:1fr 1fr;
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 650px) {
+
+    header {
+
+        flex-direction: column;
+
+        gap: 12px;
+
+        padding: 15px;
     }
 
-    .gallery-grid{
-        grid-template-columns:1fr 1fr;
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px;
     }
 
-    .gallery-item{
-        height:170px;
+    nav a {
+
+        font-size: 12px;
+    }
+
+    .hero img {
+
+        width: 100%;
+    }
+
+    section {
+
+        padding: 40px 15px;
+    }
+
+    .products {
+
+        grid-template-columns: 1fr;
+    }
+
+    .services {
+
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+
+        font-size: 25px;
+    }
+
+    .search-area {
+
+        flex-direction: column;
+    }
+
+    .search-box,
+    .filter {
+
+        width: 100%;
+    }
+
+    .cart {
+
+        width: 100%;
+    }
+
+    .ruleta-container,
+    #ruleta {
+
+        width: 280px;
+
+        height: 280px;
+    }
+
+}
+
+
+/* =========================================================
+   BOTONES FINALES DE PRODUCTOS DAMYTEC
+   Mantiene el diseño y las descripciones existentes.
+========================================================= */
+
+.btn-cart{
+    width:100% !important;
+    background:#087fbd !important;
+    color:#ffffff !important;
+    border:none !important;
+    padding:11px !important;
+    border-radius:7px !important;
+    font-size:14px !important;
+    font-weight:bold !important;
+    cursor:pointer !important;
+    margin-bottom:8px !important;
+    display:block !important;
+    text-align:center !important;
+}
+
+.btn-whatsapp{
+    display:block !important;
+    width:100% !important;
+    background:#18c964 !important;
+    color:#ffffff !important;
+    text-decoration:none !important;
+    padding:11px !important;
+    border-radius:7px !important;
+    font-weight:bold !important;
+    font-size:14px !important;
+    text-align:center !important;
+    margin:0 !important;
+}
+
+/* Muestras de instalaciones */
+
+.installations-title{
+    text-align:center;
+    margin:45px 0 25px;
+}
+
+.installations-title h3{
+    font-size:26px;
+    color:#102a43;
+    margin-bottom:8px;
+}
+
+.installations-title p{
+    color:#607d94;
+    font-size:15px;
+}
+
+.installations-gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-top:25px;
+}
+
+.installation-card{
+    background:#ffffff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.installation-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.13);
+}
+
+.installation-card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    display:block;
+}
+
+.installation-caption{
+    padding:13px;
+    text-align:center;
+    font-weight:bold;
+    color:#102a43;
+}
+
+@media(max-width:1000px){
+    .installations-gallery{
+        grid-template-columns:repeat(2,1fr);
     }
 }
+
+@media(max-width:650px){
+    .installations-gallery{
+        grid-template-columns:1fr;
+    }
+    .installation-card img{
+        height:250px;
+    }
+}
+
 </style>
+
 </head>
 
+
 <body>
+
 
 <!-- =========================
      HEADER
@@ -661,18 +1167,49 @@ footer{
 <header>
 
     <div class="logo">
+
         DAMY<span>TEC</span>
+
     </div>
 
+
     <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#catalogo">Cámaras</a>
-        <a href="#airpods">AirPods</a>
-        <a href="#piscinas">Piscinas</a>
-        <a href="#instalaciones">Instalaciones</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#contacto">Contacto</a>
+
+        <a href="#inicio">
+            Inicio
+        </a>
+
+        <a href="#camaras">
+            Cámaras
+        </a>
+
+        <a href="#airpods">
+            AirPods
+        </a>
+
+        <a href="#piscinas">
+            Piscinas
+        </a>
+
+        <a href="#servicios">
+            Servicios
+        </a>
+
+        <a href="#contacto">
+            Contacto
+        </a>
+
     </nav>
+
+
+    <button
+        class="cart-button"
+        onclick="abrirCarrito()">
+
+        🛒 Carrito
+        (<span id="cartCount">0</span>)
+
+    </button>
 
 </header>
 
@@ -681,495 +1218,748 @@ footer{
      HERO
 ========================= -->
 
-<div class="hero" id="inicio">
-    <img src="fondo-damytec.png" alt="DAMYTEC Seguridad y Tecnología">
+<div
+    class="hero"
+    id="inicio">
+
+    <img
+        src="fondo-damytec.png"
+        alt="DAMYTEC Seguridad y Tecnología">
+
 </div>
 
 
 <!-- =========================
-     CATÁLOGO
+     CÁMARAS
 ========================= -->
 
-<section id="catalogo">
+<section id="camaras">
 
-    <h2 class="section-title">📹 Cámaras de Seguridad</h2>
+    <div class="section-title">
 
-    <p class="section-subtitle">
-        Seguridad y tecnología para tu hogar o negocio
-    </p>
+        <h2>
+            📷 Cámaras de Seguridad
+        </h2>
 
-    <div class="search-box">
+        <p>
+            Encuentra la cámara ideal
+            para tu hogar o negocio
+        </p>
+
+    </div>
+
+
+    <!-- BUSCADOR -->
+
+    <div class="search-area">
+
         <input
             type="text"
             id="searchInput"
+            class="search-box"
             placeholder="🔎 Buscar producto..."
             onkeyup="filtrarProductos()"
         >
+
+
+        <select
+            id="categoryFilter"
+            class="filter"
+            onchange="filtrarProductos()">
+
+            <option value="todos">
+                Todas las categorías
+            </option>
+
+            <option value="camara">
+                Cámaras
+            </option>
+
+            <option value="airpods">
+                AirPods
+            </option>
+
+            <option value="piscina">
+                Piscinas
+            </option>
+
+        </select>
+
     </div>
 
-    <div class="filters">
 
-        <button class="filter-btn active" onclick="filtrarCategoria('todos',this)">
-            Todos
-        </button>
-
-        <button class="filter-btn" onclick="filtrarCategoria('camara',this)">
-            Cámaras
-        </button>
-
-        <button class="filter-btn" onclick="filtrarCategoria('airpods',this)">
-            AirPods
-        </button>
-
-        <button class="filter-btn" onclick="filtrarCategoria('piscina',this)">
-            Piscinas
-        </button>
-
-    </div>
-
-
-    <div class="product-grid" id="productGrid">
+    <div
+        class="products"
+        id="productContainer">
 
 
         <!-- CÁMARA 1 -->
 
-        <div class="product" data-category="camara" data-name="Cámara Foco 2K">
+        <div
+            class="product-card"
+            data-category="camara"
+            data-name="camara foco 2k">
 
             <img
-                class="product-image"
                 src="w=800,h=800,fit=pad.webp"
-                alt="Cámara Foco 2K"
-                onclick="abrirProducto(this)"
-            >
+                alt="Cámara Foco 2K">
 
             <div class="product-info">
 
-                <h3>Cámara Foco 2K</h3>
+                <h3>
+                    Cámara Foco 2K
+                </h3>
 
-                <div class="product-category">
-                    Cámara de seguridad
-                </div>
+                <p>
+                    Cámara tipo foco con
+                    conexión WiFi, visión y
+                    monitoreo mediante aplicación.
+                </p>
 
-                <div class="product-price">
+                <div class="price">
                     S/ 200
                 </div>
 
                 <button
-                    class="buy-btn"
-                    onclick="agregarCarrito('Cámara Foco 2K',200)"
-                >
-                    🛒 Comprar por WhatsApp
+                    class="btn-cart"
+                    onclick="agregarCarrito(
+                    'Cámara Foco 2K',
+                    200
+                    )">
+
+                    🛒 Agregar al carrito
+
                 </button>
 
+                <a
+                    class="btn-whatsapp"
+                    href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20estoy%20interesado%20en%20la%20Cámara%20Foco%202K%20de%20S/%20200"
+                    target="_blank">
+
+                    WhatsApp
+
+                </a>
+
             </div>
+
         </div>
 
 
         <!-- CÁMARA 2 -->
 
-        <div class="product" data-category="camara" data-name="Cámara 2K">
+        <div
+            class="product-card"
+            data-category="camara"
+            data-name="camara 2k">
 
             <img
-                class="product-image"
                 src="image (4).png"
-                alt="Cámara 2K"
-                onclick="abrirProducto(this)"
-            >
+                alt="Cámara 2K">
 
             <div class="product-info">
 
-                <h3>Cámara 2K</h3>
+                <h3>
+                    Cámara 2K
+                </h3>
 
-                <div class="product-category">
-                    Cámara de seguridad
-                </div>
+                <p>
+                    Cámara de seguridad WiFi
+                    para vigilancia de hogares
+                    y negocios.
+                </p>
 
-                <div class="product-price">
+                <div class="price">
                     S/ 240
                 </div>
 
                 <button
-                    class="buy-btn"
-                    onclick="agregarCarrito('Cámara 2K',240)"
-                >
-                    🛒 Comprar por WhatsApp
+                    class="btn-cart"
+                    onclick="agregarCarrito(
+                    'Cámara 2K',
+                    240
+                    )">
+
+                    🛒 Agregar al carrito
+
                 </button>
 
+                <a
+                    class="btn-whatsapp"
+                    href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20estoy%20interesado%20en%20la%20Cámara%202K%20de%20S/%20240"
+                    target="_blank">
+
+                    WhatsApp
+
+                </a>
+
             </div>
+
         </div>
 
 
         <!-- CÁMARA 3 -->
 
-        <div class="product" data-category="camara" data-name="Cámara Policía 3K">
+        <div
+            class="product-card"
+            data-category="camara"
+            data-name="camara policia 3k">
 
             <img
-                class="product-image"
                 src="image (3).png"
-                alt="Cámara Policía 3K"
-                onclick="abrirProducto(this)"
-            >
+                alt="Cámara Policía 3K">
 
             <div class="product-info">
 
-                <h3>Cámara Policía 3K</h3>
+                <h3>
+                    Cámara Policía 3K
+                </h3>
 
-                <div class="product-category">
-                    Cámara de seguridad
-                </div>
+                <p>
+                    Cámara de seguridad con
+                    resolución 3K para vigilancia.
+                </p>
 
-                <div class="product-price">
+                <div class="price">
                     S/ 290
                 </div>
 
                 <button
-                    class="buy-btn"
-                    onclick="agregarCarrito('Cámara Policía 3K',290)"
-                >
-                    🛒 Comprar por WhatsApp
+                    class="btn-cart"
+                    onclick="agregarCarrito(
+                    'Cámara Policía 3K',
+                    290
+                    )">
+
+                    🛒 Agregar al carrito
+
                 </button>
 
+                <a
+                    class="btn-whatsapp"
+                    href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20estoy%20interesado%20en%20la%20Cámara%20Policía%203K%20de%20S/%20290"
+                    target="_blank">
+
+                    WhatsApp
+
+                </a>
+
             </div>
+
         </div>
 
 
         <!-- CÁMARA 4 -->
 
-        <div class="product" data-category="camara" data-name="Cámara Negrita 3K">
+        <div
+            class="product-card"
+            data-category="camara"
+            data-name="camara negrita 3k">
 
             <img
-                class="product-image"
                 src="5ec66464-4284-45bd-bb95-530dddfa2f40.jpg"
-                alt="Cámara Negrita 3K"
-                onclick="abrirProducto(this)"
-            >
+                alt="Cámara Negrita 3K">
 
             <div class="product-info">
 
-                <h3>Cámara Negrita 3K</h3>
+                <h3>
+                    Cámara Negrita 3K
+                </h3>
 
-                <div class="product-category">
-                    Cámara de seguridad
-                </div>
+                <p>
+                    Cámara de seguridad 3K
+                    para vigilancia de tu hogar
+                    o negocio.
+                </p>
 
-                <div class="product-price">
+                <div class="price">
                     S/ 290
                 </div>
 
                 <button
-                    class="buy-btn"
-                    onclick="agregarCarrito('Cámara Negrita 3K',290)"
-                >
-                    🛒 Comprar por WhatsApp
+                    class="btn-cart"
+                    onclick="agregarCarrito(
+                    'Cámara Negrita 3K',
+                    290
+                    )">
+
+                    🛒 Agregar al carrito
+
                 </button>
 
+                <a
+                    class="btn-whatsapp"
+                    href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20estoy%20interesado%20en%20la%20Cámara%20Negrita%203K%20de%20S/%20290"
+                    target="_blank">
+
+                    WhatsApp
+
+                </a>
+
             </div>
+
         </div>
 
 
         <!-- CÁMARA 5 -->
 
-        <div class="product" data-category="camara" data-name="Cámara Pro 3K">
+        <div
+            class="product-card"
+            data-category="camara"
+            data-name="camara pro 3k">
 
             <img
-                class="product-image"
                 src="c003e327-4272-4a16-b699-2e5d566e58a5.jpg"
-                alt="Cámara Pro 3K"
-                onclick="abrirProducto(this)"
-            >
+                alt="Cámara Pro 3K">
 
             <div class="product-info">
 
-                <h3>Cámara Pro 3K</h3>
+                <h3>
+                    Cámara Pro 3K
+                </h3>
 
-                <div class="product-category">
-                    Cámara de seguridad
-                </div>
+                <p>
+                    Cámara WiFi de alta
+                    definición para vigilancia.
+                </p>
 
-                <div class="product-price">
+                <div class="price">
                     S/ 290
                 </div>
 
                 <button
-                    class="buy-btn"
-                    onclick="agregarCarrito('Cámara Pro 3K',290)"
-                >
-                    🛒 Comprar por WhatsApp
+                    class="btn-cart"
+                    onclick="agregarCarrito(
+                    'Cámara Pro 3K',
+                    290
+                    )">
+
+                    🛒 Agregar al carrito
+
                 </button>
 
+                <a
+                    class="btn-whatsapp"
+                    href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20estoy%20interesado%20en%20la%20Cámara%20Pro%203K%20de%20S/%20290"
+                    target="_blank">
+
+                    WhatsApp
+
+                </a>
+
             </div>
+
         </div>
 
 
         <!-- CÁMARA 6 -->
 
-        <div class="product" data-category="camara" data-name="Cámara Bocina 4K">
+        <div
+            class="product-card"
+            data-category="camara"
+            data-name="camara bocina 4k">
 
             <img
-                class="product-image"
                 src="image (1).png"
-                alt="Cámara Bocina 4K"
-                onclick="abrirProducto(this)"
-            >
+                alt="Cámara Bocina 4K">
 
             <div class="product-info">
 
-                <h3>Cámara Bocina 4K</h3>
+                <h3>
+                    Cámara Bocina 4K
+                </h3>
 
-                <div class="product-category">
-                    Cámara de seguridad
-                </div>
+                <p>
+                    Cámara de seguridad con
+                    excelente resolución y
+                    monitoreo WiFi.
+                </p>
 
-                <div class="product-price">
+                <div class="price">
                     S/ 300
                 </div>
 
                 <button
-                    class="buy-btn"
-                    onclick="agregarCarrito('Cámara Bocina 4K',300)"
-                >
-                    🛒 Comprar por WhatsApp
+                    class="btn-cart"
+                    onclick="agregarCarrito(
+                    'Cámara Bocina 4K',
+                    300
+                    )">
+
+                    🛒 Agregar al carrito
+
                 </button>
 
+                <a
+                    class="btn-whatsapp"
+                    href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20estoy%20interesado%20en%20la%20Cámara%20Bocina%204K%20de%20S/%20300"
+                    target="_blank">
+
+                    WhatsApp
+
+                </a>
+
             </div>
+
         </div>
 
 
         <!-- CÁMARA 7 -->
 
-        <div class="product" data-category="camara" data-name="Cámara Pulpo 4K HD">
+        <div
+            class="product-card"
+            data-category="camara"
+            data-name="camara pulpo 4k hd">
 
             <img
-                class="product-image"
                 src="image (2).png"
-                alt="Cámara Pulpo 4K HD"
-                onclick="abrirProducto(this)"
-            >
+                alt="Cámara Pulpo 4K HD">
 
             <div class="product-info">
 
-                <h3>Cámara Pulpo 4K HD</h3>
+                <h3>
+                    Cámara Pulpo 4K HD
+                </h3>
 
-                <div class="product-category">
+                <p>
                     Cámara de seguridad
-                </div>
+                    4K HD para vigilancia.
+                </p>
 
-                <div class="product-price">
+                <div class="price">
                     S/ 380
                 </div>
 
                 <button
-                    class="buy-btn"
-                    onclick="agregarCarrito('Cámara Pulpo 4K HD',380)"
-                >
-                    🛒 Comprar por WhatsApp
+                    class="btn-cart"
+                    onclick="agregarCarrito(
+                    'Cámara Pulpo 4K HD',
+                    380
+                    )">
+
+                    🛒 Agregar al carrito
+
                 </button>
 
+                <a
+                    class="btn-whatsapp"
+                    href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20estoy%20interesado%20en%20la%20Cámara%20Pulpo%204K%20HD%20de%20S/%20380"
+                    target="_blank">
+
+                    WhatsApp
+
+                </a>
+
             </div>
+
         </div>
 
 
         <!-- CÁMARA 8 -->
 
-        <div class="product" data-category="camara" data-name="Cámara con Panel Solar WIFI">
+        <div
+            class="product-card"
+            data-category="camara"
+            data-name="camara panel solar wifi">
 
             <img
-                class="product-image"
                 src="image (7).png"
-                alt="Cámara con Panel Solar WIFI"
-                onclick="abrirProducto(this)"
-            >
+                alt="Cámara con Panel Solar WIFI">
 
             <div class="product-info">
 
-                <h3>Cámara con Panel Solar WIFI</h3>
+                <h3>
+                    Cámara con Panel Solar WIFI
+                </h3>
 
-                <div class="product-category">
-                    Cámara de seguridad
-                </div>
+                <p>
+                    Cámara con panel solar
+                    y conexión WiFi para vigilancia.
+                </p>
 
-                <div class="product-price">
+                <div class="price">
                     S/ 380
                 </div>
 
                 <button
-                    class="buy-btn"
-                    onclick="agregarCarrito('Cámara con Panel Solar WIFI',380)"
-                >
-                    🛒 Comprar por WhatsApp
+                    class="btn-cart"
+                    onclick="agregarCarrito(
+                    'Cámara con Panel Solar WIFI',
+                    380
+                    )">
+
+                    🛒 Agregar al carrito
+
                 </button>
 
+                <a
+                    class="btn-whatsapp"
+                    href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20estoy%20interesado%20en%20la%20Cámara%20con%20Panel%20Solar%20WIFI%20de%20S/%20380"
+                    target="_blank">
+
+                    WhatsApp
+
+                </a>
+
             </div>
+
         </div>
 
 
         <!-- CÁMARA 9 -->
 
-        <div class="product" data-category="camara" data-name="Cámara 2 Paneles Solares">
+        <div
+            class="product-card"
+            data-category="camara"
+            data-name="camara 2 paneles solares chip 4 lentes">
 
             <img
-                class="product-image"
                 src="width_1178.png"
-                alt="Cámara con 2 Paneles Solares"
-                onclick="abrirProducto(this)"
-            >
+                alt="Cámara con 2 Paneles Solares">
 
             <div class="product-info">
 
-                <h3>Cámara con 2 Paneles Solares, Chip y 4 Lentes</h3>
+                <h3>
+                    Cámara con 2 Paneles Solares,
+                    Chip y 4 Lentes
+                </h3>
 
-                <div class="product-category">
-                    Cámara de seguridad
-                </div>
+                <p>
+                    Cámara con doble panel solar,
+                    chip y cuatro lentes.
+                </p>
 
-                <div class="product-price">
+                <div class="price">
                     S/ 480
                 </div>
 
                 <button
-                    class="buy-btn"
-                    onclick="agregarCarrito('Cámara con 2 Paneles Solares, Chip y 4 Lentes',480)"
-                >
-                    🛒 Comprar por WhatsApp
+                    class="btn-cart"
+                    onclick="agregarCarrito(
+                    'Cámara con 2 Paneles Solares, Chip y 4 Lentes',
+                    480
+                    )">
+
+                    🛒 Agregar al carrito
+
                 </button>
 
+                <a
+                    class="btn-whatsapp"
+                    href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20estoy%20interesado%20en%20la%20Cámara%20con%202%20Paneles%20Solares%20de%20S/%20480"
+                    target="_blank">
+
+                    WhatsApp
+
+                </a>
+
             </div>
+
         </div>
 
 
         <!-- AIRPODS 4 -->
 
-        <div class="product" id="airpods" data-category="airpods" data-name="AirPods 4ta Generación">
+        <div
+            class="product-card"
+            data-category="airpods"
+            data-name="airpods 4ta generacion">
 
             <img
-                class="product-image"
                 src="image (5).png"
-                alt="AirPods 4ta Generación"
-                onclick="abrirProducto(this)"
-            >
+                alt="AirPods 4ta Generación">
 
             <div class="product-info">
 
-                <h3>AirPods 4ta Generación</h3>
+                <h3>
+                    AirPods 4ta Generación
+                </h3>
 
-                <div class="product-category">
-                    Audio y tecnología
-                </div>
+                <p>
+                    Audífonos inalámbricos con
+                    diseño moderno y excelente sonido.
+                </p>
 
-                <div class="product-price">
+                <div class="price">
                     S/ 110
                 </div>
 
                 <button
-                    class="buy-btn"
-                    onclick="agregarCarrito('AirPods 4ta Generación',110)"
-                >
-                    🛒 Comprar
+                    class="btn-cart"
+                    onclick="agregarCarrito(
+                    'AirPods 4ta Generación',
+                    110
+                    )">
+
+                    🛒 Agregar al carrito
+
                 </button>
 
+                <a
+                    class="btn-whatsapp"
+                    href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20estoy%20interesado%20en%20los%20AirPods%204ta%20Generación%20de%20S/%20110"
+                    target="_blank">
+
+                    WhatsApp
+
+                </a>
+
             </div>
+
         </div>
 
 
         <!-- AIRPODS 3 -->
 
-        <div class="product" data-category="airpods" data-name="AirPods 3ra Generación">
+        <div
+            class="product-card"
+            data-category="airpods"
+            data-name="airpods 3ra generacion">
 
             <img
-                class="product-image"
                 src="image (6).png"
-                alt="AirPods 3ra Generación"
-                onclick="abrirProducto(this)"
-            >
+                alt="AirPods 3ra Generación">
 
             <div class="product-info">
 
-                <h3>AirPods 3ra Generación</h3>
+                <h3>
+                    AirPods 3ra Generación
+                </h3>
 
-                <div class="product-category">
-                    Audio y tecnología
-                </div>
+                <p>
+                    Audífonos inalámbricos ideales
+                    para música y llamadas.
+                </p>
 
-                <div class="product-price">
+                <div class="price">
                     S/ 140
                 </div>
 
                 <button
-                    class="buy-btn"
-                    onclick="agregarCarrito('AirPods 3ra Generación',140)"
-                >
-                    🛒 Comprar
+                    class="btn-cart"
+                    onclick="agregarCarrito(
+                    'AirPods 3ra Generación',
+                    140
+                    )">
+
+                    🛒 Agregar al carrito
+
                 </button>
 
+                <a
+                    class="btn-whatsapp"
+                    href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20estoy%20interesado%20en%20los%20AirPods%203ra%20Generación%20de%20S/%20140"
+                    target="_blank">
+
+                    WhatsApp
+
+                </a>
+
             </div>
+
         </div>
 
 
         <!-- PISCINA 1 -->
 
-        <div class="product" id="piscinas" data-category="piscina" data-name="Piscina Bestway 2.59 x 1.70">
+        <div
+            class="product-card"
+            data-category="piscina"
+            data-name="piscina bestway 2.59 1.70 61">
 
             <img
-                class="product-image"
                 src="2.59x1.70"
-                alt="Piscina Bestway 2.59 x 1.70 x 61 cm"
-                onclick="abrirProducto(this)"
-            >
+                alt="Piscina Bestway 2.59 x 1.70">
 
             <div class="product-info">
 
-                <h3>Piscina Bestway 2.59 × 1.70 × 61 cm</h3>
+                <h3>
+                    Piscina Bestway
+                    2.59 × 1.70 × 61 cm
+                </h3>
 
-                <div class="product-category">
-                    Piscina armable Bestway
-                </div>
+                <p>
+                    Piscina Bestway ideal
+                    para disfrutar en familia.
+                </p>
 
-                <div class="product-price">
+                <div class="price">
                     S/ 380
                 </div>
 
                 <button
-                    class="buy-btn"
-                    onclick="agregarCarrito('Piscina Bestway 2.59 x 1.70 x 61 cm',380)"
-                >
-                    🛒 Comprar
+                    class="btn-cart"
+                    onclick="agregarCarrito(
+                    'Piscina Bestway 2.59 x 1.70 x 61 cm',
+                    380
+                    )">
+
+                    🛒 Agregar al carrito
+
                 </button>
 
+                <a
+                    class="btn-whatsapp"
+                    href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20estoy%20interesado%20en%20la%20Piscina%20Bestway%202.59%20x%201.70%20x%2061%20cm%20de%20S/%20380"
+                    target="_blank">
+
+                    WhatsApp
+
+                </a>
+
             </div>
+
         </div>
 
 
         <!-- PISCINA 2 -->
 
-        <div class="product" data-category="piscina" data-name="Piscina Bestway 3 x 2">
+        <div
+            class="product-card"
+            data-category="piscina"
+            data-name="piscina bestway 3 2 66">
 
             <img
-                class="product-image"
                 src="3x2"
-                alt="Piscina Bestway 3.00 x 2.01 x 66 cm"
-                onclick="abrirProducto(this)"
-            >
+                alt="Piscina Bestway 3 x 2">
 
             <div class="product-info">
 
-                <h3>Piscina Bestway 3.00 × 2.01 × 66 cm</h3>
+                <h3>
+                    Piscina Bestway
+                    3.00 × 2.01 × 66 cm
+                </h3>
 
-                <div class="product-category">
-                    Piscina armable Bestway
-                </div>
+                <p>
+                    Piscina amplia para disfrutar
+                    momentos en familia.
+                </p>
 
-                <div class="product-price">
+                <div class="price">
                     S/ 450
                 </div>
 
                 <button
-                    class="buy-btn"
-                    onclick="agregarCarrito('Piscina Bestway 3.00 x 2.01 x 66 cm',450)"
-                >
-                    🛒 Comprar
+                    class="btn-cart"
+                    onclick="agregarCarrito(
+                    'Piscina Bestway 3.00 x 2.01 x 66 cm',
+                    450
+                    )">
+
+                    🛒 Agregar al carrito
+
                 </button>
 
+                <a
+                    class="btn-whatsapp"
+                    href="https://wa.me/51992504911?text=Hola%20DAMYTEC,%20estoy%20interesado%20en%20la%20Piscina%20Bestway%203.00%20x%202.01%20x%2066%20cm%20de%20S/%20450"
+                    target="_blank">
+
+                    WhatsApp
+
+                </a>
+
             </div>
+
         </div>
 
     </div>
@@ -1178,147 +1968,94 @@ footer{
 
 
 <!-- =========================
-     GALERÍA DE INSTALACIONES
+     OFERTAS
 ========================= -->
 
-<section id="instalaciones" class="gallery-section">
+<section class="offers">
 
-    <h2 class="section-title">
-        📸 Instalaciones DAMYTEC
+    <h2>
+        🔥 Ofertas DAMYTEC
     </h2>
 
-    <p class="section-subtitle">
-        Conoce algunos de nuestros trabajos realizados
+    <p>
+        Precios especiales hasta agotar stock.
     </p>
 
-    <div class="gallery-grid">
-
-        <div class="gallery-item" onclick="abrirGaleria('instalacion-1.jpg')">
-
-            <img
-                src="instalacion-1.jpg"
-                alt="Instalación de cámara DAMYTEC"
-            >
-
-            <div class="gallery-overlay">
-                📷 Instalación DAMYTEC
-            </div>
-
-        </div>
-
-
-        <div class="gallery-item" onclick="abrirGaleria('instalacion-2.jpg')">
-
-            <img
-                src="instalacion-2.jpg"
-                alt="Instalación de cámara DAMYTEC"
-            >
-
-            <div class="gallery-overlay">
-                📷 Instalación DAMYTEC
-            </div>
-
-        </div>
-
-
-        <div class="gallery-item" onclick="abrirGaleria('instalacion-3.jpg')">
-
-            <img
-                src="instalacion-3.jpg"
-                alt="Instalación de cámara DAMYTEC"
-            >
-
-            <div class="gallery-overlay">
-                📷 Instalación DAMYTEC
-            </div>
-
-        </div>
-
-
-        <div class="gallery-item" onclick="abrirGaleria('instalacion-4.jpg')">
-
-            <img
-                src="instalacion-4.jpg"
-                alt="Instalación de cámara DAMYTEC"
-            >
-
-            <div class="gallery-overlay">
-                📷 Instalación DAMYTEC
-            </div>
-
-        </div>
-
-    </div>
-
 </section>
-
-
-<!-- =========================
-     MODAL GALERÍA
-========================= -->
-
-<div
-    class="gallery-modal"
-    id="galleryModal"
-    onclick="cerrarGaleria()"
->
-
-    <span class="close-gallery">
-        ×
-    </span>
-
-    <img
-        id="galleryModalImage"
-        src=""
-        alt="Instalación DAMYTEC"
-        onclick="event.stopPropagation()"
-    >
-
-</div>
 
 
 <!-- =========================
      SERVICIOS
 ========================= -->
 
-<section id="servicios" class="services">
+<section id="servicios">
 
-    <h2 class="section-title">
-        🛠️ Nuestros Servicios
-    </h2>
+    <div class="section-title">
 
-    <p class="section-subtitle" style="color:#cbd5e1;">
-        Soluciones para la seguridad y tecnología de tu hogar o negocio
-    </p>
+        <h2>
+            🛠️ Nuestros Servicios
+        </h2>
 
-    <div class="service-grid">
+        <p>
+            Soluciones para tu hogar y negocio
+        </p>
+
+    </div>
+
+
+    <div class="services">
 
         <div class="service-card">
-            <h3>📹 Venta de cámaras</h3>
+
+            <div class="icon">
+                📷
+            </div>
+
+            <h3>
+                Venta de Cámaras
+            </h3>
+
             <p>
-                Cámaras de seguridad con diferentes características y modelos.
+                Cámaras de seguridad WiFi,
+                solares y con chip.
             </p>
+
         </div>
 
-        <div class="service-card">
-            <h3>🔧 Instalación</h3>
-            <p>
-                Instalación de cámaras de seguridad para viviendas y negocios.
-            </p>
-        </div>
 
         <div class="service-card">
-            <h3>☀️ Cámaras solares</h3>
+
+            <div class="icon">
+                🔧
+            </div>
+
+            <h3>
+                Instalación
+            </h3>
+
             <p>
-                Modelos con panel solar y opciones de conexión mediante chip.
+                Instalación de cámaras
+                de seguridad.
             </p>
+
         </div>
 
+
         <div class="service-card">
-            <h3>📱 Configuración</h3>
+
+            <div class="icon">
+                💬
+            </div>
+
+            <h3>
+                Asesoría
+            </h3>
+
             <p>
-                Configuración y conexión de las cámaras para visualización desde el celular.
+                Te ayudamos a elegir
+                la cámara adecuada.
             </p>
+
         </div>
 
     </div>
@@ -1326,40 +2063,66 @@ footer{
 </section>
 
 
+
 <!-- =========================
-     CARRITO
+     MUESTRAS DE INSTALACIONES
 ========================= -->
 
-<section class="cart-section" id="carrito">
+<section id="instalaciones">
 
-    <h2 class="section-title">
-        🛒 Tu pedido
-    </h2>
+    <div class="installations-title">
 
-    <p class="section-subtitle">
-        Revisa tus productos antes de enviarnos tu pedido
-    </p>
+        <h3>
+            📸 Muestras de nuestras instalaciones
+        </h3>
 
-    <div class="cart">
+        <p>
+            Conoce algunos de nuestros trabajos realizados.
+        </p>
 
-        <div id="cartItems">
+    </div>
 
-            <p style="text-align:center;color:#777;">
-                Tu carrito está vacío.
-            </p>
+    <div class="installations-gallery">
 
+        <div class="installation-card">
+            <img
+                src="instalacion-1.jpg"
+                alt="Instalación de cámara DAMYTEC 1"
+            >
+            <div class="installation-caption">
+                Instalación de cámaras
+            </div>
         </div>
 
-        <div class="cart-total">
-            Total: S/ <span id="cartTotal">0</span>
+        <div class="installation-card">
+            <img
+                src="instalacion-2.jpg"
+                alt="Instalación de cámara DAMYTEC 2"
+            >
+            <div class="installation-caption">
+                Instalación de cámaras
+            </div>
         </div>
 
-        <button
-            class="whatsapp-order"
-            onclick="enviarPedido()"
-        >
-            💬 Enviar pedido por WhatsApp
-        </button>
+        <div class="installation-card">
+            <img
+                src="instalacion-3.jpg"
+                alt="Instalación de cámara DAMYTEC 3"
+            >
+            <div class="installation-caption">
+                Instalación de cámaras
+            </div>
+        </div>
+
+        <div class="installation-card">
+            <img
+                src="instalacion-4.jpg"
+                alt="Instalación de cámara DAMYTEC 4"
+            >
+            <div class="installation-caption">
+                Instalación de cámaras
+            </div>
+        </div>
 
     </div>
 
@@ -1370,36 +2133,27 @@ footer{
      CONTACTO
 ========================= -->
 
-<section id="contacto" class="contact">
+<section
+    class="contact"
+    id="contacto">
 
-    <h2 class="section-title">
-        📞 Contáctanos
+    <h2>
+        📲 Contáctanos
     </h2>
 
     <p>
-        ¿Tienes alguna consulta o necesitas una instalación?
-    </p>
-
-    <p>
-        <strong>WhatsApp:</strong> 992 504 911
-    </p>
-
-    <p>
-        <strong>DAMYTEC</strong> — Seguridad y Tecnología
+        ¿Quieres comprar una cámara,
+        AirPods o piscina?
     </p>
 
     <a
+        class="contact-button"
         href="https://wa.me/51992504911"
-        target="_blank"
-        class="buy-btn"
-        style="
-            display:inline-block;
-            text-decoration:none;
-            margin-top:15px;
-            padding:13px 25px;
-        "
-    >
-        💬 Escríbenos por WhatsApp
+        target="_blank">
+
+        WhatsApp:
+        992 504 911
+
     </a>
 
 </section>
@@ -1411,7 +2165,13 @@ footer{
 
 <footer>
 
-    © 2026 DAMYTEC - Seguridad y Tecnología
+    <p>
+        © 2026 DAMYTEC - Seguridad y Tecnología
+    </p>
+
+    <p>
+        Venta e instalación de cámaras de seguridad
+    </p>
 
 </footer>
 
@@ -1424,267 +2184,428 @@ footer{
     class="whatsapp-float"
     href="https://wa.me/51992504911"
     target="_blank"
-    title="WhatsApp DAMYTEC"
->
+    title="Escríbenos por WhatsApp">
+
     💬
+
 </a>
 
 
 <!-- =========================
-     RULETA
+     CARRITO
 ========================= -->
 
-<div class="ruleta-modal" id="ruletaModal">
+<div
+    class="cart-overlay"
+    id="cartOverlay">
 
-    <div class="ruleta-box">
+    <div class="cart">
 
-        <span
-            class="close-ruleta"
-            onclick="cerrarRuleta()"
-        >
-            ×
-        </span>
+        <div class="cart-header">
 
-        <h2>🎉 ¡Gracias por tu compra!</h2>
+            <h2>
+                🛒 Mi carrito
+            </h2>
 
-        <p>
-            Gira la ruleta y descubre tu premio.
-        </p>
+            <button
+                class="close-cart"
+                onclick="cerrarCarrito()">
 
-        <div class="ruleta-container">
+                ×
 
-            <div class="ruleta-flecha">
-                ▼
-            </div>
-
-            <canvas
-                id="ruletaCanvas"
-                width="300"
-                height="300"
-            ></canvas>
+            </button>
 
         </div>
 
-        <button
-            class="spin-btn"
-            id="spinButton"
-            onclick="girarRuleta()"
-        >
-            🎯 GIRAR RULETA
-        </button>
+
+        <div id="cartItems">
+
+            <p class="empty-cart">
+                Tu carrito está vacío.
+            </p>
+
+        </div>
+
 
         <div
-            class="premio"
-            id="premio"
-        ></div>
+            class="cart-total"
+            id="cartTotal">
+
+            Total: S/ 0
+
+        </div>
+
+
+        <button
+            class="whatsapp-order"
+            onclick="enviarPedido()">
+
+            📲 Enviar pedido por WhatsApp
+
+        </button>
 
     </div>
 
 </div>
 
 
+<!-- =========================
+     RULETA
+========================= -->
+
+<div
+    id="ruletaModal"
+    class="ruleta-overlay">
+
+    <div class="ruleta-box">
+
+        <button
+            class="cerrar-ruleta"
+            onclick="cerrarRuleta()">
+
+            ×
+
+        </button>
+
+
+        <h2>
+            🎡 ¡Ruleta DAMYTEC!
+        </h2>
+
+
+        <p>
+            ¡Gracias por tu compra!
+        </p>
+
+
+        <p>
+            Gira la ruleta y gana un
+            descuento para tu próxima compra.
+        </p>
+
+
+        <div class="ruleta-container">
+
+            <div class="flecha">
+                ▼
+            </div>
+
+
+            <canvas
+                id="ruleta"
+                width="320"
+                height="320">
+            </canvas>
+
+        </div>
+
+
+        <button
+            id="botonGirar"
+            class="boton-girar"
+            onclick="girarRuleta()">
+
+            🎡 GIRAR LA RULETA
+
+        </button>
+
+
+        <div
+            id="resultadoRuleta"
+            class="resultado-ruleta">
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
 
-/* ==========================================
-   WHATSAPP
-========================================== */
 
-const whatsapp = "51992504911";
-
-
-/* ==========================================
+/* =========================
    CARRITO
-========================================== */
+========================= */
 
 let carrito = [];
 
 
-function agregarCarrito(nombre, precio){
+function agregarCarrito(nombre, precio) {
 
-    const productoExistente = carrito.find(
-        item => item.nombre === nombre
-    );
+    const productoExistente =
+        carrito.find(
+            item => item.nombre === nombre
+        );
 
-    if(productoExistente){
+
+    if (productoExistente) {
 
         productoExistente.cantidad++;
 
-    }else{
+    } else {
 
         carrito.push({
-            nombre:nombre,
-            precio:precio,
-            cantidad:1
+
+            nombre: nombre,
+
+            precio: precio,
+
+            cantidad: 1
+
         });
 
     }
 
+
     actualizarCarrito();
 
-    alert("✅ Producto agregado al carrito");
+    abrirCarrito();
 
 }
 
 
-function aumentarCantidad(index){
+function actualizarCarrito() {
 
-    carrito[index].cantidad++;
+    const container =
+        document.getElementById("cartItems");
 
-    actualizarCarrito();
+    const count =
+        document.getElementById("cartCount");
 
-}
-
-
-function disminuirCantidad(index){
-
-    if(carrito[index].cantidad > 1){
-
-        carrito[index].cantidad--;
-
-    }else{
-
-        carrito.splice(index,1);
-
-    }
-
-    actualizarCarrito();
-
-}
+    const totalElement =
+        document.getElementById("cartTotal");
 
 
-function actualizarCarrito(){
+    container.innerHTML = "";
 
-    const cartItems = document.getElementById("cartItems");
 
-    const cartTotal = document.getElementById("cartTotal");
+    if (carrito.length === 0) {
 
-    if(carrito.length === 0){
+        container.innerHTML = `
 
-        cartItems.innerHTML = `
-            <p style="text-align:center;color:#777;">
+            <p class="empty-cart">
                 Tu carrito está vacío.
             </p>
+
         `;
 
-        cartTotal.textContent = "0";
+        count.textContent = "0";
+
+        totalElement.textContent =
+            "Total: S/ 0";
 
         return;
     }
 
 
-    let html = "";
-
     let total = 0;
 
-
-    carrito.forEach((item,index)=>{
-
-        const subtotal =
-            item.precio * item.cantidad;
-
-        total += subtotal;
+    let cantidadTotal = 0;
 
 
-        html += `
+    carrito.forEach(
+        (item, index) => {
 
-            <div class="cart-item">
+            total +=
+                item.precio *
+                item.cantidad;
 
-                <div class="cart-item-info">
+            cantidadTotal +=
+                item.cantidad;
 
-                    <strong>
-                        ${item.nombre}
-                    </strong>
 
+            const div =
+                document.createElement("div");
+
+            div.className =
+                "cart-item";
+
+
+            div.innerHTML = `
+
+                <h4>
+                    ${item.nombre}
+                </h4>
+
+                <p>
                     S/ ${item.precio}
-                    c/u
+                </p>
 
-                </div>
-
-
-                <div class="quantity">
+                <div class="cart-controls">
 
                     <button
-                        onclick="disminuirCantidad(${index})"
-                    >
-                        −
+                        onclick="cambiarCantidad(
+                            ${index},
+                            -1
+                        )">
+
+                        -
+
                     </button>
+
 
                     <strong>
                         ${item.cantidad}
                     </strong>
 
+
                     <button
-                        onclick="aumentarCantidad(${index})"
-                    >
+                        onclick="cambiarCantidad(
+                            ${index},
+                            1
+                        )">
+
                         +
+
+                    </button>
+
+
+                    <button
+                        class="remove"
+                        onclick="eliminarProducto(
+                            ${index}
+                        )">
+
+                        🗑
+
                     </button>
 
                 </div>
 
-
-                <strong>
-                    S/ ${subtotal}
-                </strong>
-
-            </div>
-
-        `;
-
-    });
+            `;
 
 
-    cartItems.innerHTML = html;
+            container.appendChild(div);
 
-    cartTotal.textContent = total;
+        }
+    );
+
+
+    count.textContent =
+        cantidadTotal;
+
+
+    totalElement.textContent =
+        "Total: S/ " + total;
 
 }
 
 
-/* ==========================================
-   ENVIAR PEDIDO WHATSAPP
-========================================== */
+function cambiarCantidad(index, cambio) {
 
-function enviarPedido(){
+    carrito[index].cantidad += cambio;
 
-    if(carrito.length === 0){
 
-        alert("🛒 Primero agrega productos al carrito.");
+    if (
+        carrito[index].cantidad <= 0
+    ) {
+
+        carrito.splice(index, 1);
+
+    }
+
+
+    actualizarCarrito();
+
+}
+
+
+function eliminarProducto(index) {
+
+    carrito.splice(index, 1);
+
+    actualizarCarrito();
+
+}
+
+
+function abrirCarrito() {
+
+    document
+        .getElementById("cartOverlay")
+        .classList
+        .add("active");
+
+}
+
+
+function cerrarCarrito() {
+
+    document
+        .getElementById("cartOverlay")
+        .classList
+        .remove("active");
+
+}
+
+
+/* =========================
+   ENVIAR PEDIDO
+========================= */
+
+function enviarPedido() {
+
+    if (carrito.length === 0) {
+
+        alert(
+            "Tu carrito está vacío."
+        );
 
         return;
     }
 
 
     let mensaje =
-        "Hola DAMYTEC 👋, quiero realizar el siguiente pedido:%0A%0A";
+        "Hola DAMYTEC 👋%0A%0A";
+
+    mensaje +=
+        "Quiero realizar el siguiente pedido:%0A%0A";
 
 
     let total = 0;
 
 
-    carrito.forEach(item=>{
+    carrito.forEach(item => {
 
         const subtotal =
-            item.precio * item.cantidad;
+            item.precio *
+            item.cantidad;
 
         total += subtotal;
 
 
         mensaje +=
-            `📦 ${item.nombre}%0A` +
-            `Cantidad: ${item.cantidad}%0A` +
-            `Precio: S/ ${item.precio}%0A` +
-            `Subtotal: S/ ${subtotal}%0A%0A`;
+            "• " +
+            item.nombre +
+            " x" +
+            item.cantidad +
+            " - S/ " +
+            subtotal +
+            "%0A";
 
     });
 
 
     mensaje +=
-        `💰 TOTAL: S/ ${total}%0A%0A` +
-        "Gracias. Quedo atento/a a la confirmación.";
+        "%0A💰 Total: S/ " +
+        total;
+
+
+    mensaje +=
+        "%0A%0AGracias por su atención.";
+
+
+    const url =
+        "https://wa.me/51992504911?text=" +
+        mensaje;
 
 
     window.open(
-        `https://wa.me/${whatsapp}?text=${mensaje}`,
+        url,
         "_blank"
     );
 
@@ -1693,24 +2614,26 @@ function enviarPedido(){
 
     actualizarCarrito();
 
+    cerrarCarrito();
 
-    setTimeout(()=>{
 
-        abrirRuleta();
+    setTimeout(
+        () => {
 
-    },1000);
+            abrirRuleta();
+
+        },
+        1000
+    );
 
 }
 
 
-/* ==========================================
-   BÚSQUEDA
-========================================== */
+/* =========================
+   BUSCADOR
+========================= */
 
-let categoriaActual = "todos";
-
-
-function filtrarProductos(){
+function filtrarProductos() {
 
     const texto =
         document
@@ -1719,34 +2642,53 @@ function filtrarProductos(){
         .toLowerCase();
 
 
+    const categoria =
+        document
+        .getElementById("categoryFilter")
+        .value;
+
+
     const productos =
-        document.querySelectorAll(".product");
+        document.querySelectorAll(
+            ".product-card"
+        );
 
 
-    productos.forEach(producto=>{
+    productos.forEach(producto => {
 
         const nombre =
-            producto.dataset.name.toLowerCase();
+            producto.getAttribute(
+                "data-name"
+            );
 
-        const categoria =
-            producto.dataset.category;
+
+        const cat =
+            producto.getAttribute(
+                "data-category"
+            );
 
 
         const coincideTexto =
             nombre.includes(texto);
 
+
         const coincideCategoria =
-            categoriaActual === "todos" ||
-            categoria === categoriaActual;
+            categoria === "todos" ||
+            cat === categoria;
 
 
-        if(coincideTexto && coincideCategoria){
+        if (
+            coincideTexto &&
+            coincideCategoria
+        ) {
 
-            producto.style.display = "flex";
+            producto.style.display =
+                "flex";
 
-        }else{
+        } else {
 
-            producto.style.display = "none";
+            producto.style.display =
+                "none";
 
         }
 
@@ -1755,137 +2697,90 @@ function filtrarProductos(){
 }
 
 
-function filtrarCategoria(categoria, boton){
-
-    categoriaActual = categoria;
-
-
-    document
-    .querySelectorAll(".filter-btn")
-    .forEach(btn=>{
-        btn.classList.remove("active");
-    });
-
-
-    boton.classList.add("active");
-
-
-    filtrarProductos();
-
-}
-
-
-/* ==========================================
-   GALERÍA
-========================================== */
-
-function abrirGaleria(imagen){
-
-    const modal =
-        document.getElementById("galleryModal");
-
-    const modalImage =
-        document.getElementById("galleryModalImage");
-
-
-    modalImage.src = imagen;
-
-    modal.style.display = "flex";
-
-}
-
-
-function cerrarGaleria(){
-
-    document
-    .getElementById("galleryModal")
-    .style.display = "none";
-
-}
-
-
-/* ==========================================
-   VER IMAGEN DE PRODUCTO
-========================================== */
-
-function abrirProducto(imagen){
-
-    const modal =
-        document.getElementById("galleryModal");
-
-    const modalImage =
-        document.getElementById("galleryModalImage");
-
-
-    modalImage.src = imagen.src;
-
-    modal.style.display = "flex";
-
-}
-
-
-/* ==========================================
+/* =========================
    RULETA
-========================================== */
+========================= */
 
 const premios = [
 
-    {
-        nombre:"5% de descuento",
-        codigo:"DAMY5"
-    },
+    "5% de descuento",
 
-    {
-        nombre:"10% de descuento",
-        codigo:"DAMY10"
-    },
+    "10% de descuento",
 
-    {
-        nombre:"15% de descuento",
-        codigo:"DAMY15"
-    },
+    "15% de descuento",
 
-    {
-        nombre:"S/ 10 de descuento",
-        codigo:"DAMY10SOLES"
-    },
+    "S/ 10 de descuento",
 
-    {
-        nombre:"S/ 20 de descuento",
-        codigo:"DAMY20SOLES"
-    },
+    "S/ 20 de descuento",
 
-    {
-        nombre:"🎁 Premio sorpresa",
-        codigo:"DAMYSORPRESA"
-    }
+    "Premio sorpresa"
 
 ];
 
 
-const canvas =
-    document.getElementById("ruletaCanvas");
+const codigos = [
 
-const ctx =
-    canvas.getContext("2d");
+    "DAMY5",
+
+    "DAMY10",
+
+    "DAMY15",
+
+    "DAMY10SOLES",
+
+    "DAMY20SOLES",
+
+    "DAMYSORPRESA"
+
+];
 
 
-const centro = 150;
+const colores = [
 
-const radio = 145;
+    "#00aeef",
 
-let anguloActual = 0;
+    "#18c964",
 
-let girando = false;
+    "#0077b6",
+
+    "#00c2cb",
+
+    "#062235",
+
+    "#159447"
+
+];
 
 
-function dibujarRuleta(){
+let rotacionActual = 0;
 
-    const cantidad =
-        premios.length;
+let puedeGirar = true;
+
+let premioGanado = "";
+
+
+/* =========================
+   DIBUJAR RULETA
+========================= */
+
+function dibujarRuleta() {
+
+    const canvas =
+        document.getElementById(
+            "ruleta"
+        );
+
+    const ctx =
+        canvas.getContext("2d");
+
+
+    const centro = 160;
+
+    const radio = 150;
 
     const angulo =
-        (Math.PI * 2) / cantidad;
+        (2 * Math.PI) /
+        premios.length;
 
 
     ctx.clearRect(
@@ -1896,155 +2791,131 @@ function dibujarRuleta(){
     );
 
 
-    premios.forEach((premio,index)=>{
+    premios.forEach(
+        (premio, i) => {
 
-        const inicio =
-            anguloActual + index * angulo;
+            const inicio =
+                i * angulo;
 
-        const fin =
-            inicio + angulo;
-
-
-        ctx.beginPath();
-
-        ctx.moveTo(
-            centro,
-            centro
-        );
-
-        ctx.arc(
-            centro,
-            centro,
-            radio,
-            inicio,
-            fin
-        );
-
-        ctx.closePath();
-
-        ctx.fillStyle =
-            index % 2 === 0
-            ? "#20c4ff"
-            : "#071a33";
-
-        ctx.fill();
-
-        ctx.strokeStyle =
-            "#ffffff";
-
-        ctx.lineWidth = 2;
-
-        ctx.stroke();
+            const fin =
+                inicio + angulo;
 
 
-        ctx.save();
+            ctx.beginPath();
 
-        ctx.translate(
-            centro,
-            centro
-        );
+            ctx.moveTo(
+                centro,
+                centro
+            );
 
-        ctx.rotate(
-            inicio + angulo / 2
-        );
+            ctx.arc(
+                centro,
+                centro,
+                radio,
+                inicio,
+                fin
+            );
 
-        ctx.fillStyle =
-            "#ffffff";
+            ctx.closePath();
 
-        ctx.font =
-            "bold 13px Arial";
 
-        ctx.textAlign =
-            "right";
+            ctx.fillStyle =
+                colores[i];
 
-        ctx.fillText(
-            premio.nombre,
-            radio - 8,
-            5
-        );
+            ctx.fill();
 
-        ctx.restore();
 
-    });
+            ctx.strokeStyle =
+                "#ffffff";
 
+            ctx.lineWidth = 3;
+
+            ctx.stroke();
+
+
+            ctx.save();
+
+
+            ctx.translate(
+                centro,
+                centro
+            );
+
+
+            ctx.rotate(
+                inicio +
+                angulo / 2
+            );
+
+
+            ctx.fillStyle =
+                "white";
+
+            ctx.font =
+                "bold 13px Arial";
+
+            ctx.textAlign =
+                "right";
+
+
+            ctx.fillText(
+                premio,
+                radio - 12,
+                5
+            );
+
+
+            ctx.restore();
+
+        }
+    );
+
+
+    /* CENTRO */
 
     ctx.beginPath();
 
     ctx.arc(
         centro,
         centro,
-        25,
+        35,
         0,
         Math.PI * 2
     );
 
+
     ctx.fillStyle =
-        "#ffffff";
+        "white";
 
     ctx.fill();
 
+
     ctx.strokeStyle =
-        "#071a33";
+        "#062235";
+
+    ctx.lineWidth = 5;
 
     ctx.stroke();
 
 }
 
 
-dibujarRuleta();
+/* =========================
+   ABRIR RULETA
+========================= */
 
+function abrirRuleta() {
 
-function abrirRuleta(){
-
-    if(
+    const yaGiro =
         localStorage.getItem(
             "damytecRuletaUsada"
-        ) === "si"
-    ){
-
-        return;
-
-    }
+        );
 
 
-    document
-    .getElementById("ruletaModal")
-    .style.display = "flex";
-
-
-    document
-    .getElementById("premio")
-    .textContent = "";
-
-}
-
-
-function cerrarRuleta(){
-
-    document
-    .getElementById("ruletaModal")
-    .style.display = "none";
-
-}
-
-
-function girarRuleta(){
-
-    if(girando){
-
-        return;
-
-    }
-
-
-    if(
-        localStorage.getItem(
-            "damytecRuletaUsada"
-        ) === "si"
-    ){
+    if (yaGiro === "si") {
 
         alert(
-            "Ya utilizaste tu oportunidad de girar la ruleta."
+            "🎁 Ya utilizaste tu giro de descuento. ¡Gracias por comprar en DAMYTEC!"
         );
 
         return;
@@ -2052,139 +2923,221 @@ function girarRuleta(){
     }
 
 
-    girando = true;
+    document
+        .getElementById(
+            "ruletaModal"
+        )
+        .classList
+        .add("active");
+
+
+    puedeGirar = true;
+
+    premioGanado = "";
 
 
     document
-    .getElementById("spinButton")
-    .disabled = true;
+        .getElementById(
+            "resultadoRuleta"
+        )
+        .innerHTML = "";
 
 
-    const vueltas =
-        5 + Math.random() * 3;
+    document
+        .getElementById(
+            "botonGirar"
+        )
+        .disabled = false;
+
+}
 
 
-    const giroFinal =
-        vueltas * Math.PI * 2;
+/* =========================
+   CERRAR RULETA
+========================= */
+
+function cerrarRuleta() {
+
+    document
+        .getElementById(
+            "ruletaModal"
+        )
+        .classList
+        .remove("active");
+
+}
 
 
-    const duracion = 4000;
+/* =========================
+   GIRAR RULETA
+========================= */
 
-    const inicio = performance.now();
+function girarRuleta() {
 
-    const anguloInicial =
-        anguloActual;
+    if (!puedeGirar) {
 
+        return;
 
-    function animar(tiempo){
-
-        const progreso =
-            Math.min(
-                (tiempo - inicio) / duracion,
-                1
-            );
+    }
 
 
-        const suavizado =
-            1 - Math.pow(
-                1 - progreso,
-                3
-            );
+    const yaGiro =
+        localStorage.getItem(
+            "damytecRuletaUsada"
+        );
 
 
-        anguloActual =
-            anguloInicial +
-            giroFinal * suavizado;
+    if (yaGiro === "si") {
+
+        alert(
+            "🎁 Ya utilizaste tu giro de descuento."
+        );
+
+        return;
+
+    }
 
 
-        dibujarRuleta();
+    puedeGirar = false;
 
 
-        if(progreso < 1){
-
-            requestAnimationFrame(animar);
-
-        }else{
-
-            girando = false;
-
-            document
-            .getElementById("spinButton")
-            .disabled = false;
+    document
+        .getElementById(
+            "botonGirar"
+        )
+        .disabled = true;
 
 
-            const cantidad =
-                premios.length;
+    const numeroPremio =
+        Math.floor(
+            Math.random() *
+            premios.length
+        );
 
 
-            const angulo =
-                (Math.PI * 2) / cantidad;
+    const vueltas = 5;
 
 
-            let posicion =
-                (Math.PI * 1.5 - anguloActual)
-                % (Math.PI * 2);
+    const gradosPorPremio =
+        360 /
+        premios.length;
 
 
-            if(posicion < 0){
-
-                posicion += Math.PI * 2;
-
-            }
+    const gradosPremio =
+        numeroPremio *
+        gradosPorPremio;
 
 
-            const indice =
-                Math.floor(
-                    posicion / angulo
-                );
+    rotacionActual +=
+        vueltas * 360;
 
 
-            const premioGanado =
-                premios[indice];
+    rotacionActual +=
+        360 -
+        gradosPremio -
+        gradosPorPremio / 2;
 
 
-            document
-            .getElementById("premio")
-            .innerHTML =
-                `🎉 ¡Ganaste ${premioGanado.nombre}!<br>
-                <small>Código: ${premioGanado.codigo}</small>`;
+    document
+        .getElementById(
+            "ruleta"
+        )
+        .style.transform =
+        `rotate(${rotacionActual}deg)`;
 
+
+    setTimeout(
+        () => {
+
+            premioGanado =
+                premios[numeroPremio];
+
+
+            const codigo =
+                codigos[numeroPremio];
+
+
+            /*
+             * GUARDAR QUE YA GIRO
+             */
 
             localStorage.setItem(
                 "damytecRuletaUsada",
                 "si"
             );
 
-        }
 
-    }
+            document
+                .getElementById(
+                    "resultadoRuleta"
+                )
+                .innerHTML = `
 
+                    🎉 ¡Felicidades!
 
-    requestAnimationFrame(animar);
+                    <br>
+
+                    Ganaste:
+
+                    <strong>
+                        ${premioGanado}
+                    </strong>
+
+                    <div
+                        class="codigo-descuento">
+
+                        Código:
+
+                        ${codigo}
+
+                        <br>
+
+                        <small>
+                            Válido para tu
+                            próxima compra
+                        </small>
+
+                    </div>
+
+                `;
+
+        },
+
+        5200
+    );
 
 }
 
 
-/* ==========================================
-   ESC PARA CERRAR GALERÍA
-========================================== */
+/* =========================
+   INICIAR RULETA
+========================= */
 
-document.addEventListener(
-    "keydown",
-    function(event){
+dibujarRuleta();
 
-        if(event.key === "Escape"){
 
-            cerrarGaleria();
+/* =========================
+   CERRAR CARRITO
+   HACIENDO CLIC AFUERA
+========================= */
 
-            cerrarRuleta();
+document
+    .getElementById("cartOverlay")
+    .addEventListener(
+        "click",
+        function(e) {
+
+            if (e.target === this) {
+
+                cerrarCarrito();
+
+            }
 
         }
-
-    }
-);
+    );
 
 </script>
 
 </body>
+
 </html>
