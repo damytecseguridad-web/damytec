@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,57 +7,81 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#f3f6fa;color:#102a43}
-header{background:#071d31;color:white;padding:18px;position:sticky;top:0;z-index:10}
-.navbar{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:25px;font-weight:900}.logo span{color:#08b7ee}
-nav{display:flex;gap:15px;flex-wrap:wrap}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#f1f5f9;color:#102a43}
+img{max-width:100%}
+header{background:#071d31;color:white;position:sticky;top:0;z-index:1000}
+.navbar{max-width:1200px;margin:auto;min-height:55px;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+.logo{font-size:24px;font-weight:900}
+.logo span{color:#08b7ee}
+nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
 nav a{color:white;text-decoration:none;font-size:13px;font-weight:bold}
-.hero img{display:block;width:100%;max-height:320px;object-fit:cover}
-.section{max-width:1200px;margin:auto;padding:30px 15px}
-.section-title{text-align:center;margin-bottom:25px}
-.section-title h2{font-size:27px;margin-bottom:8px}
-.section-title p{color:#607d94}
-.controls{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:25px}
-.controls input,.controls select{padding:10px;border:1px solid #ccd6df;border-radius:7px;min-width:220px}
-.products{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
-.product-card{background:white;border-radius:13px;overflow:hidden;box-shadow:0 5px 16px #00000012;display:flex;flex-direction:column;min-width:0}
-.product-image{height:175px;width:100%;object-fit:contain;padding:8px}
-.product-info{padding:11px;display:flex;flex-direction:column;flex:1}
-.product-info h3{font-size:14px;margin-bottom:7px}
-.product-info p{font-size:12px;line-height:1.4;color:#607d94;min-height:34px}
-.memory-text{background:#fff3a6;color:#000;padding:6px;margin-top:8px;border-radius:5px;font-size:11px;font-weight:900;line-height:1.4}
-.price{font-size:20px;font-weight:900;color:#087fbd;margin:10px 0}
-.btn-cart,.btn-whatsapp{display:block;width:100%;padding:10px 5px;border:0;border-radius:6px;text-align:center;color:white;text-decoration:none;font-weight:bold;font-size:11px;cursor:pointer;margin-top:5px}
-.btn-cart{background:#087fbd}.btn-whatsapp{background:#18c964}
-.installations-gallery,.services{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.installation-card,.service-card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 5px 16px #00000012;text-align:center}
-.installation-card img{width:100%;height:200px;object-fit:cover}
-.installation-caption,.service-card{padding:15px}
-.service-card h3{margin:8px}
-.service-card p{font-size:13px;color:#607d94;line-height:1.5}
-.cart-box{max-width:800px;margin:auto;background:white;padding:20px;border-radius:12px}
-.cart-item{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid #ddd}
+nav a:hover{color:#08b7ee}
+.hero img{width:100%;display:block}
+.section{max-width:1200px;margin:auto;padding:32px 16px}
+.section-title{text-align:center;margin-bottom:20px}
+.section-title h2{font-size:25px;margin-bottom:6px}
+.section-title p{font-size:13px;color:#607d94}
+.controls{display:flex;justify-content:center;gap:10px;margin:15px auto 25px;flex-wrap:wrap}
+.controls input,.controls select{width:250px;max-width:100%;height:36px;border:1px solid #cbd7e2;border-radius:6px;padding:0 10px;background:white}
+.products{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.product-card{background:white;border-radius:13px;overflow:hidden;box-shadow:0 4px 14px #102a4310;display:flex;flex-direction:column;min-width:0}
+.product-image{width:100%;height:175px;object-fit:contain;background:#fff;padding:5px}
+.product-info{padding:10px;display:flex;flex-direction:column;flex:1}
+.product-info h3{font-size:14px;line-height:1.25;margin-bottom:6px;color:#102a43}
+.product-info p{font-size:11px;color:#607d94;line-height:1.4;min-height:30px;margin-bottom:7px}
+.memory-text{background:#fff0a3;color:#000;font-size:11px;font-weight:900;text-transform:uppercase;line-height:1.25;padding:7px;border-radius:4px;margin:3px 0 8px}
+.price{color:#087fbd;font-size:20px;font-weight:900;margin:5px 0 10px}
+.btn-cart{width:100%;min-height:34px;background:#087fbd;color:white;border:0;border-radius:5px;font-size:11px;font-weight:bold;cursor:pointer;margin-top:auto;margin-bottom:6px}
+.btn-cart:hover{background:#066c9f}
+.btn-whatsapp{width:100%;min-height:32px;display:flex;align-items:center;justify-content:center;background:#18c964;color:white;text-decoration:none;border-radius:5px;font-size:11px;font-weight:bold}
+.btn-whatsapp:hover{background:#0eae54}
+.installations-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.installation-card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 4px 14px #102a4310}
+.installation-card img{width:100%;height:190px;object-fit:cover;display:block}
+.installation-caption{text-align:center;padding:10px;font-size:13px;font-weight:bold}
+.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.service-card{background:white;border-radius:13px;padding:24px;text-align:center;box-shadow:0 4px 14px #102a4310}
+.service-card .icon{font-size:30px;margin-bottom:10px}
+.service-card h3{font-size:16px;margin-bottom:8px}
+.service-card p{color:#607d94;font-size:13px;line-height:1.5}
+.cart-box{max-width:850px;margin:auto;background:white;border-radius:13px;padding:20px;box-shadow:0 4px 14px #102a4310}
+.cart-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #e7edf2}
+.cart-item-info{flex:1;font-size:13px}
 .qty{display:flex;align-items:center;gap:8px}
-.qty button{border:0;background:#087fbd;color:white;border-radius:5px;padding:6px 10px;cursor:pointer}
-.cart-total{text-align:right;font-size:22px;font-weight:bold;color:#087fbd;margin-top:15px}
-.order-btn{width:100%;padding:12px;border:0;border-radius:7px;background:#18c964;color:white;font-weight:bold;margin-top:15px;cursor:pointer}
-.empty-cart{text-align:center;padding:20px;color:#607d94}
-footer{background:#071d31;color:white;text-align:center;padding:25px;margin-top:25px;font-size:13px}
-.modal{display:none;position:fixed;inset:0;background:#0009;z-index:100;align-items:center;justify-content:center;padding:20px}
-.modal.show{display:flex}
-.modal-content{background:white;padding:25px;border-radius:15px;text-align:center;max-width:400px;width:100%}
-.wheel{width:220px;height:220px;border-radius:50%;margin:20px auto;background:conic-gradient(#087fbd 0 60deg,#18c964 60deg 120deg,#ffcc00 120deg 180deg,#ff7a00 180deg 240deg,#9b59b6 240deg 300deg,#e74c3c 300deg);display:grid;place-items:center;border:7px solid #102a43}
-.wheel-center{background:white;padding:20px;border-radius:50%;font-weight:bold}
-.spin-btn,.close-btn{padding:10px 18px;border:0;border-radius:6px;cursor:pointer;margin:5px}
-.spin-btn{background:#087fbd;color:white}
-@media(max-width:1100px){.products{grid-template-columns:repeat(4,minmax(0,1fr))}}
-@media(max-width:800px){nav{display:none}.products{grid-template-columns:repeat(2,minmax(0,1fr))}.installations-gallery,.services{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.section{padding:25px 10px}.products{gap:9px}.product-info{padding:9px}.product-image{height:145px}.product-info h3{font-size:13px}.price{font-size:18px}.installations-gallery,.services{grid-template-columns:1fr}}
+.qty button{width:28px;height:28px;border:0;border-radius:5px;background:#087fbd;color:white;cursor:pointer}
+.cart-total{text-align:right;font-size:22px;font-weight:bold;color:#087fbd;margin-top:18px}
+.order-btn{width:100%;margin-top:15px;min-height:42px;border:0;border-radius:6px;background:#18c964;color:white;font-weight:bold;cursor:pointer}
+.empty-cart{text-align:center;color:#607d94;padding:20px}
+footer{background:#071d31;color:white;text-align:center;padding:25px 15px;margin-top:25px}
+footer p{font-size:13px;margin:5px}
+@media(max-width:1000px){.products{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:760px){
+ nav{gap:10px}
+ nav a{font-size:11px}
+ .products{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .installations-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .services{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+ .navbar{align-items:flex-start;gap:10px;flex-direction:column}
+ nav{display:flex}
+ .section{padding:22px 10px}
+ .products{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .product-image{height:150px}
+ .product-info{padding:8px}
+ .product-info h3{font-size:12px}
+ .product-info p{font-size:10px}
+ .memory-text{font-size:9px;padding:6px}
+ .price{font-size:17px}
+ .btn-cart,.btn-whatsapp{font-size:10px}
+ .installations-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 </style>
 </head>
 
 <body>
+
 <header>
   <div class="navbar">
     <div class="logo">DAMY<span>TEC</span></div>
@@ -69,21 +92,24 @@ footer{background:#071d31;color:white;text-align:center;padding:25px;margin-top:
       <a href="#piscinas">Piscinas</a>
       <a href="#instalaciones">Instalaciones</a>
       <a href="#servicios">Servicios</a>
-      <a href="#carrito">🛒 Carrito</a>
+      <a href="#carrito">Carrito 🛒</a>
     </nav>
   </div>
 </header>
 
 <main>
+
 <section class="hero" id="inicio">
-  <img src="https://damytecseguridad-web.github.io/damytec/fondo-damytec.png" alt="DAMYTEC Seguridad y Tecnología">
+  <img src="https://damytecseguridad-web.github.io/damytec/fondo-damytec.png"
+       alt="DAMYTEC Seguridad y Tecnología">
 </section>
 
 <section class="section" id="camaras">
   <div class="section-title">
-    <h2>📷 Cámaras de seguridad</h2>
+    <h2>📷 Cámaras de Seguridad</h2>
     <p>Encuentra la cámara ideal para tu hogar o negocio</p>
   </div>
+
   <div class="controls">
     <input id="search" type="search" placeholder="🔎 Buscar producto..." oninput="filtrarProductos()">
     <select id="category" onchange="filtrarProductos()">
@@ -93,12 +119,13 @@ footer{background:#071d31;color:white;text-align:center;padding:25px;margin-top:
       <option value="piscina">Piscinas</option>
     </select>
   </div>
+
   <div class="products" id="products"></div>
 </section>
 
 <section class="section" id="instalaciones">
   <div class="section-title">
-    <h2>📸 Instalaciones</h2>
+    <h2>📸 Muestras de nuestras instalaciones</h2>
     <p>Conoce algunos de nuestros trabajos realizados.</p>
   </div>
   <div class="installations-gallery">
@@ -114,163 +141,345 @@ footer{background:#071d31;color:white;text-align:center;padding:25px;margin-top:
       <img src="https://damytecseguridad-web.github.io/damytec/instalacion-3.jpg" alt="Instalación de cámaras">
       <div class="installation-caption">Instalación de cámaras</div>
     </div>
+    <div class="installation-card">
+      <img src="https://damytecseguridad-web.github.io/damytec/instalacion-4.jpg" alt="Instalación de cámaras">
+      <div class="installation-caption">Instalación de cámaras</div>
+    </div>
   </div>
 </section>
 
 <section class="section" id="servicios">
-  <div class="section-title"><h2>🛠️ Nuestros servicios</h2></div>
+  <div class="section-title">
+    <h2>🛠️ Nuestros Servicios</h2>
+    <p>Soluciones para tu hogar y negocio</p>
+  </div>
   <div class="services">
-    <div class="service-card"><h3>📷 Venta de cámaras</h3><p>Cámaras WiFi, solares y con chip.</p></div>
-    <div class="service-card"><h3>🔧 Instalación</h3><p>Soluciones de seguridad para hogares y negocios.</p></div>
-    <div class="service-card"><h3>💬 Asesoría</h3><p>Te ayudamos a elegir la cámara adecuada.</p></div>
+    <div class="service-card">
+      <div class="icon">📷</div>
+      <h3>Venta de Cámaras</h3>
+      <p>Cámaras de seguridad WiFi, solares y con chip.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon">🔧</div>
+      <h3>Instalación</h3>
+      <p>Instalación de cámaras de seguridad para hogares y negocios.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon">💬</div>
+      <h3>Asesoría</h3>
+      <p>Te ayudamos a elegir la cámara adecuada para tus necesidades.</p>
+    </div>
   </div>
 </section>
 
 <section class="section" id="carrito">
-  <div class="section-title"><h2>🛒 Mi carrito</h2><p>Revisa tus productos antes de realizar el pedido.</p></div>
+  <div class="section-title">
+    <h2>🛒 Mi carrito</h2>
+    <p>Revisa tus productos antes de enviar tu pedido.</p>
+  </div>
   <div class="cart-box">
     <div id="cartItems"></div>
     <div class="cart-total" id="cartTotal">Total: S/ 0</div>
     <button class="order-btn" onclick="enviarPedidoWhatsApp()">📲 Enviar pedido por WhatsApp</button>
   </div>
 </section>
+
 </main>
 
 <footer>
   <p><strong>DAMYTEC</strong> — Seguridad y Tecnología</p>
-  <p>Venta de cámaras, AirPods y piscinas Bestway.</p>
+  <p>Venta de cámaras de seguridad, AirPods y piscinas Bestway.</p>
   <p>WhatsApp: 992 504 911</p>
 </footer>
 
-<div class="modal" id="rouletteModal">
-  <div class="modal-content">
-    <h2>🎉 ¡Gira la ruleta!</h2>
-    <p>Descubre tu beneficio promocional.</p>
-    <div class="wheel"><div class="wheel-center">DAMYTEC</div></div>
-    <p id="rouletteResult"></p>
-    <button class="spin-btn" onclick="girarRuleta()">🎡 GIRAR</button>
-    <button class="close-btn" onclick="cerrarRuleta()">Cerrar</button>
-  </div>
-</div>
-
 <script>
-const SITE_BASE="https://damytecseguridad-web.github.io/damytec/";
-const WHATSAPP="51992504911";
-const imagenUrl=(nombre)=>SITE_BASE+encodeURIComponent(nombre);
+const SITE_BASE = "https://damytecseguridad-web.github.io/damytec/";
+const WHATSAPP = "51992504911";
 
-/* ORDEN SEGÚN TU PDF: PRIMERO LAS 13 CÁMARAS */
-const productos=[
-{id:1,nombre:"Cámara Foco 2K",categoria:"camara",precio:200,imagen:"w=800,h=800,fit=pad.webp",descripcion:"Cámara tipo foco 2K con monitoreo mediante aplicación."},
-{id:2,nombre:"Cámara 2K",categoria:"camara",precio:240,imagen:"image (4).png",descripcion:"Cámara de seguridad WiFi para hogares y negocios."},
-{id:3,nombre:"Cámara Poli 3K",categoria:"camara",precio:270,imagen:"Cámara Poli 3K PNG.png",descripcion:"Cámara de seguridad Poli 3K."},
-{id:4,nombre:"Cámara Negrita 3K",categoria:"camara",precio:290,imagen:"5ec66464-4284-45bd-bb95-530dddfa2f40.jpg",descripcion:"Cámara de seguridad 3K para tu hogar o negocio."},
-{id:5,nombre:"Cámara HD Bocina 4K",categoria:"camara",precio:300,imagen:"image (1).png",descripcion:"Cámara HD Bocina 4K."},
-{id:6,nombre:"Cámara Dalhua 5K un lente",categoria:"camara",precio:310,imagen:"Cámara Dalhua 5k png.png",descripcion:"Cámara Dalhua 5K de un lente."},
-{id:7,nombre:"Cámara 3K Llamada",categoria:"camara",precio:340,imagen:"CAMARA LLAMADA 3K PNG.png",descripcion:"Cámara 3K con función de llamada."},
-{id:8,nombre:"Cámara Zoom Óptico 5K",categoria:"camara",precio:340,imagen:"modelo 5k con zoom optico.jpg",descripcion:"Cámara con zoom óptico 5K."},
-{id:9,nombre:"Cámara Pulpo HD 4K",categoria:"camara",precio:380,imagen:"image (2).png",descripcion:"Cámara Pulpo HD 4K."},
-{id:10,nombre:"Cámara WiFi y Panel Solar",categoria:"camara",precio:380,imagen:"image (7).png",descripcion:"Cámara WiFi con panel solar."},
-{id:11,nombre:"Cámara 4 lentes con chip y doble panel solar",categoria:"camara",precio:480,imagen:"width_1178.png",descripcion:"Cámara de cuatro lentes con chip y doble panel solar."},
+function imagenUrl(nombre) {
+  if (/^https?:\/\//i.test(nombre)) return nombre;
+  return SITE_BASE + encodeURIComponent(nombre).replace(/%2F/gi, "/");
+}
 
-/* OTROS PRODUCTOS */
-{id:12,nombre:"Cámara Blanca 2 lentes 3K",categoria:"camara",precio:290,imagen:"imageUrl_4.webp",descripcion:"Cámara blanca de dos lentes 3K."},
-{id:13,nombre:"AirPods 4ta Generación",categoria:"airpods",precio:110,imagen:"image (5).png",descripcion:"Audífonos inalámbricos de cuarta generación."},
-{id:14,nombre:"AirPods 3ra Generación",categoria:"airpods",precio:140,imagen:"image (6).png",descripcion:"Audífonos inalámbricos."},
-{id:15,nombre:"Piscina Bestway 2.59 x 1.70",categoria:"piscina",precio:380,imagen:"2.59x1.70",descripcion:"Piscina armable Bestway."},
-{id:16,nombre:"Piscina Bestway 3 x 2",categoria:"piscina",precio:450,imagen:"3x2",descripcion:"Piscina armable Bestway."}
+/*
+  ORDEN DEL CATÁLOGO:
+  1. Foco 2K
+  2. Cámara 2K
+  3. Poli 3K
+  4. Negrita 3K
+  5. Policía 3K
+  6. Blanca 2 lentes
+  7. HD Bocina 4K
+  8. Dalhua 5K un lente
+  9. 3K Llamada
+  10. Zoom Óptico 5K
+  11. Pulpo HD 4K
+  12. WiFi y Panel Solar
+  13. 4 lentes con chip y doble panel
+  14. AirPods 4.ª generación
+  15. AirPods 3.ª generación
+  16. Piscina 2.59 x 1.70
+  17. Piscina 3 x 2
+*/
+
+const productos = [
+  {
+    id:1, nombre:"Cámara Foco 2K", categoria:"camara", precio:200,
+    imagen:"w=800,h=800,fit=pad.webp",
+    descripcion:"Cámara tipo foco 2K con monitoreo mediante aplicación."
+  },
+  {
+    id:2, nombre:"Cámara 2K", categoria:"camara", precio:240,
+    imagen:"image (4).png",
+    descripcion:"Cámara de seguridad WiFi para hogares y negocios."
+  },
+  {
+    id:3, nombre:"Cámara Poli 3K", categoria:"camara", precio:270,
+    imagen:"Cámara PEQUE 3K PNG.png",
+    descripcion:"Cámara de seguridad Poli 3K."
+  },
+  {
+    id:4, nombre:"Cámara Negrita 3K", categoria:"camara", precio:290,
+    imagen:"5ec66464-4284-45bd-bb95-530dddfa2f40.jpg",
+    descripcion:"Cámara de seguridad 3K para tu hogar o negocio."
+  },
+  {
+    id:5, nombre:"Cámara Policía 3K", categoria:"camara", precio:290,
+    imagen:"image (3).png",
+    descripcion:"Cámara de seguridad Policía 3K."
+  },
+  {
+    id:6, nombre:"Cámara Blanca 2 lentes 3K", categoria:"camara", precio:290,
+    imagen:"imageUrl_4.webp",
+    descripcion:"Cámara blanca de dos lentes 3K."
+  },
+  {
+    id:7, nombre:"Cámara HD Bocina 4K", categoria:"camara", precio:300,
+    imagen:"image (1).png",
+    descripcion:"Cámara HD Bocina 4K."
+  },
+  {
+    id:8, nombre:"Cámara Dalhua 5K un lente", categoria:"camara", precio:310,
+    imagen:"Cámara Dalhua 5k png.png",
+    descripcion:"Cámara Dalhua de un lente."
+  },
+  {
+    id:9, nombre:"Cámara 3K Llamada", categoria:"camara", precio:340,
+    imagen:"CAMARA LLAMADA 3K PNG.png",
+    descripcion:"Cámara 3K con función de llamada."
+  },
+  {
+    id:10, nombre:"Cámara Zoom Óptico 5K", categoria:"camara", precio:340,
+    imagen:"modelo 5k con zoom optico.jpg",
+    descripcion:"Cámara con zoom óptico 5K."
+  },
+  {
+    id:11, nombre:"Cámara Pulpo HD 4K", categoria:"camara", precio:380,
+    imagen:"image (2).png",
+    descripcion:"Cámara Pulpo HD 4K."
+  },
+  {
+    id:12, nombre:"Cámara WiFi y Panel Solar", categoria:"camara", precio:380,
+    imagen:"image (7).png",
+    descripcion:"Cámara WiFi con panel solar."
+  },
+  {
+    id:13, nombre:"Cámara 4 lentes con chip y doble panel solar", categoria:"camara", precio:480,
+    imagen:"width_1178.png",
+    descripcion:"Cámara de cuatro lentes con chip y doble panel solar."
+  },
+  {
+    id:14, nombre:"AirPods 4ta Generación", categoria:"airpods", precio:110,
+    imagen:"image (5).png",
+    descripcion:"Audífonos inalámbricos de cuarta generación."
+  },
+  {
+    id:15, nombre:"AirPods 3ra Generación", categoria:"airpods", precio:140,
+    imagen:"image (6).png",
+    descripcion:"Audífonos inalámbricos."
+  },
+  {
+    id:16, nombre:"Piscina Bestway 2.59 x 1.70", categoria:"piscina", precio:380,
+    imagen:"2.59x1.70",
+    descripcion:"Piscina armable Bestway."
+  },
+  {
+    id:17, nombre:"Piscina Bestway 3 x 2", categoria:"piscina", precio:450,
+    imagen:"3x2",
+    descripcion:"Piscina armable Bestway."
+  }
 ];
 
-let carrito=[];
-try{carrito=JSON.parse(localStorage.getItem("damytecCarrito")||"[]");if(!Array.isArray(carrito))carrito=[];}catch(e){carrito=[];}
-
-function guardarCarrito(){localStorage.setItem("damytecCarrito",JSON.stringify(carrito));}
-
-function whatsappProducto(p){
-  const msg="Hola DAMYTEC, estoy interesado en "+p.nombre+" de S/ "+p.precio+". ¿Me brindan más información?";
-  return "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(msg);
+let carrito = [];
+try {
+  carrito = JSON.parse(localStorage.getItem("damytecCarrito") || "[]");
+} catch (e) {
+  carrito = [];
 }
 
-function renderProductos(lista){
-  document.getElementById("products").innerHTML=lista.map(p=>`
-    <article class="product-card" id="${p.categoria==='airpods'?'airpods':p.categoria==='piscina'?'piscinas':''}">
-      <img class="product-image" src="${imagenUrl(p.imagen)}" alt="${p.nombre}" onerror="this.style.opacity='.35';this.alt='Verifica el nombre del archivo de imagen';">
-      <div class="product-info">
-        <h3>${p.nombre}</h3>
-        <p>${p.descripcion}</p>
-        ${p.categoria==="camara"?'<div class="memory-text">INCLUYE MEMORIA MICRO SD DE 128 GB</div>':""}
-        <div class="price">S/ ${p.precio}</div>
-        <button class="btn-cart" onclick="agregarCarrito(${p.id})">🛒 Agregar al carrito</button>
-        <a class="btn-whatsapp" href="${whatsappProducto(p)}" target="_blank" rel="noopener">Consultar por WhatsApp</a>
-      </div>
-    </article>`).join("");
+function guardarCarrito() {
+  localStorage.setItem("damytecCarrito", JSON.stringify(carrito));
 }
 
-function filtrarProductos(){
-  const texto=document.getElementById("search").value.toLowerCase();
-  const cat=document.getElementById("category").value;
-  renderProductos(productos.filter(p=>(cat==="todos"||p.categoria===cat)&&(p.nombre.toLowerCase().includes(texto)||p.descripcion.toLowerCase().includes(texto))));
+function whatsappProducto(producto) {
+  const mensaje = "Hola DAMYTEC, estoy interesado en " +
+    producto.nombre + " de S/ " + producto.precio + ".";
+  return "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(mensaje);
 }
 
-function agregarCarrito(id){
-  const p=productos.find(x=>x.id===id);
-  const item=carrito.find(x=>x.id===id);
-  if(item)item.cantidad++;
-  else carrito.push({id:p.id,nombre:p.nombre,precio:p.precio,cantidad:1});
-  guardarCarrito();actualizarCarrito();
+function agregarCarrito(id) {
+  const producto = productos.find(p => p.id === id);
+  if (!producto) return;
+
+  const existente = carrito.find(p => p.id === id);
+  if (existente) {
+    existente.cantidad++;
+  } else {
+    carrito.push({
+      id:producto.id,
+      nombre:producto.nombre,
+      precio:producto.precio,
+      cantidad:1
+    });
+  }
+
+  guardarCarrito();
+  actualizarCarrito();
 }
 
-function cambiarCantidad(id,cambio){
-  const item=carrito.find(x=>x.id===id);
-  if(!item)return;
-  item.cantidad+=cambio;
-  if(item.cantidad<=0)carrito=carrito.filter(x=>x.id!==id);
-  guardarCarrito();actualizarCarrito();
+function cambiarCantidad(id, cambio) {
+  const item = carrito.find(p => p.id === id);
+  if (!item) return;
+
+  item.cantidad += cambio;
+  if (item.cantidad <= 0) {
+    carrito = carrito.filter(p => p.id !== id);
+  }
+
+  guardarCarrito();
+  actualizarCarrito();
 }
 
-function actualizarCarrito(){
-  const box=document.getElementById("cartItems");
-  if(!carrito.length){
-    box.innerHTML='<div class="empty-cart">Tu carrito está vacío.</div>';
-    document.getElementById("cartTotal").textContent="Total: S/ 0";
+function actualizarCarrito() {
+  const contenedor = document.getElementById("cartItems");
+  const totalElemento = document.getElementById("cartTotal");
+
+  if (!carrito.length) {
+    contenedor.innerHTML = '<div class="empty-cart">Tu carrito está vacío.</div>';
+    totalElemento.textContent = "Total: S/ 0";
     return;
   }
-  let total=0;
-  box.innerHTML=carrito.map(p=>{
-    const sub=p.precio*p.cantidad;total+=sub;
-    return `<div class="cart-item"><div><strong>${p.nombre}</strong><p>S/ ${p.precio} c/u</p><p>Subtotal: S/ ${sub}</p></div><div class="qty"><button onclick="cambiarCantidad(${p.id},-1)">−</button><strong>${p.cantidad}</strong><button onclick="cambiarCantidad(${p.id},1)">+</button></div></div>`;
+
+  let total = 0;
+  contenedor.innerHTML = carrito.map(item => {
+    const subtotal = item.precio * item.cantidad;
+    total += subtotal;
+
+    return `
+      <div class="cart-item">
+        <div class="cart-item-info">
+          <strong>${item.nombre}</strong>
+          <div>S/ ${item.precio} c/u</div>
+          <div>Subtotal: S/ ${subtotal}</div>
+        </div>
+        <div class="qty">
+          <button onclick="cambiarCantidad(${item.id},-1)">−</button>
+          <strong>${item.cantidad}</strong>
+          <button onclick="cambiarCantidad(${item.id},1)">+</button>
+        </div>
+      </div>
+    `;
   }).join("");
-  document.getElementById("cartTotal").textContent="Total: S/ "+total;
+
+  totalElemento.textContent = "Total: S/ " + total;
 }
 
-function enviarPedidoWhatsApp(){
-  if(!carrito.length){alert("Tu carrito está vacío.");return;}
-  let msg="Hola DAMYTEC, deseo realizar este pedido:\n\n",total=0;
-  carrito.forEach(p=>{const sub=p.precio*p.cantidad;total+=sub;msg+="• "+p.nombre+" x"+p.cantidad+" — S/ "+sub+"\n";});
-  msg+="\nTotal: S/ "+total;
-  window.open("https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(msg),"_blank");
-  abrirRuleta();
+function enviarPedidoWhatsApp() {
+  if (!carrito.length) {
+    alert("Tu carrito está vacío.");
+    return;
+  }
+
+  let lineas = ["Hola DAMYTEC, quiero realizar este pedido:", ""];
+  let total = 0;
+
+  carrito.forEach(item => {
+    const subtotal = item.precio * item.cantidad;
+    total += subtotal;
+    lineas.push("• " + item.nombre + " x" + item.cantidad + " — S/ " + subtotal);
+  });
+
+  lineas.push("");
+  lineas.push("Total: S/ " + total);
+
+  const url = "https://wa.me/" + WHATSAPP +
+    "?text=" + encodeURIComponent(lineas.join("\n"));
+
+  window.open(url, "_blank");
 }
 
-const premios=[
-"5% de descuento","10% de descuento","15% de descuento",
-"S/ 10 de descuento","S/ 20 de descuento","Premio sorpresa"
-];
+function filtrarProductos() {
+  const texto = document.getElementById("search").value.toLowerCase().trim();
+  const categoria = document.getElementById("category").value;
 
-function abrirRuleta(){
-  if(localStorage.getItem("damytecRuletaUsada")!=="1")
-    document.getElementById("rouletteModal").classList.add("show");
+  const filtrados = productos.filter(producto => {
+    const coincideTexto =
+      producto.nombre.toLowerCase().includes(texto) ||
+      producto.descripcion.toLowerCase().includes(texto);
+
+    const coincideCategoria =
+      categoria === "todos" || producto.categoria === categoria;
+
+    return coincideTexto && coincideCategoria;
+  });
+
+  renderProductos(filtrados);
 }
-function cerrarRuleta(){document.getElementById("rouletteModal").classList.remove("show");}
-function girarRuleta(){
-  if(localStorage.getItem("damytecRuletaUsada")==="1")return;
-  localStorage.setItem("damytecRuletaUsada","1");
-  const premio=premios[Math.floor(Math.random()*premios.length)];
-  document.getElementById("rouletteResult").textContent="🎉 Tu premio: "+premio;
-  document.querySelector(".spin-btn").disabled=true;
+
+function renderProductos(lista) {
+  const contenedor = document.getElementById("products");
+
+  contenedor.innerHTML = lista.map(producto => {
+    const esCamara = producto.categoria === "camara";
+
+    return `
+      <article class="product-card">
+        <img
+          class="product-image"
+          src="${imagenUrl(producto.imagen)}"
+          alt="${producto.nombre}"
+          loading="lazy"
+          onerror="this.onerror=null;this.alt='Imagen no encontrada: ${producto.imagen}';"
+        >
+
+        <div class="product-info">
+          <h3>${producto.nombre}</h3>
+          <p>${producto.descripcion}</p>
+
+          ${esCamara
+            ? '<div class="memory-text">INCLUYE MEMORIA MICRO SD DE 128 GB</div>'
+            : ''}
+
+          <div class="price">S/ ${producto.precio}</div>
+
+          <button class="btn-cart" onclick="agregarCarrito(${producto.id})">
+            🛒 Agregar al carrito
+          </button>
+
+          <a class="btn-whatsapp"
+             href="${whatsappProducto(producto)}"
+             target="_blank" rel="noopener">
+            Consultar por WhatsApp
+          </a>
+        </div>
+      </article>
+    `;
+  }).join("");
 }
 
 renderProductos(productos);
 actualizarCarrito();
 </script>
+
 </body>
 </html>
