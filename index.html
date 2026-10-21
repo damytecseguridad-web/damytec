@@ -229,20 +229,37 @@ function cambiarCantidad(id,cambio){
   guardarCarrito();actualizarCarrito();
 }
 
-function actualizarCarrito(){
-  const box=document.getElementById("cartItems");
-  if(!carrito.length){
-    box.innerHTML='<div class="empty-cart">Tu carrito está vacío.</div>';
-    document.getElementById("cartTotal").textContent="Total: S/ 0";
+
+function actualizarCarrito() {
+  const box = document.getElementById("cartItems");
+  const totalElemento = document.getElementById("cartTotal");
+
+  if (carrito.length === 0) {
+    box.innerHTML = '<div class="empty-cart">Tu carrito está vacío.</div>';
+    totalElemento.textContent = "Total: S/ 0";
     return;
   }
-  let total=0;
-  box.innerHTML=carrito.map(p=>{
-    const sub=p.precio*p.cantidad;total+=sub;
-    return `<div class="cart-item"><div><strong>${p.nombre}</strong><p>S/ ${p.precio} c/u</p><p>Subtotal: S/ ${sub}</p></div><div class="qty"><button onclick="cambiarCantidad(${p.id},-1)">−</button><strong>${p.cantidad}</strong><button onclick="cambiarCantidad(${p.id},1)">+</button></div></div>`;
+
+  let total = 0;
+
+  box.innerHTML = carrito.map(function(item) {
+    const subtotal = item.precio * item.cantidad;
+    total += subtotal;
+
+    return `
+      <div class="cart-item">
+        <strong>${item.nombre}</strong>
+        <span>S/ ${item.precio} x ${item.cantidad}</span>
+        <span>S/ ${subtotal}</span>
+        <button onclick="cambiarCantidad(${item.id}, -1)">−</button>
+        <button onclick="cambiarCantidad(${item.id}, 1)">+</button>
+      </div>
+    `;
   }).join("");
-  document.getElementById("cartTotal").textContent="Total: S/ "+total;
+
+  totalElemento.textContent = "Total: S/ " + total;
 }
+
 
 function enviarPedidoWhatsApp(){
   if(!carrito.length){alert("Tu carrito está vacío.");return;}
